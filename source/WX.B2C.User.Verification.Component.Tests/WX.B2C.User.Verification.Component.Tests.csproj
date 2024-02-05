@@ -1,0 +1,136 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.1" />
+    <PackageReference Include="MbDotNet" Version="5.0.0-rc7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="SqlKata.Execution" Version="2.3.7" />
+    <PackageReference Include="WX.Backend.EventHub.Events" Version="18.9.2-release-new-verification.1.41" />
+    <PackageReference Include="WX.KeyVault" Version="3.0.1.28" />
+    <PackageReference Include="WX.Logging.Autofac" Version="1.0.1.9" />
+    <PackageReference Include="WX.Messaging.Stub.Autofac" Version="2.0.1.46" />
+    <PackageReference Include="FluentAssertions" Version="6.2.0" />
+    <PackageReference Include="FsCheck.NUnit" Version="3.0.0-alpha5" />
+    <PackageReference Include="WX.B2C.Survey.Events" Version="0.1.5" />
+    <PackageReference Include="WX.B2C.User.Profile.Events" Version="2.5.0" />
+    <PackageReference Include="WX.B2C.Risks.Events" Version="1.12.1" />
+    <PackageReference Include="WX.Risk.Assessment.Transaction.Events" Version="0.1.0.176" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WX.B2C.Survey.Api.Internal.Client" Version="0.1.5" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Api.Admin.Client\WX.B2C.User.Verification.Api.Admin.Client.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Api.Internal.Client\WX.B2C.User.Verification.Api.Internal.Client.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Api.Public.Client\WX.B2C.User.Verification.Api.Public.Client.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Api.Webhook.Client\WX.B2C.User.Verification.Api.Webhook.Client.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Events.Internal\WX.B2C.User.Verification.Events.Internal.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Events\WX.B2C.User.Verification.Events.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Extensions\WX.B2C.User.Verification.Extensions.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Onfido.Client\WX.B2C.User.Verification.Onfido.Client.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.PassFort.Client\WX.B2C.User.Verification.PassFort.Client.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Mountebank\DecorateFunctions\OnfidoDocumentReportDecorator.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\DecorateFunctions\OnfidoUploadLivePhotoDecorator.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\DecorateFunctions\OnfidoUploadDocumentDecorator.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\DecorateFunctions\OnfidoGetCheckDecorator.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\DecorateFunctions\OnfidoCreateCheckDecorator.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\DecorateFunctions\PassfortRunCheckDecorator.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoFaceDuplicationReport.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoIdentityDocumentReport.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoFacialSimilarityReport.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoLiveVideoResponse.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoLivePhotoResponse.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoDocumentResponse.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoCheckResponse.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoIdentityEnhancedReport.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\OnfidoWebhookRequest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\PassfortCheckResponse.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\PassfortWebhookRequest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\TaggedAnswersTemplate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\UserSurveyTemplate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sources\CheckInfos.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="testSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\sample.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\sample.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\sample.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\sample.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\TaggedAnswersTemplate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\UserSurveyTemplate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mountebank\Templates\PassfortUpdateProfileResponse.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <Section xdt:Locator="Match(Name)" Name="AppConfigSection">
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="IpStackApiUrl" Value="#{IpStackApiUrl}" IsEncrypted="true" />
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="OnfidoApiUrl" Value="#{OnfidoApiUrl}" IsEncrypted="true" />
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="LexisNexisRdpHost" Value="#{LexisNexisRdpHost}" IsEncrypted="true" />
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="LexisNexisRdpProxy" Value="#{LexisNexisRdpProxy}" IsEncrypted="true" />
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="LexisNexisBridgerServiceEndpoint" Value="#{LexisNexisBridgerServiceEndpoint}" IsEncrypted="true" />
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="LexisNexisMode" Value="#{LexisNexisMode}" IsEncrypted="true" />
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="PassFortApiUrl" Value="#{PassFortApiUrl}" IsEncrypted="true" />
+    <Parameter xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="B2CSurveyApiUrl" Value="#{B2CSurveyApiUrl}" IsEncrypted="true" />
+  </Section>
+</Settings>

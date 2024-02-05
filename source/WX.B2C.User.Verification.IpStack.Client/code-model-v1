@@ -1,0 +1,4748 @@
+{
+ "$id": "1",
+ "modelTypes": [
+  {
+   "$id": "2",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "3",
+     "isReadOnly": true,
+     "realPath": [
+      "code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "4",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "5",
+      "fixed": false,
+      "raw": "2-letter language code for the given language. (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "6",
+      "fixed": false,
+      "raw": "code"
+     },
+     "serializedName": "code",
+     "modelType": {
+      "$id": "7",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "8",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "9",
+     "isReadOnly": true,
+     "realPath": [
+      "name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "10",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "11",
+      "fixed": false,
+      "raw": "Name (in the API request's main language) of the given language. (e.g. Portuguese)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "12",
+      "fixed": false,
+      "raw": "name"
+     },
+     "serializedName": "name",
+     "modelType": {
+      "$id": "13",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "14",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "15",
+     "isReadOnly": true,
+     "realPath": [
+      "native"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "16",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "17",
+      "fixed": false,
+      "raw": "Native name of the given language. (e.g. Portugu�s)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "18",
+      "fixed": false,
+      "raw": "native"
+     },
+     "serializedName": "native",
+     "modelType": {
+      "$id": "19",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "20",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Language",
+   "documentation": "An object containing details of language spoken in the country associated with the IP.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "21",
+    "fixed": false,
+    "raw": "Language"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Language",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Language"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "22",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "23",
+     "isReadOnly": true,
+     "realPath": [
+      "geoname_id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "24",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "25",
+      "fixed": false,
+      "raw": "Unique geoname identifier in accordance with the Geonames Registry. (http://www.geonames.org/)"
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "26",
+      "fixed": false,
+      "raw": "geoname_id"
+     },
+     "serializedName": "geoname_id",
+     "modelType": {
+      "$id": "27",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "double",
+      "name": {
+       "$id": "28",
+       "fixed": false,
+       "raw": "Double"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "29",
+     "isReadOnly": true,
+     "realPath": [
+      "capital"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "30",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "31",
+      "fixed": false,
+      "raw": "Capital city of the country associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "32",
+      "fixed": false,
+      "raw": "capital"
+     },
+     "serializedName": "capital",
+     "modelType": {
+      "$id": "33",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "34",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "35",
+     "isReadOnly": true,
+     "realPath": [
+      "languages"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "36",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "37",
+      "fixed": false,
+      "raw": "An object containing one or multiple sub-objects per language spoken in the country associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "38",
+      "fixed": false,
+      "raw": "languages"
+     },
+     "serializedName": "languages",
+     "modelType": {
+      "$id": "39",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "2"
+      },
+      "name": {
+       "$id": "40",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "41",
+     "isReadOnly": true,
+     "realPath": [
+      "country_flag"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "42",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "43",
+      "fixed": false,
+      "raw": "HTTP URL leading to an SVG-flag icon for the country associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "44",
+      "fixed": false,
+      "raw": "country_flag"
+     },
+     "serializedName": "country_flag",
+     "modelType": {
+      "$id": "45",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "46",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "47",
+     "isReadOnly": true,
+     "realPath": [
+      "country_flag_emoji"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "48",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "49",
+      "fixed": false,
+      "raw": "Emoji icon for the flag of the country associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "50",
+      "fixed": false,
+      "raw": "country_flag_emoji"
+     },
+     "serializedName": "country_flag_emoji",
+     "modelType": {
+      "$id": "51",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "52",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "53",
+     "isReadOnly": true,
+     "realPath": [
+      "country_flag_emoji_unicode"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "54",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "55",
+      "fixed": false,
+      "raw": "Unicode value of the emoji icon for the flag of the country associated with the IP. (e.g. U+1F1F5 U+1F1F9 for the Portuguese flag)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "56",
+      "fixed": false,
+      "raw": "country_flag_emoji_unicode"
+     },
+     "serializedName": "country_flag_emoji_unicode",
+     "modelType": {
+      "$id": "57",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "58",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "59",
+     "isReadOnly": true,
+     "realPath": [
+      "calling_code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "60",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "61",
+      "fixed": false,
+      "raw": "Calling/dial code of the country associated with the IP. (e.g. 351) for Portugal."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "62",
+      "fixed": false,
+      "raw": "calling_code"
+     },
+     "serializedName": "calling_code",
+     "modelType": {
+      "$id": "63",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "64",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "65",
+     "isReadOnly": true,
+     "realPath": [
+      "is_eu"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "66",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "67",
+      "fixed": false,
+      "raw": "True or false depending on whether or not the county associated with the IP is in the European Union."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "68",
+      "fixed": false,
+      "raw": "is_eu"
+     },
+     "serializedName": "is_eu",
+     "modelType": {
+      "$id": "69",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "70",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Location",
+   "documentation": "An object containing location details associated with the IP.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "71",
+    "fixed": false,
+    "raw": "Location"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Location",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Location"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "72",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "73",
+     "isReadOnly": true,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "74",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "75",
+      "fixed": false,
+      "raw": "ID of the time zone associated with the IP. (e.g. America/Los_Angeles for PST)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "76",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "77",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "78",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "79",
+     "isReadOnly": true,
+     "realPath": [
+      "current_time"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "80",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "81",
+      "fixed": false,
+      "raw": "Current date and time in the location associated with the IP. (e.g. 2018-03-29T22:31:27-07:00)."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "82",
+      "fixed": false,
+      "raw": "current_time"
+     },
+     "serializedName": "current_time",
+     "modelType": {
+      "$id": "83",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "name": {
+       "$id": "84",
+       "fixed": false,
+       "raw": "DateTime"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "85",
+     "isReadOnly": true,
+     "realPath": [
+      "gmt_offset"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "86",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "87",
+      "fixed": false,
+      "raw": "GMT offset of the given time zone in seconds (e.g. -25200 for PST's -7h GMT offset)."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "88",
+      "fixed": false,
+      "raw": "gmt_offset"
+     },
+     "serializedName": "gmt_offset",
+     "modelType": {
+      "$id": "89",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "90",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "91",
+     "isReadOnly": true,
+     "realPath": [
+      "code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "92",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "93",
+      "fixed": false,
+      "raw": "Universal code of the given time zone. (https://www.timeanddate.com/time/zones/)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "94",
+      "fixed": false,
+      "raw": "code"
+     },
+     "serializedName": "code",
+     "modelType": {
+      "$id": "95",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "96",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "97",
+     "isReadOnly": true,
+     "realPath": [
+      "is_daylight_saving"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "98",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "99",
+      "fixed": false,
+      "raw": "True or false depending on whether or not the given time zone is considered daylight saving time."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "100",
+      "fixed": false,
+      "raw": "is_daylight_saving"
+     },
+     "serializedName": "is_daylight_saving",
+     "modelType": {
+      "$id": "101",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "102",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "TimeZone",
+   "documentation": "An object containing timezone-related data.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "103",
+    "fixed": false,
+    "raw": "TimeZone"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "TimeZone",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/TimeZone"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "104",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "105",
+     "isReadOnly": true,
+     "realPath": [
+      "code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "106",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "107",
+      "fixed": false,
+      "raw": "3-letter code of the main currency associated with the IP. Example: USD - https://www.iban.com/currency-codes.html"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "108",
+      "fixed": false,
+      "raw": "code"
+     },
+     "serializedName": "code",
+     "modelType": {
+      "$id": "109",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "110",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "111",
+     "isReadOnly": true,
+     "realPath": [
+      "name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "112",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "113",
+      "fixed": false,
+      "raw": "Name of the given currency."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "114",
+      "fixed": false,
+      "raw": "name"
+     },
+     "serializedName": "name",
+     "modelType": {
+      "$id": "115",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "116",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "117",
+     "isReadOnly": true,
+     "realPath": [
+      "plural"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "118",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "119",
+      "fixed": false,
+      "raw": "Plural name of the given currency."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "120",
+      "fixed": false,
+      "raw": "plural"
+     },
+     "serializedName": "plural",
+     "modelType": {
+      "$id": "121",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "122",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "123",
+     "isReadOnly": true,
+     "realPath": [
+      "symbol"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "124",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "125",
+      "fixed": false,
+      "raw": "Symbol letter of the given currency."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "126",
+      "fixed": false,
+      "raw": "symbol"
+     },
+     "serializedName": "symbol",
+     "modelType": {
+      "$id": "127",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "128",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "129",
+     "isReadOnly": true,
+     "realPath": [
+      "symbol_native"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "130",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "131",
+      "fixed": false,
+      "raw": "Native symbol letter of the given currency."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "132",
+      "fixed": false,
+      "raw": "symbol_native"
+     },
+     "serializedName": "symbol_native",
+     "modelType": {
+      "$id": "133",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "134",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Currency",
+   "documentation": "An object containing currency-related data.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "135",
+    "fixed": false,
+    "raw": "Currency"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Currency",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Currency"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "136",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "137",
+     "isReadOnly": false,
+     "realPath": [
+      "asn"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "138",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "139",
+      "fixed": false,
+      "raw": "Autonomous System Number associated with the IP. (https://www.techopedia.com/definition/26871/autonomous-system-number-asn)"
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "140",
+      "fixed": false,
+      "raw": "asn"
+     },
+     "serializedName": "asn",
+     "modelType": {
+      "$id": "141",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "double",
+      "name": {
+       "$id": "142",
+       "fixed": false,
+       "raw": "Double"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "143",
+     "isReadOnly": false,
+     "realPath": [
+      "isp"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "144",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "145",
+      "fixed": false,
+      "raw": "Name of the ISP associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "146",
+      "fixed": false,
+      "raw": "isp"
+     },
+     "serializedName": "isp",
+     "modelType": {
+      "$id": "147",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "148",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Connection",
+   "documentation": "An object containing connection-related data.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "149",
+    "fixed": false,
+    "raw": "Connection"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Connection",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Connection"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "150",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "151",
+     "isReadOnly": true,
+     "realPath": [
+      "is_proxy"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "152",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "153",
+      "fixed": false,
+      "raw": "True or false depending on whether or not the given IP is associated with a proxy."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "154",
+      "fixed": false,
+      "raw": "is_proxy"
+     },
+     "serializedName": "is_proxy",
+     "modelType": {
+      "$id": "155",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "156",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "157",
+     "isReadOnly": true,
+     "realPath": [
+      "proxy_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "158",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "159",
+      "fixed": false,
+      "raw": "Type of proxy the IP is associated with."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "3.0.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ProxyType",
+       "originalLocations": [
+        "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Security-proxy_type"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "ProxyType",
+       "modelAsString": true,
+       "values": [
+        {
+         "value": "cgi",
+         "description": "CGI Proxy"
+        },
+        {
+         "value": "web",
+         "description": "Web Proxy"
+        },
+        {
+         "value": "vpn",
+         "description": "VPN Proxy"
+        }
+       ]
+      },
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "160",
+      "fixed": false,
+      "raw": "proxy_type"
+     },
+     "serializedName": "proxy_type",
+     "modelType": {
+      "$id": "161",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "162",
+        "description": "CGI Proxy",
+        "name": "cgi",
+        "serializedName": "cgi"
+       },
+       {
+        "$id": "163",
+        "description": "Web Proxy",
+        "name": "web",
+        "serializedName": "web"
+       },
+       {
+        "$id": "164",
+        "description": "VPN Proxy",
+        "name": "vpn",
+        "serializedName": "vpn"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "165",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "166",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "167",
+       "fixed": false,
+       "raw": "ProxyType"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "168",
+     "isReadOnly": true,
+     "realPath": [
+      "is_crawler"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "169",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "170",
+      "fixed": false,
+      "raw": "True or false depending on whether or not the given IP is associated with a crawler."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "171",
+      "fixed": false,
+      "raw": "is_crawler"
+     },
+     "serializedName": "is_crawler",
+     "modelType": {
+      "$id": "172",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "173",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "174",
+     "isReadOnly": true,
+     "realPath": [
+      "crawler_name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "175",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "176",
+      "fixed": false,
+      "raw": "Name of the crawler the IP is associated with."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "177",
+      "fixed": false,
+      "raw": "crawler_name"
+     },
+     "serializedName": "crawler_name",
+     "modelType": {
+      "$id": "178",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "179",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "180",
+     "isReadOnly": true,
+     "realPath": [
+      "crawler_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "181",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "182",
+      "fixed": false,
+      "raw": "Type of crawler the IP is associated with."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "3.0.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "CrawlerType",
+       "originalLocations": [
+        "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Security-crawler_type"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "CrawlerType",
+       "modelAsString": true,
+       "values": [
+        {
+         "value": "unrecognized",
+         "description": "Unrecognized"
+        },
+        {
+         "value": "search_engine_bot",
+         "description": "Search engine bot"
+        },
+        {
+         "value": "site_monitor",
+         "description": "Site monitor"
+        },
+        {
+         "value": "screenshot_creator",
+         "description": "Screenshot creator"
+        },
+        {
+         "value": "link_checker",
+         "description": "Link checker"
+        },
+        {
+         "value": "wearable_computer",
+         "description": "Wearable computer"
+        },
+        {
+         "value": "web_scraper",
+         "description": "Web scraper"
+        },
+        {
+         "value": "vulnerability_scanner",
+         "description": "Vulnerability scanner"
+        },
+        {
+         "value": "virus_scanner",
+         "description": "Virus scanner"
+        },
+        {
+         "value": "speed_tester",
+         "description": "Speed tester"
+        },
+        {
+         "value": "feed_fetcher",
+         "description": "Feed Fetcher"
+        },
+        {
+         "value": "tool",
+         "description": "Tool"
+        },
+        {
+         "value": "marketing",
+         "description": "Marketing"
+        }
+       ]
+      },
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "183",
+      "fixed": false,
+      "raw": "crawler_type"
+     },
+     "serializedName": "crawler_type",
+     "modelType": {
+      "$id": "184",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "185",
+        "description": "Unrecognized",
+        "name": "unrecognized",
+        "serializedName": "unrecognized"
+       },
+       {
+        "$id": "186",
+        "description": "Search engine bot",
+        "name": "search_engine_bot",
+        "serializedName": "search_engine_bot"
+       },
+       {
+        "$id": "187",
+        "description": "Site monitor",
+        "name": "site_monitor",
+        "serializedName": "site_monitor"
+       },
+       {
+        "$id": "188",
+        "description": "Screenshot creator",
+        "name": "screenshot_creator",
+        "serializedName": "screenshot_creator"
+       },
+       {
+        "$id": "189",
+        "description": "Link checker",
+        "name": "link_checker",
+        "serializedName": "link_checker"
+       },
+       {
+        "$id": "190",
+        "description": "Wearable computer",
+        "name": "wearable_computer",
+        "serializedName": "wearable_computer"
+       },
+       {
+        "$id": "191",
+        "description": "Web scraper",
+        "name": "web_scraper",
+        "serializedName": "web_scraper"
+       },
+       {
+        "$id": "192",
+        "description": "Vulnerability scanner",
+        "name": "vulnerability_scanner",
+        "serializedName": "vulnerability_scanner"
+       },
+       {
+        "$id": "193",
+        "description": "Virus scanner",
+        "name": "virus_scanner",
+        "serializedName": "virus_scanner"
+       },
+       {
+        "$id": "194",
+        "description": "Speed tester",
+        "name": "speed_tester",
+        "serializedName": "speed_tester"
+       },
+       {
+        "$id": "195",
+        "description": "Feed Fetcher",
+        "name": "feed_fetcher",
+        "serializedName": "feed_fetcher"
+       },
+       {
+        "$id": "196",
+        "description": "Tool",
+        "name": "tool",
+        "serializedName": "tool"
+       },
+       {
+        "$id": "197",
+        "description": "Marketing",
+        "name": "marketing",
+        "serializedName": "marketing"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "198",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "199",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "200",
+       "fixed": false,
+       "raw": "CrawlerType"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "201",
+     "isReadOnly": true,
+     "realPath": [
+      "is_tor"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "202",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "203",
+      "fixed": false,
+      "raw": "True or false depending on whether or not the given IP is associated with the anonymous Tor system."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "204",
+      "fixed": false,
+      "raw": "is_tor"
+     },
+     "serializedName": "is_tor",
+     "modelType": {
+      "$id": "205",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "206",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "207",
+     "isReadOnly": true,
+     "realPath": [
+      "threat_level"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "208",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "209",
+      "fixed": false,
+      "raw": "Type of threat level the IP is associated with."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "3.0.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ThreatLevel",
+       "originalLocations": [
+        "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Security-threat_level"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "ThreatLevel",
+       "modelAsString": true,
+       "values": [
+        {
+         "value": "low",
+         "description": "Low Risk"
+        },
+        {
+         "value": "medium",
+         "description": "Medium Risk"
+        },
+        {
+         "value": "high",
+         "description": "High Risk"
+        }
+       ]
+      },
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "210",
+      "fixed": false,
+      "raw": "threat_level"
+     },
+     "serializedName": "threat_level",
+     "modelType": {
+      "$id": "211",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "212",
+        "description": "Low Risk",
+        "name": "low",
+        "serializedName": "low"
+       },
+       {
+        "$id": "213",
+        "description": "Medium Risk",
+        "name": "medium",
+        "serializedName": "medium"
+       },
+       {
+        "$id": "214",
+        "description": "High Risk",
+        "name": "high",
+        "serializedName": "high"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "215",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "216",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "217",
+       "fixed": false,
+       "raw": "ThreatLevel"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "218",
+     "isReadOnly": true,
+     "realPath": [
+      "threat_types"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "219",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "220",
+      "fixed": false,
+      "raw": "An object containing all threat types associated with the IP."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "3.0.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ThreatType",
+       "originalLocations": [
+        "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Security-threat_types"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "ThreatType",
+       "modelAsString": true,
+       "values": [
+        {
+         "value": "tor",
+         "description": "Tor System"
+        },
+        {
+         "value": "fake_crawler",
+         "description": "Fake Crawler"
+        },
+        {
+         "value": "web_scraper",
+         "description": "Web Scraper"
+        },
+        {
+         "value": "attack_source",
+         "description": "Attack Source identified: HTTP"
+        },
+        {
+         "value": "attack_source_http",
+         "description": "Attack Source identified: HTTP"
+        },
+        {
+         "value": "attack_source_mail",
+         "description": "Attack Source identified: Mail"
+        },
+        {
+         "value": "attack_source_ssh",
+         "description": "Attack Source identified: SSH"
+        }
+       ]
+      },
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "221",
+      "fixed": false,
+      "raw": "threat_types"
+     },
+     "serializedName": "threat_types",
+     "modelType": {
+      "$id": "222",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "223",
+        "description": "Tor System",
+        "name": "tor",
+        "serializedName": "tor"
+       },
+       {
+        "$id": "224",
+        "description": "Fake Crawler",
+        "name": "fake_crawler",
+        "serializedName": "fake_crawler"
+       },
+       {
+        "$id": "225",
+        "description": "Web Scraper",
+        "name": "web_scraper",
+        "serializedName": "web_scraper"
+       },
+       {
+        "$id": "226",
+        "description": "Attack Source identified: HTTP",
+        "name": "attack_source",
+        "serializedName": "attack_source"
+       },
+       {
+        "$id": "227",
+        "description": "Attack Source identified: HTTP",
+        "name": "attack_source_http",
+        "serializedName": "attack_source_http"
+       },
+       {
+        "$id": "228",
+        "description": "Attack Source identified: Mail",
+        "name": "attack_source_mail",
+        "serializedName": "attack_source_mail"
+       },
+       {
+        "$id": "229",
+        "description": "Attack Source identified: SSH",
+        "name": "attack_source_ssh",
+        "serializedName": "attack_source_ssh"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "230",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "231",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "232",
+       "fixed": false,
+       "raw": "ThreatType"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Security",
+   "documentation": "An object containing security-related data.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "233",
+    "fixed": false,
+    "raw": "Security"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Security",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/Security"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "234",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "235",
+     "isReadOnly": true,
+     "realPath": [
+      "ip"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "236",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "237",
+      "fixed": false,
+      "raw": "Requested IP address."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "238",
+      "fixed": false,
+      "raw": "ip"
+     },
+     "serializedName": "ip",
+     "modelType": {
+      "$id": "239",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "240",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "241",
+     "isReadOnly": true,
+     "realPath": [
+      "hostname"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "242",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "243",
+      "fixed": false,
+      "raw": "Hostname the requested IP resolves to, only returned if Hostname Lookup is enabled."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "244",
+      "fixed": false,
+      "raw": "hostname"
+     },
+     "serializedName": "hostname",
+     "modelType": {
+      "$id": "245",
+      "$type": "PrimaryType",
+      "format": "hostname",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "246",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "247",
+     "isReadOnly": true,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "248",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "249",
+      "fixed": false,
+      "raw": "IP address type IPv4 or IPv6."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "3.0.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "IPType",
+       "originalLocations": [
+        "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/IpAddressDetails-type"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "IPType",
+       "modelAsString": true,
+       "values": [
+        {
+         "value": "IPv4",
+         "description": "IPv4"
+        },
+        {
+         "value": "IPv6",
+         "description": "IPv6"
+        }
+       ]
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "250",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "251",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "252",
+        "description": "IPv4",
+        "name": "IPv4",
+        "serializedName": "IPv4"
+       },
+       {
+        "$id": "253",
+        "description": "IPv6",
+        "name": "IPv6",
+        "serializedName": "IPv6"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "254",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "255",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "256",
+       "fixed": false,
+       "raw": "IPType"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "257",
+     "isReadOnly": true,
+     "realPath": [
+      "continent_code"
+     ],
+     "collectionFormat": "none",
+     "constraints": {
+      "MaxLength": "2"
+     },
+     "defaultValue": {
+      "$id": "258",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "259",
+      "fixed": false,
+      "raw": "2-letter continent code associated with the IP."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "3.0.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "IpAddressDetails-continent_code",
+       "originalLocations": [
+        "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/IpAddressDetails-continent_code"
+       ]
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "260",
+      "fixed": false,
+      "raw": "continent_code"
+     },
+     "serializedName": "continent_code",
+     "modelType": {
+      "$id": "261",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "262",
+        "name": "AF",
+        "serializedName": "AF"
+       },
+       {
+        "$id": "263",
+        "name": "AS",
+        "serializedName": "AS"
+       },
+       {
+        "$id": "264",
+        "name": "EU",
+        "serializedName": "EU"
+       },
+       {
+        "$id": "265",
+        "name": "NA",
+        "serializedName": "NA"
+       },
+       {
+        "$id": "266",
+        "name": "OC",
+        "serializedName": "OC"
+       },
+       {
+        "$id": "267",
+        "name": "SA",
+        "serializedName": "SA"
+       },
+       {
+        "$id": "268",
+        "name": "AN",
+        "serializedName": "AN"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "269",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "270",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "271",
+       "fixed": false,
+       "raw": ""
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "272",
+     "isReadOnly": true,
+     "realPath": [
+      "continent_name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "273",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "274",
+      "fixed": false,
+      "raw": "Name of the continent associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "275",
+      "fixed": false,
+      "raw": "continent_name"
+     },
+     "serializedName": "continent_name",
+     "modelType": {
+      "$id": "276",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "277",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "278",
+     "isReadOnly": true,
+     "realPath": [
+      "country_code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "279",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "280",
+      "fixed": false,
+      "raw": "2-letter country code associated with the IP. (https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "281",
+      "fixed": false,
+      "raw": "country_code"
+     },
+     "serializedName": "country_code",
+     "modelType": {
+      "$id": "282",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "283",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "284",
+     "isReadOnly": true,
+     "realPath": [
+      "country_name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "285",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "286",
+      "fixed": false,
+      "raw": "Name of the country associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "287",
+      "fixed": false,
+      "raw": "country_name"
+     },
+     "serializedName": "country_name",
+     "modelType": {
+      "$id": "288",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "289",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "290",
+     "isReadOnly": true,
+     "realPath": [
+      "region_code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "291",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "292",
+      "fixed": false,
+      "raw": "Region code of the region associated with the IP (e.g. CA for California)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "293",
+      "fixed": false,
+      "raw": "region_code"
+     },
+     "serializedName": "region_code",
+     "modelType": {
+      "$id": "294",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "295",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "296",
+     "isReadOnly": true,
+     "realPath": [
+      "region_name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "297",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "298",
+      "fixed": false,
+      "raw": "Name of the region associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "299",
+      "fixed": false,
+      "raw": "region_name"
+     },
+     "serializedName": "region_name",
+     "modelType": {
+      "$id": "300",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "301",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "302",
+     "isReadOnly": true,
+     "realPath": [
+      "city"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "303",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "304",
+      "fixed": false,
+      "raw": "Name of the city associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "305",
+      "fixed": false,
+      "raw": "city"
+     },
+     "serializedName": "city",
+     "modelType": {
+      "$id": "306",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "307",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "308",
+     "isReadOnly": true,
+     "realPath": [
+      "zip"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "309",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "310",
+      "fixed": false,
+      "raw": "ZIP code associated with the IP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "311",
+      "fixed": false,
+      "raw": "zip"
+     },
+     "serializedName": "zip",
+     "modelType": {
+      "$id": "312",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "313",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "314",
+     "isReadOnly": true,
+     "realPath": [
+      "latitude"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "315",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "316",
+      "fixed": false,
+      "raw": "Latitude value associated with the IP."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "317",
+      "fixed": false,
+      "raw": "latitude"
+     },
+     "serializedName": "latitude",
+     "modelType": {
+      "$id": "318",
+      "$type": "PrimaryType",
+      "format": "double",
+      "knownPrimaryType": "double",
+      "name": {
+       "$id": "319",
+       "fixed": false,
+       "raw": "Double"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "320",
+     "isReadOnly": true,
+     "realPath": [
+      "longitude"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "321",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "322",
+      "fixed": false,
+      "raw": "Longitude value associated with the IP."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "323",
+      "fixed": false,
+      "raw": "longitude"
+     },
+     "serializedName": "longitude",
+     "modelType": {
+      "$id": "324",
+      "$type": "PrimaryType",
+      "format": "double",
+      "knownPrimaryType": "double",
+      "name": {
+       "$id": "325",
+       "fixed": false,
+       "raw": "Double"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "326",
+     "isReadOnly": false,
+     "realPath": [
+      "location"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "327",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "328",
+      "fixed": false,
+      "raw": "Returns multiple location-related objects."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "329",
+      "fixed": false,
+      "raw": "location"
+     },
+     "serializedName": "location",
+     "modelType": {
+      "$ref": "22"
+     }
+    },
+    {
+     "$id": "330",
+     "isReadOnly": false,
+     "realPath": [
+      "time_zone"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "331",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "332",
+      "fixed": false,
+      "raw": "Returns an object containing timezone-related data."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "333",
+      "fixed": false,
+      "raw": "time_zone"
+     },
+     "serializedName": "time_zone",
+     "modelType": {
+      "$ref": "72"
+     }
+    },
+    {
+     "$id": "334",
+     "isReadOnly": false,
+     "realPath": [
+      "currency"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "335",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "336",
+      "fixed": false,
+      "raw": "Returns an object containing currency-related data."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "337",
+      "fixed": false,
+      "raw": "currency"
+     },
+     "serializedName": "currency",
+     "modelType": {
+      "$ref": "104"
+     }
+    },
+    {
+     "$id": "338",
+     "isReadOnly": false,
+     "realPath": [
+      "connection"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "339",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "340",
+      "fixed": false,
+      "raw": "Returns an object containing connection-related data."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "341",
+      "fixed": false,
+      "raw": "connection"
+     },
+     "serializedName": "connection",
+     "modelType": {
+      "$ref": "136"
+     }
+    },
+    {
+     "$id": "342",
+     "isReadOnly": false,
+     "realPath": [
+      "security"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "343",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "344",
+      "fixed": false,
+      "raw": "Returns an object containing security-related data."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "345",
+      "fixed": false,
+      "raw": "security"
+     },
+     "serializedName": "security",
+     "modelType": {
+      "$ref": "150"
+     }
+    }
+   ],
+   "serializedName": "IpAddressDetails",
+   "documentation": "An object containing IP address location data.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "346",
+    "fixed": false,
+    "raw": "IpAddressDetails"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "IpAddressDetails",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/IpAddressDetails"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "347",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "348",
+     "isReadOnly": true,
+     "realPath": [
+      "code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "349",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "350",
+      "fixed": false,
+      "raw": "Error code"
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "351",
+      "fixed": false,
+      "raw": "code"
+     },
+     "serializedName": "code",
+     "modelType": {
+      "$id": "352",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "353",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "354",
+     "isReadOnly": true,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "355",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "356",
+      "fixed": false,
+      "raw": "Error type. For example monthly_limit_reached."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "3.0.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ErrorType",
+       "originalLocations": [
+        "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/ErrorDetails-type"
+       ]
+      },
+      "x-nullable": false,
+      "x-ms-enum": {
+       "name": "ErrorType",
+       "modelAsString": true,
+       "values": [
+        {
+         "value": "404_not_found",
+         "description": "The requested resource does not exist."
+        },
+        {
+         "value": "missing_access_key",
+         "description": "No API Key was specified."
+        },
+        {
+         "value": "invalid_access_key",
+         "description": "No API Key was specified or an invalid API Key was specified."
+        },
+        {
+         "value": "inactive_user",
+         "description": "The current user account is not active. User will be prompted to get in touch with Customer Support."
+        },
+        {
+         "value": "invalid_api_function",
+         "description": "The requested API endpoint does not exist."
+        },
+        {
+         "value": "usage_limit_reached",
+         "description": "The maximum allowed amount of monthly API requests has been reached."
+        },
+        {
+         "value": "function_access_restricted",
+         "description": "The current subscription plan does not support this API endpoint."
+        },
+        {
+         "value": "https_access_restricted",
+         "description": "The user's current subscription plan does not support HTTPS Encryption."
+        },
+        {
+         "value": "invalid_fields",
+         "description": "One or more invalid fields were specified using the fields parameter."
+        },
+        {
+         "value": "too_many_ips",
+         "description": "Too many IPs have been specified for the Bulk Lookup Endpoint. (max. 50)"
+        },
+        {
+         "value": "batch_not_supported_on_plan",
+         "description": "The Bulk Lookup Endpoint is not supported on the current subscription plan"
+        }
+       ]
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "357",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "358",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "359",
+        "description": "The requested resource does not exist.",
+        "name": "404_not_found",
+        "serializedName": "404_not_found"
+       },
+       {
+        "$id": "360",
+        "description": "No API Key was specified.",
+        "name": "missing_access_key",
+        "serializedName": "missing_access_key"
+       },
+       {
+        "$id": "361",
+        "description": "No API Key was specified or an invalid API Key was specified.",
+        "name": "invalid_access_key",
+        "serializedName": "invalid_access_key"
+       },
+       {
+        "$id": "362",
+        "description": "The current user account is not active. User will be prompted to get in touch with Customer Support.",
+        "name": "inactive_user",
+        "serializedName": "inactive_user"
+       },
+       {
+        "$id": "363",
+        "description": "The requested API endpoint does not exist.",
+        "name": "invalid_api_function",
+        "serializedName": "invalid_api_function"
+       },
+       {
+        "$id": "364",
+        "description": "The maximum allowed amount of monthly API requests has been reached.",
+        "name": "usage_limit_reached",
+        "serializedName": "usage_limit_reached"
+       },
+       {
+        "$id": "365",
+        "description": "The current subscription plan does not support this API endpoint.",
+        "name": "function_access_restricted",
+        "serializedName": "function_access_restricted"
+       },
+       {
+        "$id": "366",
+        "description": "The user's current subscription plan does not support HTTPS Encryption.",
+        "name": "https_access_restricted",
+        "serializedName": "https_access_restricted"
+       },
+       {
+        "$id": "367",
+        "description": "One or more invalid fields were specified using the fields parameter.",
+        "name": "invalid_fields",
+        "serializedName": "invalid_fields"
+       },
+       {
+        "$id": "368",
+        "description": "Too many IPs have been specified for the Bulk Lookup Endpoint. (max. 50)",
+        "name": "too_many_ips",
+        "serializedName": "too_many_ips"
+       },
+       {
+        "$id": "369",
+        "description": "The Bulk Lookup Endpoint is not supported on the current subscription plan",
+        "name": "batch_not_supported_on_plan",
+        "serializedName": "batch_not_supported_on_plan"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "370",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "371",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "372",
+       "fixed": false,
+       "raw": "ErrorType"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "373",
+     "isReadOnly": true,
+     "realPath": [
+      "info"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "374",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "375",
+      "fixed": false,
+      "raw": "Error description."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "376",
+      "fixed": false,
+      "raw": "info"
+     },
+     "serializedName": "info",
+     "modelType": {
+      "$id": "377",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "378",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "ErrorDetails",
+   "documentation": "An object containing security-related data.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "379",
+    "fixed": false,
+    "raw": "ErrorDetails"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ErrorDetails",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/ErrorDetails"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "380",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "381",
+     "isReadOnly": true,
+     "realPath": [
+      "success"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "382",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "383",
+      "fixed": false,
+      "raw": "False whenever a requested resource is not available or an API call fails for another reason."
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "384",
+      "fixed": false,
+      "raw": "success"
+     },
+     "serializedName": "success",
+     "modelType": {
+      "$id": "385",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "386",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "387",
+     "isReadOnly": false,
+     "realPath": [
+      "error"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "388",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "389",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "390",
+      "fixed": false,
+      "raw": "error"
+     },
+     "serializedName": "error",
+     "modelType": {
+      "$ref": "347"
+     }
+    }
+   ],
+   "serializedName": "ErrorResponse",
+   "documentation": "An object containing security-related data.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "391",
+    "fixed": false,
+    "raw": "ErrorResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ErrorResponse",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/schemas/ErrorResponse"
+     ]
+    }
+   },
+   "deprecated": false
+  }
+ ],
+ "enumTypes": [
+  {
+   "$ref": "251"
+  },
+  {
+   "$ref": "161"
+  },
+  {
+   "$ref": "184"
+  },
+  {
+   "$ref": "211"
+  },
+  {
+   "$ref": "222"
+  },
+  {
+   "$ref": "358"
+  }
+ ],
+ "name": "IpstackAPI",
+ "namespace": "WX.B2C.User.Verification.IpStack.Client",
+ "modelsName": "Models",
+ "apiVersion": "3.0.0",
+ "baseUrl": "http://api.ipstack.com",
+ "documentation": "ipstack offers a powerful, real-time IP to geolocation API capable of looking up accurate location data and assessing security threats originating from risky IP addresses. (https://ipstack.com/documentation)",
+ "properties": [
+  {
+   "$id": "392",
+   "isReadOnly": false,
+   "realPath": [
+    "access_key"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "393",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "394",
+    "fixed": false,
+    "raw": "Your API Access Key is your unique authentication key used to gain access to the ipstack API. In order to authenticate with the API, append the access_key parameter to the API's base URL and set it to your access key value."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "AccessKey",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/AccessKey"
+     ]
+    }
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "395",
+    "fixed": false,
+    "raw": "access_key"
+   },
+   "serializedName": "access_key",
+   "modelType": {
+    "$id": "396",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "397",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "398",
+   "isReadOnly": false,
+   "realPath": [
+    "ip_address"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "399",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "400",
+    "fixed": false,
+    "raw": "Any IPv4 or IPv6 address; you can also enter a domain URL to have ipstack resolve the domain to the underlying IP address."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·ojkupp·ip_address·get·parameters·1",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·ojkupp·ip_address·get·parameters·1"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "401",
+    "fixed": false,
+    "raw": "ip_address"
+   },
+   "serializedName": "ip_address",
+   "modelType": {
+    "$id": "402",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "403",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "404",
+   "isReadOnly": false,
+   "realPath": [
+    "fields"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "405",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "406",
+    "fixed": false,
+    "raw": "Set to your preferred output field(s) according to the Specify Output Fields section. (https://ipstack.com/documentation#fields)."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·8fmu7c·ip_address·get·parameters·2",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·8fmu7c·ip_address·get·parameters·2"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "407",
+    "fixed": false,
+    "raw": "fields"
+   },
+   "serializedName": "fields",
+   "modelType": {
+    "$id": "408",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "409",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "410",
+   "isReadOnly": false,
+   "realPath": [
+    "hostname"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "411",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "412",
+    "fixed": false,
+    "raw": "Set to 1 to enable Hostname Lookup. (https://ipstack.com/documentation#hostname)."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1v2wz6e·ip_address·get·parameters·3",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1v2wz6e·ip_address·get·parameters·3"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "413",
+    "fixed": false,
+    "raw": "hostname"
+   },
+   "serializedName": "hostname",
+   "modelType": {
+    "$id": "414",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "boolean",
+    "name": {
+     "$id": "415",
+     "fixed": false,
+     "raw": "Boolean"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "416",
+   "isReadOnly": false,
+   "realPath": [
+    "security"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "417",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "418",
+    "fixed": false,
+    "raw": "Set to 1 to enable the Security module. (https://ipstack.com/documentation#security)."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1mrjtai·ip_address·get·parameters·4",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1mrjtai·ip_address·get·parameters·4"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "419",
+    "fixed": false,
+    "raw": "security"
+   },
+   "serializedName": "security",
+   "modelType": {
+    "$id": "420",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "boolean",
+    "name": {
+     "$id": "421",
+     "fixed": false,
+     "raw": "Boolean"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "422",
+   "isReadOnly": false,
+   "realPath": [
+    "language"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "423",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "424",
+    "fixed": false,
+    "raw": "Set to a 2-letter language code according to the Specify Output Language section to change output language."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·5yum60·ip_address·get·parameters·5",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·5yum60·ip_address·get·parameters·5"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "425",
+    "fixed": false,
+    "raw": "language"
+   },
+   "serializedName": "language",
+   "modelType": {
+    "$id": "426",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "427",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "428",
+   "isReadOnly": false,
+   "realPath": [
+    "callback"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "429",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "430",
+    "fixed": false,
+    "raw": "Specify a JSONP callback function name according to the JSONP Callbacks section."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·urvmsw·ip_address·get·parameters·6",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·urvmsw·ip_address·get·parameters·6"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "431",
+    "fixed": false,
+    "raw": "callback"
+   },
+   "serializedName": "callback",
+   "modelType": {
+    "$id": "432",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "433",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "434",
+   "isReadOnly": false,
+   "realPath": [
+    "output"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "435",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "436",
+    "fixed": false,
+    "raw": "Set to json or xml to choose between output formats."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1iog0ik·ip_address·get·parameters·7",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1iog0ik·ip_address·get·parameters·7"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "437",
+    "fixed": false,
+    "raw": "output"
+   },
+   "serializedName": "output",
+   "modelType": {
+    "$id": "438",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "439",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "440",
+   "isReadOnly": false,
+   "realPath": [
+    "ip_addresses"
+   ],
+   "collectionFormat": "csv",
+   "defaultValue": {
+    "$id": "441",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "442",
+    "fixed": false,
+    "raw": "A comma-separated list of IPv4 or IPv6 addresses; you can also enter a domain URLs to have ipstack resolve the domains to their underlying IP addresses. (Maximum allowed values: 50)"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·wxlzb2·ip_addresses·get·parameters·1",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·wxlzb2·ip_addresses·get·parameters·1"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "443",
+    "fixed": false,
+    "raw": "ip_addresses"
+   },
+   "serializedName": "ip_addresses",
+   "modelType": {
+    "$id": "444",
+    "$type": "SequenceType",
+    "elementType": {
+     "$id": "445",
+     "$type": "PrimaryType",
+     "knownPrimaryType": "string",
+     "name": {
+      "$id": "446",
+      "fixed": false,
+      "raw": "String"
+     },
+     "deprecated": false
+    },
+    "name": {
+     "$id": "447",
+     "fixed": false
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "448",
+   "isReadOnly": false,
+   "realPath": [
+    "fields"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "449",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "450",
+    "fixed": false,
+    "raw": "Set to your preferred output field(s) according to the Specify Output Fields section. (https://ipstack.com/documentation#fields)."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1rgomga·ip_addresses·get·parameters·2",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1rgomga·ip_addresses·get·parameters·2"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "451",
+    "fixed": false,
+    "raw": "Fields1"
+   },
+   "serializedName": "fields",
+   "modelType": {
+    "$id": "452",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "453",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "454",
+   "isReadOnly": false,
+   "realPath": [
+    "hostname"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "455",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "456",
+    "fixed": false,
+    "raw": "Set to 1 to enable Hostname Lookup. (https://ipstack.com/documentation#hostname)."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1csp2fj·ip_addresses·get·parameters·3",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1csp2fj·ip_addresses·get·parameters·3"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "457",
+    "fixed": false,
+    "raw": "Hostname1"
+   },
+   "serializedName": "hostname",
+   "modelType": {
+    "$id": "458",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "boolean",
+    "name": {
+     "$id": "459",
+     "fixed": false,
+     "raw": "Boolean"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "460",
+   "isReadOnly": false,
+   "realPath": [
+    "security"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "461",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "462",
+    "fixed": false,
+    "raw": "Set to 1 to enable the Security module. (https://ipstack.com/documentation#security)."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·153upgi·ip_addresses·get·parameters·4",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·153upgi·ip_addresses·get·parameters·4"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "463",
+    "fixed": false,
+    "raw": "Security1"
+   },
+   "serializedName": "security",
+   "modelType": {
+    "$id": "464",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "boolean",
+    "name": {
+     "$id": "465",
+     "fixed": false,
+     "raw": "Boolean"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "466",
+   "isReadOnly": false,
+   "realPath": [
+    "language"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "467",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "468",
+    "fixed": false,
+    "raw": "Set to a 2-letter language code according to the Specify Output Language section to change output language."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1bgkxq1·ip_addresses·get·parameters·5",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1bgkxq1·ip_addresses·get·parameters·5"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "469",
+    "fixed": false,
+    "raw": "Language1"
+   },
+   "serializedName": "language",
+   "modelType": {
+    "$id": "470",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "471",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "472",
+   "isReadOnly": false,
+   "realPath": [
+    "callback"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "473",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "474",
+    "fixed": false,
+    "raw": "Specify a JSONP callback function name according to the JSONP Callbacks section."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·182ojgm·ip_addresses·get·parameters·6",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·182ojgm·ip_addresses·get·parameters·6"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "475",
+    "fixed": false,
+    "raw": "Callback1"
+   },
+   "serializedName": "callback",
+   "modelType": {
+    "$id": "476",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "477",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "478",
+   "isReadOnly": false,
+   "realPath": [
+    "output"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "479",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "480",
+    "fixed": false,
+    "raw": "Set to json or xml to choose between output formats."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1qk33b4·ip_addresses·get·parameters·7",
+     "originalLocations": [
+      "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1qk33b4·ip_addresses·get·parameters·7"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "481",
+    "fixed": false,
+    "raw": "Output1"
+   },
+   "serializedName": "output",
+   "modelType": {
+    "$id": "482",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "483",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  }
+ ],
+ "operations": [
+  {
+   "$id": "484",
+   "methods": [
+    {
+     "$id": "485",
+     "parameters": [
+      {
+       "$id": "486",
+       "clientProperty": {
+        "$ref": "392"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "487",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "488",
+        "fixed": false,
+        "raw": "Your API Access Key is your unique authentication key used to gain access to the ipstack API. In order to authenticate with the API, append the access_key parameter to the API's base URL and set it to your access key value."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "AccessKey",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/AccessKey"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "489",
+        "fixed": false,
+        "raw": "access_key"
+       },
+       "serializedName": "access_key",
+       "modelType": {
+        "$id": "490",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "491",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "492",
+       "clientProperty": {
+        "$ref": "398"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "493",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "494",
+        "fixed": false,
+        "raw": "Any IPv4 or IPv6 address; you can also enter a domain URL to have ipstack resolve the domain to the underlying IP address."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·ojkupp·ip_address·get·parameters·1",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·ojkupp·ip_address·get·parameters·1"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "495",
+        "fixed": false,
+        "raw": "ip_address"
+       },
+       "serializedName": "ip_address",
+       "modelType": {
+        "$id": "496",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "497",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "498",
+       "clientProperty": {
+        "$ref": "404"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "499",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "500",
+        "fixed": false,
+        "raw": "Set to your preferred output field(s) according to the Specify Output Fields section. (https://ipstack.com/documentation#fields)."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·8fmu7c·ip_address·get·parameters·2",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·8fmu7c·ip_address·get·parameters·2"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "501",
+        "fixed": false,
+        "raw": "fields"
+       },
+       "serializedName": "fields",
+       "modelType": {
+        "$id": "502",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "503",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "504",
+       "clientProperty": {
+        "$ref": "410"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "505",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "506",
+        "fixed": false,
+        "raw": "Set to 1 to enable Hostname Lookup. (https://ipstack.com/documentation#hostname)."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1v2wz6e·ip_address·get·parameters·3",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1v2wz6e·ip_address·get·parameters·3"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "507",
+        "fixed": false,
+        "raw": "hostname"
+       },
+       "serializedName": "hostname",
+       "modelType": {
+        "$id": "508",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "boolean",
+        "name": {
+         "$id": "509",
+         "fixed": false,
+         "raw": "Boolean"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "510",
+       "clientProperty": {
+        "$ref": "416"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "511",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "512",
+        "fixed": false,
+        "raw": "Set to 1 to enable the Security module. (https://ipstack.com/documentation#security)."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1mrjtai·ip_address·get·parameters·4",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1mrjtai·ip_address·get·parameters·4"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "513",
+        "fixed": false,
+        "raw": "security"
+       },
+       "serializedName": "security",
+       "modelType": {
+        "$id": "514",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "boolean",
+        "name": {
+         "$id": "515",
+         "fixed": false,
+         "raw": "Boolean"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "516",
+       "clientProperty": {
+        "$ref": "422"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "517",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "518",
+        "fixed": false,
+        "raw": "Set to a 2-letter language code according to the Specify Output Language section to change output language."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·5yum60·ip_address·get·parameters·5",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·5yum60·ip_address·get·parameters·5"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "519",
+        "fixed": false,
+        "raw": "language"
+       },
+       "serializedName": "language",
+       "modelType": {
+        "$id": "520",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "521",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "522",
+       "clientProperty": {
+        "$ref": "428"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "523",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "524",
+        "fixed": false,
+        "raw": "Specify a JSONP callback function name according to the JSONP Callbacks section."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·urvmsw·ip_address·get·parameters·6",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·urvmsw·ip_address·get·parameters·6"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "525",
+        "fixed": false,
+        "raw": "callback"
+       },
+       "serializedName": "callback",
+       "modelType": {
+        "$id": "526",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "527",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "528",
+       "clientProperty": {
+        "$ref": "434"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "529",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "530",
+        "fixed": false,
+        "raw": "Set to json or xml to choose between output formats."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1iog0ik·ip_address·get·parameters·7",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1iog0ik·ip_address·get·parameters·7"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "531",
+        "fixed": false,
+        "raw": "output"
+       },
+       "serializedName": "output",
+       "modelType": {
+        "$id": "532",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "533",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "534",
+      "fixed": false,
+      "raw": "Lookup"
+     },
+     "group": {
+      "$id": "535",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "Lookup",
+     "url": "/{ip_address}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "536",
+       "body": {
+        "$ref": "234"
+       },
+       "extensions": {
+        "$id": "537",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·qaiu8q·ip_address·get·responses·200",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/responses/paths·qaiu8q·ip_address·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "538",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "539",
+      "body": {
+       "$ref": "234"
+      },
+      "isNullable": true
+     },
+     "summary": "The ipstack's primary endpoint is called Standard Lookup and is used to look up single IPv4 or IPv6 addresses.",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "url": "http://api.ipstack.com",
+        "description": "API via HTTP"
+       },
+       {
+        "url": "https://api.ipstack.com",
+        "description": "API via HTTPS"
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "540",
+     "parameters": [
+      {
+       "$id": "541",
+       "clientProperty": {
+        "$ref": "392"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "542",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "543",
+        "fixed": false,
+        "raw": "Your API Access Key is your unique authentication key used to gain access to the ipstack API. In order to authenticate with the API, append the access_key parameter to the API's base URL and set it to your access key value."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "AccessKey",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/AccessKey"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "544",
+        "fixed": false,
+        "raw": "access_key"
+       },
+       "serializedName": "access_key",
+       "modelType": {
+        "$id": "545",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "546",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "547",
+       "clientProperty": {
+        "$ref": "440"
+       },
+       "location": "path",
+       "collectionFormat": "csv",
+       "defaultValue": {
+        "$id": "548",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "549",
+        "fixed": false,
+        "raw": "A comma-separated list of IPv4 or IPv6 addresses; you can also enter a domain URLs to have ipstack resolve the domains to their underlying IP addresses. (Maximum allowed values: 50)"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·wxlzb2·ip_addresses·get·parameters·1",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·wxlzb2·ip_addresses·get·parameters·1"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "550",
+        "fixed": false,
+        "raw": "ip_addresses"
+       },
+       "serializedName": "ip_addresses",
+       "modelType": {
+        "$id": "551",
+        "$type": "SequenceType",
+        "elementType": {
+         "$id": "552",
+         "$type": "PrimaryType",
+         "knownPrimaryType": "string",
+         "name": {
+          "$id": "553",
+          "fixed": false,
+          "raw": "String"
+         },
+         "deprecated": false
+        },
+        "name": {
+         "$id": "554",
+         "fixed": false
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "555",
+       "clientProperty": {
+        "$ref": "404"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "556",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "557",
+        "fixed": false,
+        "raw": "Set to your preferred output field(s) according to the Specify Output Fields section. (https://ipstack.com/documentation#fields)."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1rgomga·ip_addresses·get·parameters·2",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1rgomga·ip_addresses·get·parameters·2"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "558",
+        "fixed": false,
+        "raw": "fields"
+       },
+       "serializedName": "fields",
+       "modelType": {
+        "$id": "559",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "560",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "561",
+       "clientProperty": {
+        "$ref": "410"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "562",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "563",
+        "fixed": false,
+        "raw": "Set to 1 to enable Hostname Lookup. (https://ipstack.com/documentation#hostname)."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1csp2fj·ip_addresses·get·parameters·3",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1csp2fj·ip_addresses·get·parameters·3"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "564",
+        "fixed": false,
+        "raw": "hostname"
+       },
+       "serializedName": "hostname",
+       "modelType": {
+        "$id": "565",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "boolean",
+        "name": {
+         "$id": "566",
+         "fixed": false,
+         "raw": "Boolean"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "567",
+       "clientProperty": {
+        "$ref": "416"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "568",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "569",
+        "fixed": false,
+        "raw": "Set to 1 to enable the Security module. (https://ipstack.com/documentation#security)."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·153upgi·ip_addresses·get·parameters·4",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·153upgi·ip_addresses·get·parameters·4"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "570",
+        "fixed": false,
+        "raw": "security"
+       },
+       "serializedName": "security",
+       "modelType": {
+        "$id": "571",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "boolean",
+        "name": {
+         "$id": "572",
+         "fixed": false,
+         "raw": "Boolean"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "573",
+       "clientProperty": {
+        "$ref": "422"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "574",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "575",
+        "fixed": false,
+        "raw": "Set to a 2-letter language code according to the Specify Output Language section to change output language."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1bgkxq1·ip_addresses·get·parameters·5",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1bgkxq1·ip_addresses·get·parameters·5"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "576",
+        "fixed": false,
+        "raw": "language"
+       },
+       "serializedName": "language",
+       "modelType": {
+        "$id": "577",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "578",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "579",
+       "clientProperty": {
+        "$ref": "428"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "580",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "581",
+        "fixed": false,
+        "raw": "Specify a JSONP callback function name according to the JSONP Callbacks section."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·182ojgm·ip_addresses·get·parameters·6",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·182ojgm·ip_addresses·get·parameters·6"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "582",
+        "fixed": false,
+        "raw": "callback"
+       },
+       "serializedName": "callback",
+       "modelType": {
+        "$id": "583",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "584",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "585",
+       "clientProperty": {
+        "$ref": "434"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "586",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "587",
+        "fixed": false,
+        "raw": "Set to json or xml to choose between output formats."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1qk33b4·ip_addresses·get·parameters·7",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/parameters/paths·1qk33b4·ip_addresses·get·parameters·7"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "588",
+        "fixed": false,
+        "raw": "output"
+       },
+       "serializedName": "output",
+       "modelType": {
+        "$id": "589",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "590",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "591",
+      "fixed": false,
+      "raw": "BulkLookup"
+     },
+     "group": {
+      "$id": "592",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "BulkLookup",
+     "url": "/{ip_addresses}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "593",
+       "body": {
+        "$id": "594",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "234"
+        },
+        "name": {
+         "$id": "595",
+         "fixed": false
+        },
+        "deprecated": false
+       },
+       "extensions": {
+        "$id": "596",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·yand04·ip_addresses·get·responses·200",
+         "originalLocations": [
+          "file:///C:/Projects/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.IpStack.Client/openapi.json#/components/responses/paths·yand04·ip_addresses·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "597",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "598",
+      "body": {
+       "$ref": "594"
+      },
+      "isNullable": true
+     },
+     "summary": "The ipstack's endpoint to request data for multiple IPv4 or IPv6 addresses at the same time.",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "url": "http://api.ipstack.com",
+        "description": "API via HTTP"
+       },
+       {
+        "url": "https://api.ipstack.com",
+        "description": "API via HTTPS"
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "599",
+    "fixed": false,
+    "raw": ""
+   },
+   "typeName": {
+    "$id": "600",
+    "fixed": false
+   },
+   "nameForProperty": "IpstackAPI"
+  }
+ ]
+}

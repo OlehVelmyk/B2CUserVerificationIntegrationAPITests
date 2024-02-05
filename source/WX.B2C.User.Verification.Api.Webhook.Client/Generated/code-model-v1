@@ -1,0 +1,2500 @@
+{
+ "$id": "1",
+ "modelTypes": [
+  {
+   "$id": "2",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "3",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "4",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "5",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "6",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "7",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "8",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "9",
+     "isReadOnly": false,
+     "realPath": [
+      "name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "10",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "11",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "12",
+      "fixed": false,
+      "raw": "name"
+     },
+     "serializedName": "name",
+     "modelType": {
+      "$id": "13",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "14",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "15",
+     "isReadOnly": false,
+     "realPath": [
+      "alias"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "16",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "17",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "18",
+      "fixed": false,
+      "raw": "alias"
+     },
+     "serializedName": "alias",
+     "modelType": {
+      "$id": "19",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "20",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "ProductDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "21",
+    "fixed": false,
+    "raw": "ProductDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ProductDto",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/ProductDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "22",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "23",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "24",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "25",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "26",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "27",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "28",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "29",
+     "isReadOnly": false,
+     "realPath": [
+      "product"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "30",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "31",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "32",
+      "fixed": false,
+      "raw": "product"
+     },
+     "serializedName": "product",
+     "modelType": {
+      "$ref": "2"
+     }
+    },
+    {
+     "$id": "33",
+     "isReadOnly": false,
+     "realPath": [
+      "status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "34",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "35",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "36",
+      "fixed": false,
+      "raw": "status"
+     },
+     "serializedName": "status",
+     "modelType": {
+      "$id": "37",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "38",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "ApplicationDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "39",
+    "fixed": false,
+    "raw": "ApplicationDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ApplicationDto",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/ApplicationDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "40",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "41",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "42",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "43",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "44",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "45",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "46",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "47",
+     "isReadOnly": false,
+     "realPath": [
+      "name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "48",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "49",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "50",
+      "fixed": false,
+      "raw": "name"
+     },
+     "serializedName": "name",
+     "modelType": {
+      "$id": "51",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "52",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "53",
+     "isReadOnly": false,
+     "realPath": [
+      "alias"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "54",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "55",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "56",
+      "fixed": false,
+      "raw": "alias"
+     },
+     "serializedName": "alias",
+     "modelType": {
+      "$id": "57",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "58",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "VariantDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "59",
+    "fixed": false,
+    "raw": "VariantDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "VariantDto",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/VariantDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "60",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "61",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "62",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "63",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "64",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "65",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "66",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "67",
+     "isReadOnly": false,
+     "realPath": [
+      "state"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "68",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "69",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "70",
+      "fixed": false,
+      "raw": "state"
+     },
+     "serializedName": "state",
+     "modelType": {
+      "$id": "71",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "72",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "73",
+     "isReadOnly": false,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "74",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "75",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "76",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "77",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "78",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "79",
+     "isReadOnly": false,
+     "realPath": [
+      "variant"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "80",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "81",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "82",
+      "fixed": false,
+      "raw": "variant"
+     },
+     "serializedName": "variant",
+     "modelType": {
+      "$ref": "40"
+     }
+    }
+   ],
+   "serializedName": "TaskDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "83",
+    "fixed": false,
+    "raw": "TaskDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "TaskDto",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/TaskDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "84",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "85",
+     "isReadOnly": false,
+     "realPath": [
+      "action_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "86",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "87",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "88",
+      "fixed": false,
+      "raw": "action_type"
+     },
+     "serializedName": "action_type",
+     "modelType": {
+      "$id": "89",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "90",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "91",
+     "isReadOnly": false,
+     "realPath": [
+      "applications"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "92",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "93",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "94",
+      "fixed": false,
+      "raw": "applications"
+     },
+     "serializedName": "applications",
+     "modelType": {
+      "$id": "95",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "22"
+      },
+      "name": {
+       "$id": "96",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "97",
+     "isReadOnly": false,
+     "realPath": [
+      "due"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "98",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "99",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "100",
+      "fixed": false,
+      "raw": "due"
+     },
+     "serializedName": "due",
+     "modelType": {
+      "$id": "101",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "102",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "103",
+     "isReadOnly": false,
+     "realPath": [
+      "task"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "104",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "105",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "106",
+      "fixed": false,
+      "raw": "task"
+     },
+     "serializedName": "task",
+     "modelType": {
+      "$ref": "60"
+     }
+    }
+   ],
+   "serializedName": "ActionDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "107",
+    "fixed": false,
+    "raw": "ActionDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ActionDto",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/ActionDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "108",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "109",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "110",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "111",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "112",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "113",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "114",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "115",
+     "isReadOnly": false,
+     "realPath": [
+      "check_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "116",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "117",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "118",
+      "fixed": false,
+      "raw": "check_type"
+     },
+     "serializedName": "check_type",
+     "modelType": {
+      "$id": "119",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "120",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "121",
+     "isReadOnly": false,
+     "realPath": [
+      "result"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "122",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "123",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "124",
+      "fixed": false,
+      "raw": "result"
+     },
+     "serializedName": "result",
+     "modelType": {
+      "$id": "125",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "126",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "CheckDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "127",
+    "fixed": false,
+    "raw": "CheckDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "CheckDto",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/CheckDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "128",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "129",
+     "isReadOnly": false,
+     "realPath": [
+      "check"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "130",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "131",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "132",
+      "fixed": false,
+      "raw": "check"
+     },
+     "serializedName": "check",
+     "modelType": {
+      "$ref": "108"
+     }
+    }
+   ],
+   "serializedName": "CheckCompletedData",
+   "baseModelType": {
+    "$id": "133",
+    "$type": "CompositeType",
+    "properties": [
+     {
+      "$id": "134",
+      "isReadOnly": false,
+      "realPath": [
+       "customer_ref"
+      ],
+      "collectionFormat": "none",
+      "defaultValue": {
+       "$id": "135",
+       "fixed": false
+      },
+      "deprecated": false,
+      "documentation": {
+       "$id": "136",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": true
+      },
+      "isRequired": false,
+      "isConstant": false,
+      "name": {
+       "$id": "137",
+       "fixed": false,
+       "raw": "customer_ref"
+      },
+      "serializedName": "customer_ref",
+      "modelType": {
+       "$id": "138",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "139",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      }
+     },
+     {
+      "$id": "140",
+      "isReadOnly": false,
+      "realPath": [
+       "profile_id"
+      ],
+      "collectionFormat": "none",
+      "defaultValue": {
+       "$id": "141",
+       "fixed": false
+      },
+      "deprecated": false,
+      "documentation": {
+       "$id": "142",
+       "fixed": false
+      },
+      "isRequired": true,
+      "isConstant": false,
+      "name": {
+       "$id": "143",
+       "fixed": false,
+       "raw": "profile_id"
+      },
+      "serializedName": "profile_id",
+      "modelType": {
+       "$id": "144",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "145",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      }
+     }
+    ],
+    "serializedName": "Data",
+    "containsConstantProperties": false,
+    "name": {
+     "$id": "146",
+     "fixed": false,
+     "raw": "Data"
+    },
+    "extensions": {
+     "x-ms-metadata": {
+      "apiVersions": [
+       "1.0"
+      ],
+      "filename": [
+       "mem:///110?oai3.shaken.json"
+      ],
+      "name": "Data",
+      "originalLocations": [
+       "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/Data"
+      ]
+     }
+    },
+    "deprecated": false
+   },
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "147",
+    "fixed": false,
+    "raw": "CheckCompletedData"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "CheckCompletedData",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/CheckCompletedData"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$ref": "133"
+  },
+  {
+   "$id": "148",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "149",
+     "isReadOnly": false,
+     "realPath": [
+      "actions"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "150",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "151",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "152",
+      "fixed": false,
+      "raw": "actions"
+     },
+     "serializedName": "actions",
+     "modelType": {
+      "$id": "153",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "84"
+      },
+      "name": {
+       "$id": "154",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "ManualActionRequiredData",
+   "baseModelType": {
+    "$ref": "133"
+   },
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "155",
+    "fixed": false,
+    "raw": "ManualActionRequiredData"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ManualActionRequiredData",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/ManualActionRequiredData"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "156",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "157",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "158",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "159",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "160",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "161",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "162",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "163",
+     "isReadOnly": false,
+     "realPath": [
+      "status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "164",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "165",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "166",
+      "fixed": false,
+      "raw": "status"
+     },
+     "serializedName": "status",
+     "modelType": {
+      "$id": "167",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "168",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "169",
+     "isReadOnly": false,
+     "realPath": [
+      "completed_at"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "170",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "171",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "172",
+      "fixed": false,
+      "raw": "completed_at"
+     },
+     "serializedName": "completed_at",
+     "modelType": {
+      "$id": "173",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "174",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "175",
+     "isReadOnly": false,
+     "realPath": [
+      "href"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "176",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "177",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "178",
+      "fixed": false,
+      "raw": "href"
+     },
+     "serializedName": "href",
+     "modelType": {
+      "$id": "179",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "180",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Object",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "181",
+    "fixed": false,
+    "raw": "Object"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Object",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/Object"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "182",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "183",
+     "isReadOnly": false,
+     "realPath": [
+      "resource_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "184",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "185",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "186",
+      "fixed": false,
+      "raw": "resource_type"
+     },
+     "serializedName": "resource_type",
+     "modelType": {
+      "$id": "187",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "188",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "189",
+     "isReadOnly": false,
+     "realPath": [
+      "action"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "190",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "191",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "192",
+      "fixed": false,
+      "raw": "action"
+     },
+     "serializedName": "action",
+     "modelType": {
+      "$id": "193",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "194",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "195",
+     "isReadOnly": false,
+     "realPath": [
+      "object"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "196",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "197",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "198",
+      "fixed": false,
+      "raw": "object"
+     },
+     "serializedName": "object",
+     "modelType": {
+      "$ref": "156"
+     }
+    }
+   ],
+   "serializedName": "Payload",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "199",
+    "fixed": false,
+    "raw": "Payload"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Payload",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/Payload"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "200",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "201",
+     "isReadOnly": false,
+     "realPath": [
+      "payload"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "202",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "203",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "204",
+      "fixed": false,
+      "raw": "payload"
+     },
+     "serializedName": "payload",
+     "modelType": {
+      "$ref": "182"
+     }
+    }
+   ],
+   "serializedName": "OnfidoEventRequest",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "205",
+    "fixed": false,
+    "raw": "OnfidoEventRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "OnfidoEventRequest",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/OnfidoEventRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "206",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "207",
+     "isReadOnly": false,
+     "realPath": [
+      "data"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "208",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "209",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "210",
+      "fixed": false,
+      "raw": "data"
+     },
+     "serializedName": "data",
+     "modelType": {
+      "$ref": "128"
+     }
+    }
+   ],
+   "serializedName": "PassFortCheckCompletedEventRequest",
+   "baseModelType": {
+    "$id": "211",
+    "$type": "CompositeType",
+    "properties": [
+     {
+      "$id": "212",
+      "isReadOnly": false,
+      "realPath": [
+       "id"
+      ],
+      "collectionFormat": "none",
+      "defaultValue": {
+       "$id": "213",
+       "fixed": false
+      },
+      "deprecated": false,
+      "documentation": {
+       "$id": "214",
+       "fixed": false
+      },
+      "isRequired": true,
+      "isConstant": false,
+      "name": {
+       "$id": "215",
+       "fixed": false,
+       "raw": "id"
+      },
+      "serializedName": "id",
+      "modelType": {
+       "$id": "216",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "217",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      }
+     },
+     {
+      "$id": "218",
+      "isReadOnly": false,
+      "realPath": [
+       "event"
+      ],
+      "collectionFormat": "none",
+      "defaultValue": {
+       "$id": "219",
+       "fixed": false
+      },
+      "deprecated": false,
+      "documentation": {
+       "$id": "220",
+       "fixed": false
+      },
+      "isRequired": true,
+      "isConstant": false,
+      "name": {
+       "$id": "221",
+       "fixed": false,
+       "raw": "event"
+      },
+      "serializedName": "event",
+      "modelType": {
+       "$id": "222",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "223",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      }
+     },
+     {
+      "$id": "224",
+      "isReadOnly": false,
+      "realPath": [
+       "timestamp"
+      ],
+      "collectionFormat": "none",
+      "defaultValue": {
+       "$id": "225",
+       "fixed": false
+      },
+      "deprecated": false,
+      "documentation": {
+       "$id": "226",
+       "fixed": false
+      },
+      "isRequired": true,
+      "isConstant": false,
+      "name": {
+       "$id": "227",
+       "fixed": false,
+       "raw": "timestamp"
+      },
+      "serializedName": "timestamp",
+      "modelType": {
+       "$id": "228",
+       "$type": "PrimaryType",
+       "format": "int64",
+       "knownPrimaryType": "long",
+       "name": {
+        "$id": "229",
+        "fixed": false,
+        "raw": "Long"
+       },
+       "deprecated": false
+      }
+     }
+    ],
+    "serializedName": "PassFortEventRequest",
+    "containsConstantProperties": false,
+    "name": {
+     "$id": "230",
+     "fixed": false,
+     "raw": "PassFortEventRequest"
+    },
+    "extensions": {
+     "x-ms-metadata": {
+      "apiVersions": [
+       "1.0"
+      ],
+      "filename": [
+       "mem:///110?oai3.shaken.json"
+      ],
+      "name": "PassFortEventRequest",
+      "originalLocations": [
+       "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/PassFortEventRequest"
+      ]
+     }
+    },
+    "deprecated": false
+   },
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "231",
+    "fixed": false,
+    "raw": "PassFortCheckCompletedEventRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "PassFortCheckCompletedEventRequest",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/PassFortCheckCompletedEventRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$ref": "211"
+  },
+  {
+   "$id": "232",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "233",
+     "isReadOnly": false,
+     "realPath": [
+      "data"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "234",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "235",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "236",
+      "fixed": false,
+      "raw": "data"
+     },
+     "serializedName": "data",
+     "modelType": {
+      "$ref": "148"
+     }
+    }
+   ],
+   "serializedName": "PassFortManualActionRequiredEventRequest",
+   "baseModelType": {
+    "$ref": "211"
+   },
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "237",
+    "fixed": false,
+    "raw": "PassFortManualActionRequiredEventRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "PassFortManualActionRequiredEventRequest",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/PassFortManualActionRequiredEventRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "238",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "239",
+     "isReadOnly": false,
+     "realPath": [
+      "application_id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "240",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "241",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "242",
+      "fixed": false,
+      "raw": "application_id"
+     },
+     "serializedName": "application_id",
+     "modelType": {
+      "$id": "243",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "244",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "245",
+     "isReadOnly": false,
+     "realPath": [
+      "new_status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "246",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "247",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "248",
+      "fixed": false,
+      "raw": "new_status"
+     },
+     "serializedName": "new_status",
+     "modelType": {
+      "$id": "249",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "250",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "251",
+     "isReadOnly": false,
+     "realPath": [
+      "product"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "252",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "253",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "254",
+      "fixed": false,
+      "raw": "product"
+     },
+     "serializedName": "product",
+     "modelType": {
+      "$ref": "2"
+     }
+    }
+   ],
+   "serializedName": "ProductStatusChangedData",
+   "baseModelType": {
+    "$ref": "133"
+   },
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "255",
+    "fixed": false,
+    "raw": "ProductStatusChangedData"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ProductStatusChangedData",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/ProductStatusChangedData"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "256",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "257",
+     "isReadOnly": false,
+     "realPath": [
+      "data"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "258",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "259",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "260",
+      "fixed": false,
+      "raw": "data"
+     },
+     "serializedName": "data",
+     "modelType": {
+      "$ref": "238"
+     }
+    }
+   ],
+   "serializedName": "PassFortProductStatusChangedEventRequest",
+   "baseModelType": {
+    "$ref": "211"
+   },
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "261",
+    "fixed": false,
+    "raw": "PassFortProductStatusChangedEventRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "PassFortProductStatusChangedEventRequest",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/PassFortProductStatusChangedEventRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "262",
+   "$type": "CompositeType",
+   "serializedName": "UnsupportedPassFortEventRequest",
+   "baseModelType": {
+    "$ref": "211"
+   },
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "263",
+    "fixed": false,
+    "raw": "UnsupportedPassFortEventRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "UnsupportedPassFortEventRequest",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/schemas/UnsupportedPassFortEventRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  }
+ ],
+ "name": "WXB2CUserVerificationApiWebhook",
+ "namespace": "WX.B2C.User.Verification.Api.Webhook.Client",
+ "modelsName": "Models",
+ "apiVersion": "1.0",
+ "baseUrl": "http://localhost",
+ "properties": [
+  {
+   "$id": "264",
+   "isReadOnly": false,
+   "realPath": [
+    "api-version"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "265",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "266",
+    "fixed": false
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1ax4qri·healthcheck-ping·post·parameters·0",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/parameters/paths·1ax4qri·healthcheck-ping·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "267",
+    "fixed": false,
+    "raw": "api-version"
+   },
+   "serializedName": "api-version",
+   "modelType": {
+    "$id": "268",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "269",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "270",
+   "isReadOnly": false,
+   "realPath": [
+    "api-version"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "271",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "272",
+    "fixed": false
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·tqvj02·onfido-events·post·parameters·0",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/parameters/paths·tqvj02·onfido-events·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "273",
+    "fixed": false,
+    "raw": "ApiVersion1"
+   },
+   "serializedName": "api-version",
+   "modelType": {
+    "$id": "274",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "275",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "276",
+   "isReadOnly": false,
+   "realPath": [
+    "api-version"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "277",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "278",
+    "fixed": false
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·hjhfnf·passfort-events·post·parameters·0",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/parameters/paths·hjhfnf·passfort-events·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "279",
+    "fixed": false,
+    "raw": "ApiVersion2"
+   },
+   "serializedName": "api-version",
+   "modelType": {
+    "$id": "280",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "281",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  }
+ ],
+ "operations": [
+  {
+   "$id": "282",
+   "methods": [
+    {
+     "$id": "283",
+     "parameters": [
+      {
+       "$id": "284",
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "285",
+        "fixed": false,
+        "raw": "1.0"
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "286",
+        "fixed": false,
+        "raw": "The API version to use for the request."
+       },
+       "isRequired": true,
+       "isConstant": true,
+       "name": {
+        "$id": "287",
+        "fixed": false,
+        "raw": "api-version"
+       },
+       "serializedName": "api-version",
+       "modelType": {
+        "$id": "288",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "289",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "290",
+      "fixed": false,
+      "raw": "Post"
+     },
+     "group": {
+      "$id": "291",
+      "fixed": false,
+      "raw": "HealthCheck"
+     },
+     "serializedName": "HealthCheck_Post",
+     "url": "/healthcheck/ping",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "292",
+       "extensions": {
+        "$id": "293",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1cr4qsf·healthcheck-ping·post·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/responses/paths·1cr4qsf·healthcheck-ping·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "294",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "295",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "296",
+    "fixed": false,
+    "raw": "HealthCheck"
+   },
+   "typeName": {
+    "$id": "297",
+    "fixed": false
+   },
+   "nameForProperty": "HealthCheck"
+  },
+  {
+   "$id": "298",
+   "methods": [
+    {
+     "$id": "299",
+     "parameters": [
+      {
+       "$id": "300",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "301",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "302",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·c37ort·onfido-events·post·requestbody",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/requestBodies/paths·c37ort·onfido-events·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "303",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "200"
+       }
+      },
+      {
+       "$id": "304",
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "305",
+        "fixed": false,
+        "raw": "1.0"
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "306",
+        "fixed": false,
+        "raw": "The API version to use for the request."
+       },
+       "isRequired": true,
+       "isConstant": true,
+       "name": {
+        "$id": "307",
+        "fixed": false,
+        "raw": "api-version"
+       },
+       "serializedName": "api-version",
+       "modelType": {
+        "$id": "308",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "309",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "310",
+      "fixed": false,
+      "raw": "Post"
+     },
+     "group": {
+      "$id": "311",
+      "fixed": false,
+      "raw": "Onfido"
+     },
+     "serializedName": "Onfido_Post",
+     "url": "/onfido/events",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "312",
+       "extensions": {
+        "$id": "313",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·n80xw1·onfido-events·post·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/responses/paths·n80xw1·onfido-events·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "314",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "315",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "316",
+    "fixed": false,
+    "raw": "Onfido"
+   },
+   "typeName": {
+    "$id": "317",
+    "fixed": false
+   },
+   "nameForProperty": "Onfido"
+  },
+  {
+   "$id": "318",
+   "methods": [
+    {
+     "$id": "319",
+     "parameters": [
+      {
+       "$id": "320",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "321",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "322",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·f9v4mo·passfort-events·post·requestbody",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/requestBodies/paths·f9v4mo·passfort-events·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "323",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "211"
+       }
+      },
+      {
+       "$id": "324",
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "325",
+        "fixed": false,
+        "raw": "1.0"
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "326",
+        "fixed": false,
+        "raw": "The API version to use for the request."
+       },
+       "isRequired": true,
+       "isConstant": true,
+       "name": {
+        "$id": "327",
+        "fixed": false,
+        "raw": "api-version"
+       },
+       "serializedName": "api-version",
+       "modelType": {
+        "$id": "328",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "329",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "330",
+      "fixed": false,
+      "raw": "Post"
+     },
+     "group": {
+      "$id": "331",
+      "fixed": false,
+      "raw": "PassFort"
+     },
+     "serializedName": "PassFort_Post",
+     "url": "/passfort/events",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "332",
+       "extensions": {
+        "$id": "333",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·y83s2f·passfort-events·post·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Webhook.Client/swagger.json#/components/responses/paths·y83s2f·passfort-events·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "334",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "335",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "336",
+    "fixed": false,
+    "raw": "PassFort"
+   },
+   "typeName": {
+    "$id": "337",
+    "fixed": false
+   },
+   "nameForProperty": "PassFort"
+  }
+ ]
+}

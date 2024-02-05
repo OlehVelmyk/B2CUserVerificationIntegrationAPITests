@@ -1,0 +1,4345 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Onfido API",
+    "description": "The Onfido API is used to submit check requests.",
+    "version": "3.2.0",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "externalDocs": {
+    "url": "https://documentation.onfido.com"
+  },
+  "servers": [
+    {
+      "url": "https://api.{region}.onfido.com/v3.2",
+      "variables": {
+        "region": {
+          "enum": [
+            "eu",
+            "us",
+            "ca"
+          ],
+          "default": "eu"
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "Token": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "Token": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    },
+    "schemas": {
+      "ApplicantAddress": {
+        "type": "object",
+        "properties": {
+          "flat_number": {
+            "type": "string",
+            "description": "The flat number of this address"
+          },
+          "building_number": {
+            "type": "string",
+            "description": "The building number of this address"
+          },
+          "building_name": {
+            "type": "string",
+            "description": "The building name of this address"
+          },
+          "street": {
+            "type": "string",
+            "description": "The street of the applicant’s address"
+          },
+          "sub_street": {
+            "type": "string",
+            "description": "The sub-street of the applicant’s address"
+          },
+          "town": {
+            "type": "string",
+            "description": "The town of the applicant’s address"
+          },
+          "postcode": {
+            "type": "string",
+            "description": "The postcode or ZIP of the applicant’s address"
+          },
+          "country": {
+            "type": "string",
+            "description": "The 3 character ISO country code of this address. For example, GBR is the country code for the United Kingdom"
+          },
+          "state": {
+            "type": "string",
+            "description": "The address state. US states must use the USPS abbreviation (see also ISO 3166-2:US), for example AK, CA, or TX."
+          },
+          "line1": {
+            "type": "string",
+            "description": "Line 1 of the applicant's address"
+          },
+          "line2": {
+            "type": "string",
+            "description": "Line 2 of the applicant's address"
+          },
+          "line3": {
+            "type": "string",
+            "description": "Line 3 of the applicant's address"
+          }
+        }
+      },
+      "ApplicantIdNumber": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Type of ID number. Valid values are `ssn`, `social_insurance`, `tax_id`, `identity_card`, `passport` and `driving_license`"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of ID number"
+          },
+          "state_code": {
+            "type": "string",
+            "description": "Two letter code of issuing state (state-issued driving licenses only)"
+          }
+        }
+      },
+      "NewApplicant": {
+        "type": "object",
+        "required": [
+          "first_name",
+          "last_name"
+        ],
+        "properties": {
+          "first_name": {
+            "type": "string",
+            "description": "The applicant’s first name"
+          },
+          "last_name": {
+            "type": "string",
+            "description": "The applicant’s surname"
+          },
+          "email": {
+            "type": "string",
+            "description": "The applicant’s email address. Required if doing a US check, or a UK check for which `applicant_provides_data` is `true`."
+          },
+          "dob": {
+            "type": "string",
+            "format": "date",
+            "description": "The applicant’s date of birth"
+          },
+          "address": {
+            "$ref": "#/components/schemas/ApplicantAddress"
+          },
+          "id_numbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicantIdNumber"
+            }
+          }
+        }
+      },
+      "Applicant": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The unique identifier for the applicant. Read-only."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true,
+            "description": "The date and time when this applicant was created. Read-only."
+          },
+          "delete_at": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true,
+            "description": "The date and time when this applicant is scheduled to be deleted. Read-only."
+          },
+          "href": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The uri of this resource. Read-only."
+          },
+          "sandbox": {
+            "type": "boolean",
+            "readOnly": true,
+            "description": "Read-only."
+          },
+          "first_name": {
+            "type": "string",
+            "description": "The applicant’s first name"
+          },
+          "last_name": {
+            "type": "string",
+            "description": "The applicant’s surname"
+          },
+          "email": {
+            "type": "string",
+            "description": "The applicant’s email address. Required if doing a US check, or a UK check for which `applicant_provides_data` is `true`."
+          },
+          "dob": {
+            "type": "string",
+            "format": "date",
+            "description": "The applicant’s date of birth"
+          },
+          "address": {
+            "$ref": "#/components/schemas/ApplicantAddress"
+          },
+          "id_numbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicantIdNumber"
+            }
+          }
+        }
+      },
+      "ApplicantList": {
+        "type": "object",
+        "properties": {
+          "applicants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Applicant"
+            }
+          }
+        }
+      },
+      "Document": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the document"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the document was uploaded"
+          },
+          "file_name": {
+            "type": "string",
+            "description": "The name of the uploaded file"
+          },
+          "file_size": {
+            "type": "integer",
+            "description": "The size of the file in bytes"
+          },
+          "file_type": {
+            "type": "string",
+            "description": "The file type of the uploaded file"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of document"
+          },
+          "side": {
+            "type": "string",
+            "description": "The side of the document, if applicable. The possible values are front and back"
+          },
+          "issuing_country": {
+            "type": "string",
+            "description": "The issuing country of the document, a 3-letter ISO code."
+          },
+          "href": {
+            "type": "string",
+            "description": "The uri of this resource"
+          },
+          "download_href": {
+            "type": "string",
+            "description": "The uri that can be used to download the document"
+          }
+        }
+      },
+      "DocumentList": {
+        "type": "object",
+        "properties": {
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            }
+          }
+        }
+      },
+      "LivePhoto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the photo."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the photo was uploaded."
+          },
+          "href": {
+            "type": "string",
+            "description": "The uri of this resource."
+          },
+          "download_href": {
+            "type": "string",
+            "description": "The uri that can be used to download the photo."
+          },
+          "file_name": {
+            "type": "string",
+            "description": "The name of the uploaded file."
+          },
+          "file_size": {
+            "type": "integer",
+            "description": "The size of the file in bytes."
+          },
+          "file_type": {
+            "type": "string",
+            "description": "The file type of the uploaded file."
+          }
+        }
+      },
+      "LivePhotoList": {
+        "type": "object",
+        "properties": {
+          "live_photos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LivePhoto"
+            }
+          }
+        }
+      },
+      "LiveVideo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the video."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the video was uploaded."
+          },
+          "href": {
+            "type": "string",
+            "description": "The uri of this resource."
+          },
+          "download_href": {
+            "type": "string",
+            "description": "The uri that can be used to download the video."
+          },
+          "file_name": {
+            "type": "string",
+            "description": "The name of the uploaded file."
+          },
+          "file_size": {
+            "type": "integer",
+            "description": "The size of the file in bytes."
+          },
+          "file_type": {
+            "type": "string",
+            "description": "The file type of the uploaded file."
+          }
+        }
+      },
+      "LiveVideoList": {
+        "type": "object",
+        "properties": {
+          "live_videos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LiveVideo"
+            }
+          }
+        }
+      },
+      "CheckRequest": {
+        "type": "object",
+        "required": [
+          "applicant_id",
+          "report_names"
+        ],
+        "properties": {
+          "applicant_id": {
+            "type": "string",
+            "description": "The ID of the applicant to do the check on."
+          },
+          "report_names": {
+            "description": "An array of report names (strings).",
+            "writeOnly": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "privacy_notices_read_consent_given": {
+            "type": "boolean",
+            "description": "Indicates whether the privacy notices and terms of service have been read and, where specific laws require, that consent has been given for Onfido."
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of tags being assigned to this check."
+          },
+          "applicant_provides_data": {
+            "type": "boolean",
+            "description": "Send an applicant form to applicant to complete to proceed with check. Defaults to false.\n"
+          },
+          "suppress_form_emails": {
+            "type": "boolean",
+            "writeOnly": true,
+            "description": "For checks where `applicant_provides_data` is `true`, applicant form will not be automatically sent if `suppress_form_emails` is set to `true`. You can manually send the form at any time after the check has been created, using the link found in the form_uri attribute of the check object. Write-only. Defaults to false.\n"
+          },
+          "asynchronous": {
+            "type": "boolean",
+            "writeOnly": true,
+            "description": "Defaults to `true`. Write-only. If set to `false`, you will only receive a response when all reports in your check have completed.\n"
+          },
+          "webhook_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional. An array of strings describing which webhooks to trigger for this check. By default, all webhooks registered in the account will be triggered and this value will be null in the responses."
+          },
+
+          "document_ids": {
+            "description": "Optional. Array of strings describing which document to process in checks containing a Document report or a Facial Similarity report, or both. By default, the most recently uploaded document is used. `document_ids` is only usable with Document and Facial Similarity reports.",
+            "type": "array",
+            "writeOnly": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "redirect_uri": {
+            "type": "string",
+            "readOnly": true,
+            "description": "For checks where `applicant_provides_data` is `true`, redirect to this URI when the applicant has submitted their data. Read-only."
+          },
+          "consider": {
+            "description": "Returns a pre-determined consider sub-result in sandbox for the specific reports in the consider array.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "writeOnly": true
+          }
+        }
+      },
+      "CheckResult": {
+        "enum": [
+          "clear",
+          "consider"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "CheckResult",
+          "modelAsString": true,
+          "values": [
+            {
+              "value": "clear",
+              "description": "If an individual report has passed, the result is clear."
+            },
+            {
+              "value": "consider",
+              "description": "If the report has failed to pass verification, the result is consider."
+            }
+          ]
+        }
+      },
+      "CheckStatus": {
+        "enum": [
+          "in_progress",
+          "awaiting_applicant",
+          "complete",
+          "withdrawn",
+          "paused",
+          "reopened"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "CheckStatus",
+          "modelAsString": true,
+          "values": [
+            {
+              "value": "in_progress",
+              "description": "We are currently processing the check."
+            },
+            {
+              "value": "awaiting_applicant",
+              "description": "The applicant has not yet submitted the applicant form, either because they have not started filling the form out or because they have started but have not finished."
+            },
+            {
+              "value": "complete",
+              "description": "All reports for the applicant have been completed or withdrawn."
+            },
+            {
+              "value": "withdrawn",
+              "description": "The check has been withdrawn."
+            },
+            {
+              "value": "paused",
+              "description": "The check is paused until you (the client) switch it on manually. Special case used by clients who wants to collect data and run the checks when they want and not immediately."
+            },
+            {
+              "value": "reopened",
+              "description": "Insufficient or inconsistent information was provided by the applicant, and the report has been bounced back for further information."
+            }
+          ]
+        }
+      },
+      "ReportStatus": {
+        "enum": [
+          "awaiting_data",
+          "awaiting_approval",
+          "complete",
+          "withdrawn",
+          "paused"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "ReportStatus",
+          "modelAsString": true,
+          "values": [
+            {
+              "value": "awaiting_data",
+              "description": "Onfido has made a request to one of its data providers and we are waiting on their reply."
+            },
+            {
+              "value": "awaiting_approval",
+              "description": "Report is going through manual review."
+            },
+            {
+              "value": "complete",
+              "description": "Report is done."
+            },
+            {
+              "value": "withdrawn",
+              "description": "Report has been cancelled."
+            },
+            {
+              "value": "paused",
+              "description": "Report is paused until you, i.e. the client, switch it on manually. Special case used by clients who wants to collect data and run the reports when they want and not immediately."
+            }
+          ]
+        }
+      },
+      "ReportResult": {
+        "enum": [
+          "clear",
+          "consider",
+          "unidentified"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "ReportResult",
+          "modelAsString": true,
+          "values": [
+            {
+              "value": "clear",
+              "description": "If all underlying verifications pass, the overall result will be clear."
+            },
+            {
+              "value": "consider",
+              "description": "If the report has returned information that needs to be evaluated, the overall result will be consider."
+            },
+            {
+              "value": "unidentified",
+              "description": "For Identity Enhanced reports only."
+            }
+          ]
+        }
+      },
+      "ReportSubResult": {
+        "enum": [
+          "clear",
+          "rejected",
+          "suspected",
+          "caution"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "ReportSubResult",
+          "modelAsString": true,
+          "values": [
+            {
+              "value": "clear",
+              "description": "If all underlying verifications pass, the overall sub result will be clear."
+            },
+            {
+              "value": "rejected",
+              "description": "If the report has returned information where the check cannot be processed further (poor quality image or an unsupported document)."
+            },
+            {
+              "value": "suspected",
+              "description": "If the document that is analysed is suspected to be fraudulent."
+            },
+            {
+              "value": "caution",
+              "description": "If any other underlying verifications fail but they don't necessarily point to a fraudulent document (such as the name provided by the applicant doesn't match the one on the document)."
+            }
+          ]
+        }
+      },
+      "Check": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The unique identifier for the check. Read-only."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true,
+            "description": "The date and time when this check was created. Read-only."
+          },
+          "href": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The uri of this resource. Read-only."
+          },
+          "status": {
+            "type": "string",
+            "readOnly": true,
+            "x-nullable": false,
+            "description": "The current state of the check in the checking process. Read-only."
+          },
+          "result": {
+            "$ref": "#/components/schemas/CheckResult",
+            "readOnly": true,
+            "description": "The overall result of the check, based on the results of the constituent reports. Read-only."
+          },
+          "download_uri": {
+            "type": "string",
+            "readOnly": true,
+            "description": "A link to a PDF output of the check results. Append `.pdf` to get the pdf file. Read-only."
+          },
+          "form_uri": {
+            "type": "string",
+            "readOnly": true,
+            "description": "A link to the applicant form, if `applicant_provides_data` is `true`. Read-only."
+          },
+          "redirect_uri": {
+            "type": "string",
+            "readOnly": true,
+            "description": "For checks where `applicant_provides_data` is `true`, redirect to this URI when the applicant has submitted their data. Read-only."
+          },
+          "results_uri": {
+            "type": "string",
+            "readOnly": true,
+            "description": "A link to the corresponding results page on the Onfido dashboard."
+          },
+          "report_names": {
+            "description": "An array of report names (strings).",
+            "writeOnly": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "applicant_id": {
+            "type": "string",
+            "description": "The ID of the applicant to do the check on."
+          },
+          "privacy_notices_read_consent_given": {
+            "type": "boolean",
+            "description": "Indicates whether the privacy notices and terms of service have been read and, where specific laws require, that consent has been given for Onfido."
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of tags being assigned to this check."
+          },
+          "applicant_provides_data": {
+            "type": "boolean",
+            "description": "Send an applicant form to applicant to complete to proceed with check. Defaults to false.\n"
+          },
+          "suppress_form_emails": {
+            "type": "boolean",
+            "writeOnly": true,
+            "description": "For checks where `applicant_provides_data` is `true`, applicant form will not be automatically sent if `suppress_form_emails` is set to `true`. You can manually send the form at any time after the check has been created, using the link found in the form_uri attribute of the check object. Write-only. Defaults to false.\n"
+          },
+          "asynchronous": {
+            "type": "boolean",
+            "writeOnly": true,
+            "description": "Defaults to `true`. Write-only. If set to `false`, you will only receive a response when all reports in your check have completed.\n"
+          },
+          "webhook_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional. An array of strings describing which webhooks to trigger for this check. By default, all webhooks registered in the account will be triggered and this value will be null in the responses."
+          },
+          "report_ids": {
+            "description": "An array of report ids.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "document_ids": {
+            "description": "Optional. Array of strings describing which document to process in checks containing a Document report or a Facial Similarity report, or both. By default, the most recently uploaded document is used. `document_ids` is only usable with Document and Facial Similarity reports.",
+            "type": "array",
+            "writeOnly": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "consider": {
+            "description": "Returns a pre-determined consider sub-result in sandbox for the specific reports in the consider array.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "writeOnly": true
+          },
+          "sub_result": {
+            "description": "Triggers a pre-determined sub-result response for sandbox Document reports.",
+            "type": "string"
+          }
+        }
+      },
+      "CheckList": {
+        "type": "object",
+        "properties": {
+          "checks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Check"
+            }
+          }
+        }
+      },
+      "DocumentItem": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID of uploaded document to use."
+          }
+        }
+      },
+      "AddressLines": {
+        "type": "object",
+        "properties": {
+          "street_address": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country_code": {
+            "type": "string"
+          }
+        }
+      },
+      "Barcode": {
+        "type": "object",
+        "properties": {
+          "first_name": {
+            "type": "string"
+          },
+          "middle_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "date_of_expiry": {
+            "type": "string",
+            "format": "date"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "issuing_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "address_line_1": {
+            "type": "string"
+          },
+          "address_line_2": {
+            "type": "string"
+          },
+          "address_line_3": {
+            "type": "string"
+          },
+          "address_line_4": {
+            "type": "string"
+          },
+          "address_line_5": {
+            "type": "string"
+          },
+          "issuing_state": {
+            "type": "string"
+          },
+          "class": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "issuing_country": {
+            "type": "string"
+          },
+          "document_number": {
+            "type": "string"
+          },
+          "real_id_classification": {
+            "type": "string"
+          }
+        }
+      },
+      "Nfc": {
+        "type": "object",
+        "properties": {
+          "document_type": {
+            "type": "string"
+          },
+          "issuing_country": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "document_number": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "date_of_expiry": {
+            "type": "string",
+            "format": "date"
+          },
+          "personal_number": {
+            "type": "string"
+          },
+          "place_of_birth": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "issuing_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "issuing_authority": {
+            "type": "string"
+          }
+        }
+      },
+      "DocumentNumber": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "DriverLicenseInformation": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "obtainment_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "expiry_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "codes": {
+            "type": "string"
+          }
+        }
+      },
+      "DocumentClassification": {
+        "type": "object",
+        "properties": {
+          "issuing_country": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "issuing_state": {
+            "type": "string"
+          }
+        }
+      },
+      "DocumentExtractedData": {
+        "type": "object",
+        "properties": {
+          "document_number": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "date_of_expiry": {
+            "type": "string",
+            "format": "date"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "middle_name": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "spouse_name": {
+            "type": "string"
+          },
+          "widow_name": {
+            "type": "string"
+          },
+          "alias_name": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "mrz_line1": {
+            "type": "string"
+          },
+          "mrz_line2": {
+            "type": "string"
+          },
+          "mrz_line3": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "address_line_1": {
+            "type": "string"
+          },
+          "address_line_2": {
+            "type": "string"
+          },
+          "address_line_3": {
+            "type": "string"
+          },
+          "address_line_4": {
+            "type": "string"
+          },
+          "address_line_5": {
+            "type": "string"
+          },
+          "issuing_authority": {
+            "type": "string"
+          }
+        }
+      },
+      "BreakdownResult": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "type": "string"
+          }
+        }
+      },
+      "DefaultBreakdownResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object"
+              }
+            }
+          }
+        ]
+      },
+      "Report": {
+        "type": "object",
+        "readOnly": true,
+        "required": [ "id", "name" ],
+        "discriminator": {
+          "propertyName": "name"
+        },
+        "properties": {
+          "id": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The unique identifier for the report. Read-only."
+          },
+          "name": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The name of the report type.",
+            "enum": [
+              "document",
+              "document_with_address_information",
+              "document_with_driving_licence_information",
+              "facial_similarity_photo",
+              "facial_similarity_photo_fully_auto",
+              "facial_similarity_video",
+              "known_faces",
+              "identity_enhanced",
+              "watchlist_enhanced",
+              "watchlist_standard",
+              "watchlist_peps_only",
+              "watchlist_sanctions_only",
+              "proof_of_address",
+              "right_to_work"
+            ],
+            "x-ms-enum": {
+              "name": "ReportName",
+              "modelAsString": false
+            }
+          },
+          "created_at": {
+            "type": "string",
+            "readOnly": true,
+            "format": "date-time",
+            "description": "The date and time at which the report was first initiated. Read-only."
+          },
+          "href": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The API endpoint to retrieve the report. Read-only."
+          },
+          "status": {
+            "type": "string",
+            "readOnly": true,
+            "x-nullable": false,
+            "description": "The current state of the report in the checking process. Read-only."
+          },
+          "result": {
+            "$ref": "#/components/schemas/ReportResult",
+            "readOnly": true,
+            "description": "The result of the report. Read-only."
+          },
+          "sub_result": {
+            "$ref": "#/components/schemas/ReportSubResult",
+            "readOnly": true,
+            "description": "The sub_result of the report. It gives a more detailed result for document reports only, and will be null otherwise. Read-only."
+          },
+          "check_id": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The ID of the check to which the report belongs. Read-only."
+          },
+          "documents": {
+            "type": "array",
+            "description": "Array of objects with document ids that were used in the Onfido engine. [ONLY POPULATED FOR DOCUMENT AND FACIAL SIMILARITY REPORTS]",
+            "items": {
+              "$ref": "#/components/schemas/DocumentItem"
+            }
+          }
+        }
+      },
+      "DocumentReport": {
+        "x-ms-discriminator-value": "document",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "$ref": "#/components/schemas/DocumentReportBreakdown"
+              },
+              "properties": {
+                "$ref": "#/components/schemas/DocumentReportProperties"
+              }
+            }
+          }
+        ]
+      },
+      "DocumentReportBreakdown": {
+        "type": "object",
+        "properties": {
+          "data_comparison": {
+            "$ref": "#/components/schemas/DocumentDataComparison"
+          },
+          "data_validation": {
+            "$ref": "#/components/schemas/DocumentDataValidation"
+          },
+          "image_integrity": {
+            "$ref": "#/components/schemas/DocumentImageIntegrity"
+          },
+          "visual_authenticity": {
+            "$ref": "#/components/schemas/DocumentVisualAuthenticity"
+          },
+          "data_consistency": {
+            "$ref": "#/components/schemas/DocumentDataConsistency"
+          },
+          "police_record": {
+            "$ref": "#/components/schemas/DocumentPolicyRecord"
+          },
+          "compromised_document": {
+            "$ref": "#/components/schemas/DocumentCompromisedDocument"
+          },
+          "age_validation": {
+            "$ref": "#/components/schemas/DocumentAgeValidation"
+          },
+          "issuing_authority": {
+            "$ref": "#/components/schemas/DocumentIssuingAuthority"
+          }
+        }
+      },
+      "DocumentReportProperties": {
+        "type": "object",
+        "properties": {
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "date_of_expiry": {
+            "type": "string",
+            "format": "date"
+          },
+          "document_numbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentNumber"
+            }
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "issuing_country": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "issuing_state": {
+            "type": "string"
+          },
+          "issuing_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "categorisation": {
+            "type": "string"
+          },
+          "mrz_line1": {
+            "type": "string"
+          },
+          "mrz_line2": {
+            "type": "string"
+          },
+          "mrz_line3": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "place_of_birth": {
+            "type": "string"
+          },
+          "spouse_name": {
+            "type": "string"
+          },
+          "widow_name": {
+            "type": "string"
+          },
+          "alias_name": {
+            "type": "string"
+          },
+          "issuing_authority": {
+            "type": "string"
+          },
+          "real_id_compliance": {
+            "type": "string"
+          },
+          "address_lines": {
+            "$ref": "#/components/schemas/AddressLines"
+          },
+          "barcode": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Barcode"
+            }
+          },
+          "nfc": {
+            "$ref": "#/components/schemas/Nfc"
+          },
+          "driving_licence_information": {
+            "$ref": "#/components/schemas/DriverLicenseInformation"
+          },
+          "document_classification": {
+            "$ref": "#/components/schemas/DocumentClassification"
+          },
+          "extracted_data": {
+            "$ref": "#/components/schemas/DocumentExtractedData"
+          }
+        }
+      },
+      "DocumentDataComparison": {
+        "description": "Asserts whether data on the document is consistent with data provided when creating an applicant through the API.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "issuing_country": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "gender": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_expiry": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "last_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_type": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_numbers": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "first_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_birth": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentDataValidation": {
+        "description": "Asserts whether algorithmically validatable elements are correct.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "gender": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_birth": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_numbers": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_expiration": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "If this is flagged, the document has expired."
+                  },
+                  "expiry_date": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "If this is flagged, the expiration date has the incorrect format."
+                  },
+                  "mrz": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "barcode": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentImageIntegrity": {
+        "description": "Asserts if the document is of sufficient quality to verify.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "image_quality": {
+                    "$ref": "#/components/schemas/DocumentImageQuality"
+                  },
+                  "supported_document": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the submitted document is supported."
+                  },
+                  "colour_picture": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the image was a colour one."
+                  },
+                  "conclusive_document_quality": {
+                    "$ref": "#/components/schemas/DocumentConclusiveDocumentQuality"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentImageQuality": {
+        "description": "Asserts whether the quality of the image was sufficient for processing.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "dark_photo": {
+                    "type": "string",
+                    "description": "When an image of the document is too dark to be able to see data points."
+                  },
+                  "glare_on_photo": {
+                    "type": "string",
+                    "description": "When there is light reflecting on the document causing glare to obstruct data points."
+                  },
+                  "blurred_photo": {
+                    "type": "string",
+                    "description": "When data points are blurred and no reference can be made elsewhere in the document or if the data points are too blurry and 'they could be something else'."
+                  },
+                  "covered_photo": {
+                    "type": "string",
+                    "description": "When data points have been covered either by the applicant or by another object such as a sticker."
+                  },
+                  "other_photo_issue": {
+                    "type": "string",
+                    "description": "Any other reason not listed, such as when holograms are obscuring data points."
+                  },
+                  "damaged_document": {
+                    "type": "string",
+                    "description": "When a document is damaged and we are unable to make out data points."
+                  },
+                  "incorrect_side": {
+                    "type": "string",
+                    "description": "When the incorrect side of a document has been uploaded, and we have not received the front."
+                  },
+                  "cut_off_document": {
+                    "type": "string",
+                    "description": "When data points are not included in the image due to the document being cut off."
+                  },
+                  "no_document_in_image": {
+                    "type": "string",
+                    "description": "If no document has been uploaded or there is a blank image."
+                  },
+                  "two_documents_uploaded": {
+                    "type": "string",
+                    "description": "When 2 different documents are submitted in the same check."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentConclusiveDocumentQuality": {
+        "description": "Asserts if the document was of enough quality to be able to perform a fraud inspection.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "obscured_data_points": {
+                    "type": "string",
+                    "description": "When data points are obscured to the point that we cannot confirm if the fonts match the expected ones."
+                  },
+                  "obscured_security_features": {
+                    "type": "string",
+                    "description": "When a critical security feature is obscured. This can also refer to when the holder's wet signature, necessary for the document to be valid, is not present."
+                  },
+                  "abnormal_document_features": {
+                    "type": "string",
+                    "description": "One of 3 reasons (1) OCR Assisted Scans (i.e. when you're able to move the mouse and highlight part of text), (2) Severely Washed out Background, (3) Overlapping Text."
+                  },
+                  "watermarks_digital_text_overlay": {
+                    "type": "string",
+                    "description": "Any digital text or electronic watermarks on the document."
+                  },
+                  "corner_removed": {
+                    "type": "string",
+                    "description": "If the corner has been physically cut off. This can be found on some documents that are no longer valid."
+                  },
+                  "punctured_document": {
+                    "type": "string",
+                    "description": "A punched hole is present."
+                  },
+                  "missing_back": {
+                    "type": "string",
+                    "description": "When the back of a document is needed for processing, but is not available."
+                  },
+                  "digital_document": {
+                    "type": "string",
+                    "description": "When a document has been published digitally, there aren’t enough security features to review so we cannot perform a full fraud assessment."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentVisualAuthenticity": {
+        "description": "Asserts whether visual, non-textual, elements are correct given the type of document.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "fonts": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Fonts in the document don’t match the expected ones."
+                  },
+                  "picture_face_integrity": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "The pictures of the person identified on the document show signs of tampering or alteration."
+                  },
+                  "template": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "The document doesn’t match the expected template for the document type and country it is from."
+                  },
+                  "security_features": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Security features expected on the document are missing or wrong."
+                  },
+                  "original_document_present": {
+                    "$ref": "#/components/schemas/DocumentOriginalDocumentPresent"
+                  },
+                  "digital_tampering": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Indication of digital tampering in the image."
+                  },
+                  "other": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "This sub-breakdown is returned for backward compatibility reasons. Its value will be consider when at least one of the other breakdowns is consider, and clear when all the other breakdowns are clear."
+                  },
+                  "face_detection": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "No face was detected on the document."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentOriginalDocumentPresent": {
+        "description": "The document was not present when the photo was taken.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "photo_of_screen": {
+                    "type": "string",
+                    "description": "When the applicant's document is on a physical screen or device."
+                  },
+                  "screenshot": {
+                    "type": "string",
+                    "description": "When the applicant has used their mobile phone, tablet, or computer to take a photo within the device."
+                  },
+                  "document_on_printed_paper": {
+                    "type": "string",
+                    "description": "When the applicant has previously captured an image of the document, printed it out, and has now taken a photo of this print out to upload."
+                  },
+                  "scan": {
+                    "type": "string",
+                    "description": "When the document has clearly been captured using a scanner and there are visible indicators of this"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentDataConsistency": {
+        "description": "Asserts whether data represented in multiple places on the document is consistent.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "date_of_expiry": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_numbers": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "issuing_country": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_type": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_birth": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "gender": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "first_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "nationality": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "last_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "multiple_data_sources_present": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentPolicyRecord": {
+        "description": "Asserts whether the document had been identified as lost, stolen or otherwise compromised.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          }
+        ]
+      },
+      "DocumentCompromisedDocument": {
+        "description": "Asserts whether the image of the document has been found in our internal database of compromised documents.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          }
+        ]
+      },
+      "DocumentAgeValidation": {
+        "description": "Asserts whether the age calculated from the document’s date of birth data point is greater than or equal to the minimum accepted age.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "minimum_accepted_age": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DocumentIssuingAuthority": {
+        "description": "Asserts whether data on the document matches the issuing authority data.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "nfc_active_authentication": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the document NFC chip is original or cloned."
+                  },
+                  "nfc_passive_authentication": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the document NFC chip data was tampered."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityPhotoReport": {
+        "x-ms-discriminator-value": "facial_similarity_photo",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_comparison": {
+                    "$ref": "#/components/schemas/FacialSimilarityPhotoFaceComparison"
+                  },
+                  "image_integrity": {
+                    "$ref": "#/components/schemas/FacialSimilarityPhotoImageIntegrity"
+                  },
+                  "visual_authenticity": {
+                    "$ref": "#/components/schemas/FacialSimilarityPhotoVisualAuthenticity"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityPhotoFaceComparison": {
+        "description": "Asserts whether the face in the document matches the face in the live photo.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_match": {
+                    "$ref": "#/components/schemas/FacialSimilarityPhotoFaceMatch"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityPhotoFaceMatch": {
+        "description": "Contains a score value under the properties bag.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A floating point number between 0 and 1 that expresses how similar the two faces are, where 1 is a perfect match."
+                  },
+                  "document_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The UUID for the document containing the extracted face that was used for face matching."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityPhotoImageIntegrity": {
+        "description": "Asserts whether the quality and integrity of the uploaded files were sufficient to perform a face comparison.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_detected": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts a single face of good enough quality has been found in both the document image and the live photo."
+                  },
+                  "source_integrity": {
+                    "$ref": "#/components/schemas/FacialSimilarityPhotoSourceIntegrity"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityPhotoSourceIntegrity": {
+        "description": "Asserts whether the live photo is trustworthy - i.e. not digitally tampered, from a fake webcam, or from other dubious sources.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "digital_tampering": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that the image was manipulated by Photoshop, or other software."
+                  },
+                  "fake_webcam": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that a fake webcam was used."
+                  },
+                  "time_of_capture": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that the live photo was taken more than 24 hours before live photo upload."
+                  },
+                  "emulator": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that an Android emulator was used."
+                  },
+                  "reasons": {
+                    "type": "string",
+                    "description": "Additional comma separated details such as the exact digital tampering software used, or the name of the fake webcam."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityPhotoVisualAuthenticity": {
+        "description": "Asserts whether the person in the live photo is real and not a spoof.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "spoofing_detection": {
+                    "$ref": "#/components/schemas/FacialSimilarityPhotoSpoofingDetection"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityPhotoSpoofingDetection": {
+        "description": "Contains a score value under the properties bag.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A floating point number between 0 and 1. The closer the score is to 0, the more likely it is to be a spoof."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityVideoReport": {
+        "x-ms-discriminator-value": "facial_similarity_video",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_comparison": {
+                    "$ref": "#/components/schemas/FacialSimilarityVideoFaceComparison"
+                  },
+                  "image_integrity": {
+                    "$ref": "#/components/schemas/FacialSimilarityVideoImageIntegrity"
+                  },
+                  "visual_authenticity": {
+                    "$ref": "#/components/schemas/FacialSimilarityVideoVisualAuthenticity"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityVideoFaceComparison": {
+        "readOnly": true,
+        "description": "Asserts whether the face in the document matches the face in the live video.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_match": {
+                    "$ref": "#/components/schemas/FacialSimilarityVideoFaceMatch"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityVideoFaceMatch": {
+        "description": "Contains a score value under the properties bag.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A floating point number between 0 and 1 that expresses how similar the two faces are, where 1 is a perfect match."
+                  },
+                  "document_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The UUID for the document containing the extracted face that was used for face matching."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityVideoImageIntegrity": {
+        "readOnly": true,
+        "description": "Asserts whether the quality and integrity of the uploaded files were sufficient to perform a face comparison.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_detected": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts a single face of good enough quality has been found in both the document image and the live video."
+                  },
+                  "source_integrity": {
+                    "$ref": "#/components/schemas/FacialSimilarityVideoSourceIntegrity"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityVideoSourceIntegrity": {
+        "description": "Asserts whether the live video is trustworthy - e.g. not from a fake webcam.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "fake_webcam": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that a fake webcam was used."
+                  },
+                  "challenge_reuse": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that the video was uploaded in an attempt to circumvent the randomness of the speaking and head turn challenges"
+                  },
+                  "emulator": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that an Android emulator was used."
+                  },
+                  "reasons": {
+                    "type": "string",
+                    "description": "Additional comma separated details such as the name of the fake webcam."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityVideoVisualAuthenticity": {
+        "readOnly": true,
+        "description": "Asserts whether the person in the live video is real (not a spoof) and live.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "liveness_detected": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the numbers and head movements were correctly executed."
+                  },
+                  "spoofing_detection": {
+                    "$ref": "#/components/schemas/FacialSimilarityVideoSpoofingDetection"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FacialSimilarityVideoSpoofingDetection": {
+        "description": "Asserts whether the live video is not a spoof (such as videos of digital screens).",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A floating point number between 0 and 1. The closer the score is to 0, the more likely it is to be a spoof."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PhotoFullyAutoReport": {
+        "x-ms-discriminator-value": "photo_fully_auto",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_comparison": {
+                    "$ref": "#/components/schemas/PhotoFullyAutoFaceComparison"
+                  },
+                  "image_integrity": {
+                    "$ref": "#/components/schemas/PhotoFullyAutoImageIntegrity"
+                  },
+                  "visual_authenticity": {
+                    "$ref": "#/components/schemas/PhotoFullyAutoVisualAuthenticity"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PhotoFullyAutoFaceComparison": {
+        "description": "Asserts whether the face in the document matches the face in the live photo.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_match": {
+                    "$ref": "#/components/schemas/PhotoFullyAutoFaceMatch"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PhotoFullyAutoFaceMatch": {
+        "description": "Contains a score value under the properties bag.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A floating point number between 0 and 1 that expresses how similar the two faces are, where 1 is a perfect match."
+                  },
+                  "document_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "The UUID for the document containing the extracted face that was used for face matching."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PhotoFullyAutoImageIntegrity": {
+        "description": "Asserts whether the quality and integrity of the uploaded files were sufficient to perform a face comparison.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "face_detected": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts a single face of good enough quality has been found in both the document image and the live photo."
+                  },
+                  "source_integrity": {
+                    "$ref": "#/components/schemas/PhotoFullyAutoFaceDetected"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PhotoFullyAutoFaceDetected": {
+        "description": "Asserts whether the live photo is trustworthy - i.e. not digitally tampered, from a fake webcam, or from other dubious sources.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "digital_tampering": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that the image was manipulated by Photoshop, or other software."
+                  },
+                  "fake_webcam": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that a fake webcam was used."
+                  },
+                  "time_of_capture": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that the live photo was taken more than 24 hours before live photo upload."
+                  },
+                  "emulator": {
+                    "type": "string",
+                    "description": "Flags when evidence is found that an Android emulator was used."
+                  },
+                  "reasons": {
+                    "type": "string",
+                    "description": "Additional comma separated details such as the exact digital tampering software used, or the name of the fake webcam."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PhotoFullyAutoVisualAuthenticity": {
+        "description": "Asserts whether the person in the live photo is real and not a spoof.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "spoofing_detection": {
+                    "$ref": "#/components/schemas/PhotoFullyAutoSpoofingDetection"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PhotoFullyAutoSpoofingDetection": {
+        "description": "Contains a score value under the properties bag.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A floating point number between 0 and 1. The closer the score is to 0, the more likely it is to be a spoof."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "KnownFacesReport": {
+        "x-ms-discriminator-value": "known_faces",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "previously_seen_faces": {
+                    "$ref": "#/components/schemas/KnownFacesPreviouslySeenFaces"
+                  },
+                  "image_integrity": {
+                    "$ref": "#/components/schemas/KnownFacesImageIntegrity"
+                  }
+                }
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "matches": {
+                    "description": "Returns any matching applicant IDs as entries inside a matches array under a properties bag.",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/KnownFacesMatch"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "KnownFacesPreviouslySeenFaces": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts whether the applicant's most recent facial media (live photo or live video) matches any other live photos or live videos already in your Onfido account database."
+      },
+      "KnownFacesImageIntegrity": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts whether the uploaded live photo or live video and the content contained within it were of sufficient quality to perform a face comparison."
+      },
+      "KnownFacesMatch": {
+        "type": "object",
+        "properties": {
+          "applicant_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The applicant ID of the matched applicant."
+          },
+          "score": {
+            "type": "number",
+            "format": "float",
+            "description": "A floating point number between 0 and 1 that expresses how similar the two faces are, where 1 is a perfect match."
+          },
+          "media_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The corresponding UUID for the media type."
+          },
+          "media_type": {
+            "type": "string",
+            "description": "The media type (for example live_photos or live_videos)."
+          }
+        }
+      },
+      "ProofOfAddressReport": {
+        "x-ms-discriminator-value": "proof_of_address",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "data_comparison": {
+                    "$ref": "#/components/schemas/ProofOfAddressDataComparison"
+                  },
+                  "document_classification": {
+                    "$ref": "#/components/schemas/ProofOfAddressDocumentClassification"
+                  },
+                  "image_integrity": {
+                    "$ref": "#/components/schemas/ProofOfAddressImageIntegrity"
+                  }
+                }
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "description": "This property provides the address on the document.",
+                    "type": "string"
+                  },
+                  "document_type": {
+                    "description": "This property provides the document type according to the set of supported documents.",
+                    "type": "string"
+                  },
+                  "first_names": {
+                    "description": "This property provides the first names on the document, including any initials and middle names.",
+                    "type": "string"
+                  },
+                  "last_names": {
+                    "description": "This property provided the last names on the document.",
+                    "type": "string"
+                  },
+                  "issue_date": {
+                    "description": "This property provides the issue date of the document.",
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "issuer": {
+                    "description": "This property provides the document issuer (e.g. HSBC, British Gas).",
+                    "type": "string"
+                  },
+                  "summary_period_start": {
+                    "description": "This property provides the summary period start date.",
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "summary_period_end": {
+                    "description": "This property provides the summary period end date.",
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ProofOfAddressDataComparison": {
+        "description": "Asserts whether the first name, last name and address provided by the applicant match those on the PoA document.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "first_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "last_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ProofOfAddressDocumentClassification": {
+        "description": "Asserts whether the document is of a valid type as PoA.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "supported_document": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ProofOfAddressImageIntegrity": {
+        "description": "Asserts whether the quality of the uploaded document was sufficient to verify the address.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "image_quality": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkReport": {
+        "x-ms-discriminator-value": "right_to_work",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "$ref": "#/components/schemas/RightToWorkReportBreakdown"
+              },
+              "properties": {
+                "$ref": "#/components/schemas/RightToWorkReportProperties"
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkReportBreakdown": {
+        "type": "object",
+        "properties": {
+          "right_to_work": {
+            "$ref": "#/components/schemas/RightToWorkRightToWork"
+          },
+          "data_comparison": {
+            "$ref": "#/components/schemas/RightToWorkDataComparison"
+          },
+          "data_validation": {
+            "$ref": "#/components/schemas/RightToWorkDataValidation"
+          },
+          "image_integrity": {
+            "$ref": "#/components/schemas/RightToWorkImageIntegrity"
+          },
+          "visual_authenticity": {
+            "$ref": "#/components/schemas/RightToWorkVisualAuthenticity"
+          },
+          "data_consistency": {
+            "$ref": "#/components/schemas/RightToWorkDataConsistency"
+          },
+          "police_record": {
+            "$ref": "#/components/schemas/RightToWorkPoliceRecord"
+          },
+          "compromised_document": {
+            "$ref": "#/components/schemas/RightToWorkCompromisedRecord"
+          },
+          "age_validation": {
+            "$ref": "#/components/schemas/RightToWorkAgeValidation"
+          },
+          "share_code_validation": {
+            "$ref": "#/components/schemas/RightToWorkShareCodeValidation"
+          }
+        }
+      },
+      "RightToWorkReportProperties": {
+        "type": "object",
+        "description": "Returns the information contained in the submitted document.",
+        "properties": {
+          "nationality": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "issuing_country": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "document_numbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentNumber"
+            }
+          },
+          "date_of_expiry": {
+            "type": "string",
+            "format": "date"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "document_version": {
+            "type": "string"
+          },
+          "issuing_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "mrz_line1": {
+            "type": "string"
+          },
+          "mrz_line2": {
+            "type": "string"
+          },
+          "place_of_birth": {
+            "type": "string"
+          },
+          "issuing_authority": {
+            "type": "string"
+          }
+        }
+      },
+      "RightToWorkRightToWork": {
+        "description": "Asserts whether the applicant has the right to work.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "applicant_has_the_right_to_work": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the applicant has the right to work, has restricted right to work or no right to work."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkDataComparison": {
+        "description": "Asserts whether data on the document is consistent with data provided when creating an applicant through the API.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "issuing_country": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "gender": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_expiry": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "last_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_type": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_numbers": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "first_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_birth": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkDataValidation": {
+        "description": "Asserts whether algorithmically validatable elements are correct.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "gender": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_birth": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_numbers": {
+                    "$ref": "#/components/schemas/RightToWorkDocumentNumbers"
+                  },
+                  "document_expiration": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "expiry_date": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "mrz": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkDocumentNumbers": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "document_number": {
+                    "type": "string",
+                    "description": "Flags if the document number is not the expected length and format for document."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkImageIntegrity": {
+        "description": "Asserts if the document is of sufficient quality to verify.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "image_quality": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "supported_document": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "colour_picture": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "conclusive_document_quality": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkVisualAuthenticity": {
+        "description": "Asserts whether visual, non-textual, elements are correct given the type of document.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "fonts": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "picture_face_integrity": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "template": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "security_features": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "original_document_present": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "digital_tampering": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "other": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "face_detection": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkDataConsistency": {
+        "description": "Asserts whether data represented in multiple places on the document is consistent.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "date_of_expiry": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_numbers": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "issuing_country": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "document_type": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "date_of_birth": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "gender": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "first_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "nationality": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  },
+                  "last_name": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkPoliceRecord": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts whether the document had been identified as lost, stolen or otherwise compromised."
+      },
+      "RightToWorkCompromisedRecord": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts whether the image of the document has been found in our internal database of compromised documents."
+      },
+      "RightToWorkAgeValidation": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts whether the age calculated from the document’s date of birth data point is greater than or equal to the minimum accepted age."
+      },
+      "RightToWorkShareCodeValidation": {
+        "description": "Asserts whether the applicant has a valid right to work share code. Only returned when a share code is provided.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "document_id": {
+                    "$ref": "#/components/schemas/RightToWorkDocumentId"
+                  },
+                  "applicant_has_valid_share_code": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the provided share code is valid."
+                  },
+                  "name_matched": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Asserts whether the applicant's given name matches the name on the share code results document."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RightToWorkDocumentId": {
+        "description": "Contains the document ID number in the properties bag.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "document_id": {
+                    "type": "string",
+                    "description": "The document ID to retrieve the GOV.UK evidence document of the applicant's right to work."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "MatchedAddress": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The address number."
+          },
+          "match_types": {
+            "type": "array",
+            "description": "Sources which contain matched addresses.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "IdentityEnhancedReport": {
+        "x-ms-discriminator-value": "identity_enhanced",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "sources": {
+                    "$ref": "#/components/schemas/IdentityEnhancedSources"
+                  },
+                  "address": {
+                    "$ref": "#/components/schemas/IdentityEnhancedAddress"
+                  },
+                  "date_of_birth": {
+                    "$ref": "#/components/schemas/IdentityEnhancedDateOfBirth"
+                  },
+                  "mortality": {
+                    "$ref": "#/components/schemas/IdentityEnhancedMortality"
+                  }
+                }
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "matched_address": {
+                    "description": "Returns address number which has been matched.",
+                    "type": "number"
+                  },
+                  "matched_addresses": {
+                    "description": "Returns array of sources which contain matched addresses for the corresponding address number.",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/MatchedAddress"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "IdentityEnhancedSources": {
+        "description": "Asserts if any sources that an applicant's details have been verified against have produced a match.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "total_sources": {
+                    "$ref": "#/components/schemas/IdentityEnhancedTotalSources"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "IdentityEnhancedTotalSources": {
+        "description": "The number of sources which produced a match to applicant details.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "total_number_of_sources": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "IdentityEnhancedAddress": {
+        "description": "Asserts if the applicant's address matches any sources.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "credit_agencies": {
+                    "$ref": "#/components/schemas/IdentityEnhancedCreditAgencies"
+                  },
+                  "telephone_database": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Address match against telephone database."
+                  },
+                  "voting_register": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Address match against voting register."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "IdentityEnhancedCreditAgencies": {
+        "description": "The number of address matches against credit agencies.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "number_of_matches": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "IdentityEnhancedDateOfBirth": {
+        "description": "Asserts if the applicant's date of birth matches any sources.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BreakdownResult"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "credit_agencies": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Date of birth match against credit agencies."
+                  },
+                  "voting_register": {
+                    "$ref": "#/components/schemas/DefaultBreakdownResult",
+                    "description": "Date of birth match against voting register."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "IdentityEnhancedMortality": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if the applicant's details match any death records."
+      },
+      "WatchlistReport": {
+        "x-ms-discriminator-value": "watchlist_standard",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "sanction": {
+                    "$ref": "#/components/schemas/WatchlistSanction"
+                  },
+                  "politically_exposed_person": {
+                    "$ref": "#/components/schemas/WatchlistPoliticallyExposedPerson"
+                  },
+                  "legal_and_regulatory_warnings": {
+                    "$ref": "#/components/schemas/WatchlistLegalAndRegulatoryWarnings"
+                  }
+                }
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "records": {
+                    "description": "Returns any matches including, but not limited to, name and date of birth of match, aliases and associates, and relevant events and sources.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "WatchlistSanction": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if there are any records found in Government and International Organisations Sanctions Lists."
+      },
+      "WatchlistPoliticallyExposedPerson": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if there are any records found in the proprietary database of Politically Exposed Persons sourced from government lists, websites and other media sources."
+      },
+      "WatchlistLegalAndRegulatoryWarnings": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if there are any records found in Law-Enforcement and Regulatory bodies Monitored Lists (including Terrorism, Money Laundering and Most Wanted lists)."
+      },
+      "WatchlistEnhancedReport": {
+        "x-ms-discriminator-value": "watchlist_enhanced",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Report"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "breakdown": {
+                "type": "object",
+                "properties": {
+                  "politically_exposed_person": {
+                    "$ref": "#/components/schemas/WatchlistEnhancedPoliticallyExposedPerson"
+                  },
+                  "sanction": {
+                    "$ref": "#/components/schemas/WatchlistEnhancedSanction"
+                  },
+                  "adverse_media": {
+                    "$ref": "#/components/schemas/WatchlistEnhancedAdverseMedia"
+                  },
+                  "monitored_lists": {
+                    "$ref": "#/components/schemas/WatchlistEnhancedMonitoredLists"
+                  }
+                }
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "records": {
+                    "description": "Returns any matches including, but not limited to, name and date of birth of match, aliases and associates, and relevant events and sources.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "WatchlistEnhancedPoliticallyExposedPerson": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if there are any records found in the proprietary database of Politically Exposed Persons sourced from government lists, websites and other media sources."
+      },
+      "WatchlistEnhancedSanction": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if there are any records found in Government and International Organisations Sanctions Lists."
+      },
+      "WatchlistEnhancedAdverseMedia": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if there are any records found of negative events reported by publicly and generally available media sources."
+      },
+      "WatchlistEnhancedMonitoredLists": {
+        "$ref": "#/components/schemas/BreakdownResult",
+        "description": "Asserts if there are any records found in Law-Enforcement and Regulatory bodies Monitored Lists (including Terrorism, Money Laundering and Most Wanted lists)."
+      },
+      "ReportList": {
+        "type": "object",
+        "properties": {
+          "reports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Report"
+            }
+          }
+        }
+      },
+      "WebhookRequest": {
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The url that will listen to notifications (must be https)."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Determine if the webhook is active."
+          },
+          "environments": {
+            "type": "array",
+            "description": "The environments from which the webhook will receive events. Allowed values are “sandbox” and “live”. If the environments parameter is omitted the webhook will receive events from both environments.\n",
+            "items": {
+              "type": "string"
+            }
+          },
+          "events": {
+            "type": "array",
+            "description": "The events that will be published to the webhook. The supported events are: `report.completed`, `report.withdrawn`, `check.completed`, `check.started`, `check.form_opened`, `check.form_completed`. If the events parameter is omitted all the events will be subscribed.\n",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Webhook": {
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The unique identifier of the webhook. Read-only."
+          },
+          "token": {
+            "type": "string",
+            "readOnly": true,
+            "description": "Webhook secret token used to sign the webhook's payload. Read-only."
+          },
+          "href": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The API endpoint to retrieve the webhook. Read-only."
+          },
+          "url": {
+            "type": "string",
+            "description": "The url that will listen to notifications (must be https)."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Determine if the webhook is active."
+          },
+          "environments": {
+            "type": "array",
+            "description": "The environments from which the webhook will receive events. Allowed values are “sandbox” and “live”. If the environments parameter is omitted the webhook will receive events from both environments.\n",
+            "items": {
+              "type": "string"
+            }
+          },
+          "events": {
+            "type": "array",
+            "description": "The events that will be published to the webhook. The supported events are: `report.completed`, `report.withdrawn`, `check.completed`, `check.started`, `check.form_opened`, `check.form_completed`. If the events parameter is omitted all the events will be subscribed.\n",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "WebhookList": {
+        "type": "object",
+        "properties": {
+          "webhooks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Webhook"
+            }
+          }
+        }
+      },
+      "SdkTokenRequest": {
+        "type": "object",
+        "properties": {
+          "applicant_id": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The unique identifier of the applicant"
+          },
+          "referrer": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The referrer URL pattern"
+          },
+          "application_id": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The application ID (iOS or Android)"
+          },
+          "cross_device_url": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "Enterprise Feature - The URL to be used for the cross device flow of the Web SDK"
+          }
+        }
+      },
+      "SdkToken": {
+        "type": "object",
+        "properties": {
+          "applicant_id": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The unique identifier of the applicant"
+          },
+          "referrer": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The referrer URL pattern"
+          },
+          "application_id": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The application ID (iOS or Android)"
+          },
+          "cross_device_url": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "Enterprise Feature - The URL to be used for the cross device flow of the Web SDK"
+          },
+          "token": {
+            "type": "string",
+            "readOnly": true,
+            "description": "The generated SDK token"
+          }
+        }
+      },
+      "ErrorDetails": {
+        "title": "ErrorProperties",
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "object"
+          }
+        }
+      },
+      "OnfidoApiError": {
+        "type": "object",
+        "title": "Error",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetails"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "region": {
+        "in": "path",
+        "name": "region",
+        "description": "The name of the region.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/applicants": {
+      "post": {
+        "summary": "Create Applicant",
+        "operationId": "applicants_create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewApplicant"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Applicant"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "List Applicants",
+        "operationId": "applicants_list",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page to return. The first page is `page=1`",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "The number of objects per page.",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
+          },
+          {
+            "name": "include_deleted",
+            "in": "query",
+            "description": "Whether to also include applicants scheduled for deletion.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of applicants",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicantList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applicants/{applicant_id}": {
+      "get": {
+        "summary": "Retrieve Applicant",
+        "operationId": "applicants_find",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Applicant object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Applicant"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Applicant",
+        "description": "Applicant details can be updated between check creations.\n- Partial updates - Addresses and ID numbers present will replace existing ones - Same applicant validations to create applicant\n",
+        "operationId": "applicants_update",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Applicant"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Applicant Object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Applicant"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Applicant",
+        "operationId": "applicants_destroy",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applicants/{applicant_id}/restore": {
+      "post": {
+        "summary": "Restore Applicant",
+        "operationId": "applicants_restore",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents": {
+      "get": {
+        "summary": "List documents",
+        "operationId": "documents_list",
+        "description": "All documents belonging to an applicant can be listed from this endpoint",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents/{document_id}": {
+      "get": {
+        "summary": "A single document can be retrieved by calling this endpoint with the document’s unique identifier.",
+        "operationId": "documents_find",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live_photos": {
+      "get": {
+        "summary": "List live photos",
+        "operationId": "LivePhotos_list",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "query",
+            "required": true,
+            "description": "The id of the applicant the live photos belong to.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of live photos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LivePhotoList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live_photos/{live_photo_id}": {
+      "get": {
+        "summary": "Retrieve live photo",
+        "operationId": "LivePhotos_find",
+        "parameters": [
+          {
+            "name": "live_photo_id",
+            "in": "path",
+            "required": true,
+            "description": "The live photo’s unique identifier.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A live photo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LivePhoto"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live_videos": {
+      "get": {
+        "summary": "List live videos",
+        "operationId": "LiveVideos_list",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "query",
+            "required": true,
+            "description": "The id of the applicant the live videos belong to.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of live videos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiveVideoList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live_videos/{live_video_id}": {
+      "get": {
+        "summary": "Retrieve live video",
+        "operationId": "LiveVideos_find",
+        "parameters": [
+          {
+            "name": "live_video_id",
+            "in": "path",
+            "required": true,
+            "description": "The live video’s unique identifier.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A live video",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiveVideo"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live_videos/{live_video_id}/frame": {
+      "get": {
+        "summary": "Download live video frame",
+        "description": "Live video frames are downloaded using this endpoint.",
+        "operationId": "LiveVideos_download_frame",
+        "parameters": [
+          {
+            "name": "live_video_id",
+            "in": "path",
+            "required": true,
+            "description": "The live video’s unique identifier.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The live video frame's binary data.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/checks": {
+      "get": {
+        "summary": "Retrieve Checks",
+        "operationId": "checks_list",
+        "parameters": [
+          {
+            "name": "applicant_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of checks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a check",
+        "operationId": "checks_create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Check"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/checks/{check_id}": {
+      "get": {
+        "summary": "Retrieve a Check",
+        "operationId": "checks_find",
+        "parameters": [
+          {
+            "name": "check_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Check object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Check"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/checks/{check_id}/resume": {
+      "post": {
+        "summary": "Resume a Check",
+        "operationId": "checks_resume",
+        "parameters": [
+          {
+            "name": "check_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/checks/{check_id}/download": {
+      "get": {
+        "summary": "Download a PDF of the check",
+        "operationId": "checks_download",
+        "parameters": [
+          {
+            "name": "check_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The PDF binary data"
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports": {
+      "get": {
+        "summary": "All the reports belonging to a particular check can be listed from this endpoint.",
+        "operationId": "reports_list",
+        "parameters": [
+          {
+            "name": "check_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Reports",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports/{report_id}": {
+      "get": {
+        "summary": "A single report can be retrieved using this endpoint with the corresponding unique identifier.",
+        "operationId": "reports_find",
+        "parameters": [
+          {
+            "name": "report_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Report object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Report"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports/{report_id}/resume": {
+      "post": {
+        "summary": "This endpoint is for resuming individual paused reports.",
+        "operationId": "reports_resume",
+        "parameters": [
+          {
+            "name": "report_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports/{report_id}/cancel": {
+      "post": {
+        "summary": "This endpoint is for cancelling individual paused reports.",
+        "operationId": "reports_cancel",
+        "parameters": [
+          {
+            "name": "report_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webhooks": {
+      "get": {
+        "summary": "List webhooks",
+        "operationId": "webhooks_list",
+        "responses": {
+          "200": {
+            "description": "A list of webhooks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebhookList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a webhook",
+        "operationId": "webhooks_create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebhookRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Webhook"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webhooks/{webhook_id}": {
+      "get": {
+        "summary": "Retrieve a Webhook",
+        "operationId": "webhooks_find",
+        "parameters": [
+          {
+            "name": "webhook_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Webhook object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Webhook"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Edit a webhook",
+        "operationId": "webhooks_edit",
+        "parameters": [
+          {
+            "name": "webhook_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Webhook"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Webhook Object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Webhook"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a webhook",
+        "operationId": "webhooks_delete",
+        "parameters": [
+          {
+            "name": "webhook_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Webhook deleted"
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sdk_token": {
+      "post": {
+        "summary": "Generate a SDK token",
+        "operationId": "SdkToken_generate",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SdkTokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Generated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SdkToken"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnfidoApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

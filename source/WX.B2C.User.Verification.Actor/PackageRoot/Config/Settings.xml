@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Section Name="KeyVaultConfigSection" >
+    <Parameter Name="KeyVaultUrl" Value="https://wx-dev3.vault.azure.net/" IsEncrypted="true" />
+    <Parameter Name="KeyVaultClientId" Value="2fc813f0-66e7-48e7-9dfd-d393cef2cc19" IsEncrypted="true" />
+    <Parameter Name="KeyVaultSecret" Value="gCI-pZ2747yXplCFSBO1o4t_hJ.vgK0C~Y" IsEncrypted="true" />
+  </Section>
+  <Section Name="AppConfigSection" >
+    <Parameter Name="IpStackApiUrl" Value="https://api.ipstack.com" IsEncrypted="true" />
+    <Parameter Name="OnfidoApiUrl" Value="https://api.eu.onfido.com/v3.2" IsEncrypted="true" />
+    <Parameter Name="LexisNexisRdpHost" Value="https://staging.ws.idms.lexisnexis.com" IsEncrypted="true" />
+    <Parameter Name="LexisNexisRdpProxy" Value="http://13.83.16.248:3128/" IsEncrypted="true" />
+    <Parameter Name="LexisNexisMode" Value="testing" IsEncrypted="true" />
+    <Parameter Name="LexisNexisBridgerServiceEndpoint" Value="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.2/XGServices.svc/" IsEncrypted="true" />
+    <Parameter Name="PassFortApiUrl" Value="https://api.passfort.com/4.0" IsEncrypted="true" />
+    <Parameter Name="B2CRisksApiUrl" Value="http://localhost:17064" IsEncrypted="true" />
+    <Parameter Name="B2CSurveyApiUrl" Value="http://localhost:17063" IsEncrypted="true" />
+  </Section>
+  <Section Name="ApplicationActorReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="ApplicationActorReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="ApplicationActorReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+
+  <Section Name="ProfileActorReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="ProfileActorReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="ProfileActorReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+
+  <Section Name="TaskActorReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="TaskActorReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="TaskActorReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+
+  <Section Name="CollectionStepActorReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="CollectionStepActorReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="CollectionStepActorReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+
+  <Section Name="CheckActorReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="CheckActorReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="CheckActorReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+
+  <Section Name="ExternalProfileActorReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="ExternalProfileActorReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="ExternalProfileActorReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+
+  <Section Name="TriggerActorReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="TriggerActorReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="TriggerActorReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+  <!-- The content will be generated during build -->
+</Settings>
