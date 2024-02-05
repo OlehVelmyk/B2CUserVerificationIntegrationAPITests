@@ -1,0 +1,327 @@
+﻿[
+  {
+    "id": "7BA96008-C7B3-469B-9F3C-307224ABBE83",
+    "name": "EEA monitoring policy",
+    "regionType": "Region",
+    "region": "EEA",
+    "triggers": [
+      {
+        "id": "B62B049C-4B5C-40E5-8927-D83674E2A245",
+        "name": "Account age tracking",
+        "schedule": {
+          "type": "interval",
+          "offset": "01:00:00",
+          "value": {
+            "unit": "Day",
+            "value": 7
+          }
+        },
+        "conditions": [
+          {
+            "type": "AccountAge",
+            "value": {
+              "riskLevel": "Low",
+              "limit": "3",
+              "unit": "Year"
+            }
+          },
+          {
+            "type": "AccountAge",
+            "value": {
+              "riskLevel": "Medium",
+              "limit": "2",
+              "unit": "Year"
+            }
+          },
+          {
+            "type": "AccountAge",
+            "value": {
+              "riskLevel": "High",
+              "limit": "1",
+              "unit": "Year"
+            }
+          },
+          {
+            "type": "AccountAge",
+            "value": {
+              "riskLevel": "ExtraHigh",
+              "limit": "1",
+              "unit": "Year"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "Address",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfAddress",
+                "isReviewNeeded": true,
+                "isRequired": false
+              }
+            }
+          },
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "41F23381-F8BB-42C7-8B58-C344A4AD011E", //Financial conditions
+              "addCompleted" : true
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "FinancialCondition",
+              "collectionStep": {
+                // "Occupation/income survey" 
+                "xPath": "Survey.F9A2A3AC-6E98-43C9-BAB2-794E8E6DF686",
+                "isReviewNeeded": false,
+                "isRequired": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "14FA6B41-8751-48FA-A862-EC7486A7B06C",
+        "name": "EEA high risk user",
+        "conditions": [
+          {
+            "type": "RiskLevel",
+            "value": "High"
+          },
+          {
+            "type": "RiskLevel",
+            "value": "ExtraHigh"
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "41F23381-F8BB-42C7-8B58-C344A4AD011E", //Financial conditions
+              "addCompleted": true
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "FinancialCondition",
+              "collectionStep": {
+                // "Occupation/income survey" 
+                "xPath": "Survey.F9A2A3AC-6E98-43C9-BAB2-794E8E6DF686",
+                "isReviewNeeded": false,
+                "isRequired": false
+              }
+            }
+          },
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "9E202236-42B4-4105-A6A4-1356A82911A2", //Proof of funds
+              "addCompleted": true
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                //SoF survey
+                "xPath": "Survey.0FB7492B-7DC5-4277-A7FF-F3D07376FF66",
+                "isReviewNeeded": false,
+                "isRequired": false
+              }
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfFunds",
+                "isReviewNeeded": true,
+                "isRequired": false
+              }
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "Address",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfAddress",
+                "isReviewNeeded": true,
+                "isRequired": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "25540161-4CCB-4C03-9458-62CD8DAD0BFA",
+        "name": "Request PoA on first turnover threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 60000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 30000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "first-threshold-reached"
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "Address",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfAddress",
+                "isReviewNeeded": true,
+                "isRequired": false
+              }
+            }
+          },
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "41F23381-F8BB-42C7-8B58-C344A4AD011E", //Financial conditions
+              "addCompleted": true
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "FinancialCondition",
+              "collectionStep": {
+                // "Occupation/income survey" 
+                "xPath": "Survey.F9A2A3AC-6E98-43C9-BAB2-794E8E6DF686",
+                "isReviewNeeded": false,
+                "isRequired": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "9BD82EB1-4649-460A-98B3-491A2C79A509",
+        "name": "EEA second threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 75000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 60000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "second-threshold-reached"
+            }
+          },
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "9E202236-42B4-4105-A6A4-1356A82911A2", //Proof of funds
+              "addCompleted": true
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                //SoF survey
+                "xPath": "Survey.0FB7492B-7DC5-4277-A7FF-F3D07376FF66",
+                "isReviewNeeded": false,
+                "isRequired": false
+              }
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfFunds",
+                "isReviewNeeded": true,
+                "isRequired": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "E1FFB995-72CB-429E-99B2-DB4282DA6526",
+        "name": "EEA repeating threshold",
+        "iterative": true,
+        "conditions": [
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 75000,
+              "step": 75000
+            }
+          },
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 60000,
+              "step": 60000
+            }
+          },
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "High",
+              "threshold": 15000,
+              "step": 30000
+            }
+          },
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "ExtraHigh",
+              "threshold": 15000,
+              "step": 30000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "repeating-turnover-threshold-reached"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

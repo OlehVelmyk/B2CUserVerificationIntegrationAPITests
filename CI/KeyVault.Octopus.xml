@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <Section xdt:Transform="Replace" xdt:Locator="Match(Name)" Name="KeyVaultConfigSection">
+    <Parameter Name="KeyVaultUrl" Value="#{KeyVaultUrl}" IsEncrypted="true" />
+    <Parameter Name="KeyVaultClientId" Value="#{KeyVaultClientId}" IsEncrypted="true" />
+    <Parameter Name="KeyVaultSecret" Value="#{KeyVaultSecret}" IsEncrypted="true" />
+  </Section>
+</Settings>

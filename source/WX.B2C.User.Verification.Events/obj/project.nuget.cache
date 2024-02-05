@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "Is/pG+FgxJKcjsxy49K4Ew6CZ/xEgFT3ccnNJBOA/iTrTixDsghFLE6+hDzzlAYo/50d2hviRxMBLjpipV75gg==",
+  "success": false,
+  "projectFilePath": "D:\\QA\\MyProjestsNew\\wx-b2c-user-verification\\source\\WX.B2C.User.Verification.Events\\WX.B2C.User.Verification.Events.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package WX.Messaging.Core. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "WX.Messaging.Core",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

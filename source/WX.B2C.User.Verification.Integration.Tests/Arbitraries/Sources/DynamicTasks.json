@@ -1,0 +1,36 @@
+[
+  // Us
+  {
+    "PolicyId": "4b6271bd-fde5-40f7-8701-29aa66865568",
+    "TaskVariantId": "c2d32093-ad0f-45ad-9377-4dd12550a221",
+    "TaskType": "UserRiskScreening"
+  },
+  // Eea
+  {
+    "PolicyId": "0eaae368-8acb-410b-8ec0-3ae404f49d5e",
+    "TaskVariantId": "9E202236-42B4-4105-A6A4-1356A82911A2",
+    "TaskType": "ProofOfFunds"
+  },
+  {
+    "PolicyId": "0eaae368-8acb-410b-8ec0-3ae404f49d5e",
+    "TaskVariantId": "41F23381-F8BB-42C7-8B58-C344A4AD011E",
+    "TaskType": "FinancialCondition"
+  },
+  // RoW
+  {
+    "PolicyId": "d5b5997e-ffc1-495d-9e98-60ccbdd6f43b",
+    "TaskVariantId": "1673241e-bc0a-4007-a353-a2c39880bbef",
+    "TaskType": "ProofOfFunds"
+  },
+  // Gb
+  {
+    "PolicyId": "dc658b4f-a0eb-4c20-b296-e0d57e8da6db",
+    "TaskVariantId": "c1b826b7-6e0a-4ab3-813d-4393e0c0e095",
+    "TaskType": "ProofOfFunds"
+  },
+  {
+    "PolicyId": "dc658b4f-a0eb-4c20-b296-e0d57e8da6db",
+    "TaskVariantId": "cf9f0ca8-6535-4f4a-b2d3-71ab075ec841",
+    "TaskType": "FinancialCondition"
+  }
+]

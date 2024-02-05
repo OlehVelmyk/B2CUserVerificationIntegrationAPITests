@@ -1,0 +1,5044 @@
+{
+ "$id": "1",
+ "modelTypes": [
+  {
+   "$id": "2",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "3",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetAddress1"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "4",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "5",
+      "fixed": false,
+      "raw": "First line of the street address."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "6",
+      "fixed": false,
+      "raw": "StreetAddress1"
+     },
+     "serializedName": "StreetAddress1",
+     "modelType": {
+      "$id": "7",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "8",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "9",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetAddress2"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "10",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "11",
+      "fixed": false,
+      "raw": "Second line of the street address."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "12",
+      "fixed": false,
+      "raw": "StreetAddress2"
+     },
+     "serializedName": "StreetAddress2",
+     "modelType": {
+      "$id": "13",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "14",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "15",
+     "isReadOnly": false,
+     "realPath": [
+      "City"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "16",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "17",
+      "fixed": false,
+      "raw": "City."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "18",
+      "fixed": false,
+      "raw": "City"
+     },
+     "serializedName": "City",
+     "modelType": {
+      "$id": "19",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "20",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "21",
+     "isReadOnly": false,
+     "realPath": [
+      "State"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "22",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "23",
+      "fixed": false,
+      "raw": "Two-letter state abbreviation (for example, MT or FL)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "24",
+      "fixed": false,
+      "raw": "State"
+     },
+     "serializedName": "State",
+     "modelType": {
+      "$id": "25",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "26",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "27",
+     "isReadOnly": false,
+     "realPath": [
+      "Zip5"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "28",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "29",
+      "fixed": false,
+      "raw": "Five-digit ZIP Code."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "30",
+      "fixed": false,
+      "raw": "Zip5"
+     },
+     "serializedName": "Zip5",
+     "modelType": {
+      "$id": "31",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "32",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "33",
+     "isReadOnly": false,
+     "realPath": [
+      "Country"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "34",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "35",
+      "fixed": false,
+      "raw": "ISO (International Organization for Standardization) 2 country code for the country associated with the address."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "36",
+      "fixed": false,
+      "raw": "Country"
+     },
+     "serializedName": "Country",
+     "modelType": {
+      "$id": "37",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "38",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "39",
+     "isReadOnly": false,
+     "realPath": [
+      "Context"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "40",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "41",
+      "fixed": false,
+      "raw": "Address type."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "42",
+      "fixed": false,
+      "raw": "Context"
+     },
+     "serializedName": "Context",
+     "modelType": {
+      "$id": "43",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "44",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Address",
+   "documentation": "Structure that contains subject address elements.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "45",
+    "fixed": false,
+    "raw": "Address"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Address",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/Address"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "46",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "47",
+     "isReadOnly": false,
+     "realPath": [
+      "Year"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "48",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "49",
+      "fixed": false,
+      "raw": "Year (yyyy)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "50",
+      "fixed": false,
+      "raw": "Year"
+     },
+     "serializedName": "Year",
+     "modelType": {
+      "$id": "51",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "52",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "53",
+     "isReadOnly": false,
+     "realPath": [
+      "Month"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "54",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "55",
+      "fixed": false,
+      "raw": "Month (MM)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "56",
+      "fixed": false,
+      "raw": "Month"
+     },
+     "serializedName": "Month",
+     "modelType": {
+      "$id": "57",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "58",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "59",
+     "isReadOnly": false,
+     "realPath": [
+      "Day"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "60",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "61",
+      "fixed": false,
+      "raw": "Day (dd)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "62",
+      "fixed": false,
+      "raw": "Day"
+     },
+     "serializedName": "Day",
+     "modelType": {
+      "$id": "63",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "64",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "DateOfBirth",
+   "documentation": "Structure that contains subject DOB elements.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "65",
+    "fixed": false,
+    "raw": "DateOfBirth"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "DateOfBirth",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/DateOfBirth"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "66",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "67",
+     "isReadOnly": false,
+     "realPath": [
+      "Number"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "68",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "69",
+      "fixed": false,
+      "raw": "SSN."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "70",
+      "fixed": false,
+      "raw": "Number"
+     },
+     "serializedName": "Number",
+     "modelType": {
+      "$id": "71",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "72",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "73",
+     "isReadOnly": false,
+     "realPath": [
+      "Type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "74",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "75",
+      "fixed": false,
+      "raw": "Type of SSN."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "76",
+      "fixed": false,
+      "raw": "Type"
+     },
+     "serializedName": "Type",
+     "modelType": {
+      "$id": "77",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "78",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Ssn",
+   "documentation": "Structure that contains SSN elements.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "79",
+    "fixed": false,
+    "raw": "Ssn"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Ssn",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/Ssn"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "80",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "81",
+     "isReadOnly": false,
+     "realPath": [
+      "Mode"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "82",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "83",
+      "fixed": false,
+      "raw": "Mode in which the transaction is generated."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "84",
+      "fixed": false,
+      "raw": "Mode"
+     },
+     "serializedName": "Mode",
+     "modelType": {
+      "$id": "85",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "86",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "87",
+     "isReadOnly": false,
+     "realPath": [
+      "Reference"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "88",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "89",
+      "fixed": false,
+      "raw": "Internal tracking number that your organization can assign to a transaction."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "90",
+      "fixed": false,
+      "raw": "Reference"
+     },
+     "serializedName": "Reference",
+     "modelType": {
+      "$id": "91",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "92",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "93",
+     "isReadOnly": false,
+     "realPath": [
+      "Locale"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "94",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "95",
+      "fixed": false,
+      "raw": "Language in which the customer wants to receive the response. The default value is en_US."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "96",
+      "fixed": false,
+      "raw": "Locale"
+     },
+     "serializedName": "Locale",
+     "modelType": {
+      "$id": "97",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "98",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "99",
+     "isReadOnly": false,
+     "realPath": [
+      "Venue"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "100",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "101",
+      "fixed": false,
+      "raw": "Type of environment where the transaction takes place. The default value is online."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "102",
+      "fixed": false,
+      "raw": "Venue"
+     },
+     "serializedName": "Venue",
+     "modelType": {
+      "$id": "103",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "104",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Settings",
+   "documentation": "Structure that contains settings elements .",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "105",
+    "fixed": false,
+    "raw": "Settings"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Settings",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/Settings"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "106",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "107",
+     "isReadOnly": false,
+     "realPath": [
+      "FirstName"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "108",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "109",
+      "fixed": false,
+      "raw": "Subject's first name."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "110",
+      "fixed": false,
+      "raw": "FirstName"
+     },
+     "serializedName": "FirstName",
+     "modelType": {
+      "$id": "111",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "112",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "113",
+     "isReadOnly": false,
+     "realPath": [
+      "LastName"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "114",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "115",
+      "fixed": false,
+      "raw": "Subject's last name."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "116",
+      "fixed": false,
+      "raw": "LastName"
+     },
+     "serializedName": "LastName",
+     "modelType": {
+      "$id": "117",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "118",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "PersonName",
+   "documentation": "Structure that contains subject name elements.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "119",
+    "fixed": false,
+    "raw": "PersonName"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "PersonName",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/PersonName"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "120",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "121",
+     "isReadOnly": false,
+     "realPath": [
+      "Context"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "122",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "123",
+      "fixed": false,
+      "raw": "Context of the person. This element is required for Order Score."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "124",
+      "fixed": false,
+      "raw": "Context"
+     },
+     "serializedName": "Context",
+     "modelType": {
+      "$id": "125",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "126",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "127",
+     "isReadOnly": false,
+     "realPath": [
+      "Name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "128",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "129",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "130",
+      "fixed": false,
+      "raw": "Name"
+     },
+     "serializedName": "Name",
+     "modelType": {
+      "$ref": "106"
+     }
+    },
+    {
+     "$id": "131",
+     "isReadOnly": false,
+     "realPath": [
+      "DateOfBirth"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "132",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "133",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "134",
+      "fixed": false,
+      "raw": "DateOfBirth"
+     },
+     "serializedName": "DateOfBirth",
+     "modelType": {
+      "$ref": "46"
+     }
+    },
+    {
+     "$id": "135",
+     "isReadOnly": false,
+     "realPath": [
+      "SSN"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "136",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "137",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "138",
+      "fixed": false,
+      "raw": "SSN"
+     },
+     "serializedName": "SSN",
+     "modelType": {
+      "$ref": "66"
+     }
+    },
+    {
+     "$id": "139",
+     "isReadOnly": false,
+     "realPath": [
+      "Addresses"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "140",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "141",
+      "fixed": false,
+      "raw": "Structure that contains subject address elements."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "142",
+      "fixed": false,
+      "raw": "Addresses"
+     },
+     "serializedName": "Addresses",
+     "modelType": {
+      "$id": "143",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "2"
+      },
+      "name": {
+       "$id": "144",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Person",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "145",
+    "fixed": false,
+    "raw": "Person"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Person",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/Person"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "146",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "147",
+     "isReadOnly": false,
+     "realPath": [
+      "Type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "148",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "149",
+      "fixed": false,
+      "raw": "Product that provides the results."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "150",
+      "fixed": false,
+      "raw": "Type"
+     },
+     "serializedName": "Type",
+     "modelType": {
+      "$id": "151",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "152",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "153",
+     "isReadOnly": false,
+     "realPath": [
+      "Data"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "154",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "155",
+      "fixed": false,
+      "raw": "Product response from the products that are marked for pass through. Generally, results are returned as a block of data in an unparsed format."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "156",
+      "fixed": false,
+      "raw": "Data"
+     },
+     "serializedName": "Data",
+     "modelType": {
+      "$id": "157",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "158",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "PassThrough",
+   "documentation": "Structure that contains product pass through elements.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "159",
+    "fixed": false,
+    "raw": "PassThrough"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "PassThrough",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/PassThrough"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "160",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "161",
+     "isReadOnly": false,
+     "realPath": [
+      "ProductType"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "162",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "163",
+      "fixed": false,
+      "raw": "Name of a product that ran in the workflow."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "164",
+      "fixed": false,
+      "raw": "ProductType"
+     },
+     "serializedName": "ProductType",
+     "modelType": {
+      "$id": "165",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "166",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "167",
+     "isReadOnly": false,
+     "realPath": [
+      "ExecutedStepName"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "168",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "169",
+      "fixed": false,
+      "raw": "Name of the workflow step that was executed for the product."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "170",
+      "fixed": false,
+      "raw": "ExecutedStepName"
+     },
+     "serializedName": "ExecutedStepName",
+     "modelType": {
+      "$id": "171",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "172",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "173",
+     "isReadOnly": false,
+     "realPath": [
+      "ProductConfigurationName"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "174",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "175",
+      "fixed": false,
+      "raw": "Name of the product configuration that was executed in the workflow."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "176",
+      "fixed": false,
+      "raw": "ProductConfigurationName"
+     },
+     "serializedName": "ProductConfigurationName",
+     "modelType": {
+      "$id": "177",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "178",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "179",
+     "isReadOnly": false,
+     "realPath": [
+      "ProductStatus"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "180",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "181",
+      "fixed": false,
+      "raw": "Status of the product that ran in the workflow."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "182",
+      "fixed": false,
+      "raw": "ProductStatus"
+     },
+     "serializedName": "ProductStatus",
+     "modelType": {
+      "$id": "183",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "184",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Product",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "185",
+    "fixed": false,
+    "raw": "Product"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Product",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/Product"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "186",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "187",
+     "isReadOnly": false,
+     "realPath": [
+      "Number"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "188",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "189",
+      "fixed": false,
+      "raw": "Passport number."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "190",
+      "fixed": false,
+      "raw": "Number"
+     },
+     "serializedName": "Number",
+     "modelType": {
+      "$id": "191",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "192",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "193",
+     "isReadOnly": false,
+     "realPath": [
+      "ExpirationDate"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "194",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "195",
+      "fixed": false,
+      "raw": "Structure that contains passport expiration date elements."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "196",
+      "fixed": false,
+      "raw": "ExpirationDate"
+     },
+     "serializedName": "ExpirationDate",
+     "modelType": {
+      "$id": "197",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "object",
+      "name": {
+       "$id": "198",
+       "fixed": false,
+       "raw": "Object"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "199",
+     "isReadOnly": false,
+     "realPath": [
+      "Country"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "200",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "201",
+      "fixed": false,
+      "raw": "Passport country."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "202",
+      "fixed": false,
+      "raw": "Country"
+     },
+     "serializedName": "Country",
+     "modelType": {
+      "$id": "203",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "204",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "205",
+     "isReadOnly": false,
+     "realPath": [
+      "MachineReadableLine1"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "206",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "207",
+      "fixed": false,
+      "raw": "Passport machine-readable line one."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "208",
+      "fixed": false,
+      "raw": "MachineReadableLine1"
+     },
+     "serializedName": "MachineReadableLine1",
+     "modelType": {
+      "$id": "209",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "210",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "211",
+     "isReadOnly": false,
+     "realPath": [
+      "MachineReadableLine2"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "212",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "213",
+      "fixed": false,
+      "raw": "Passport machine-readable line two."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "214",
+      "fixed": false,
+      "raw": "MachineReadableLine2"
+     },
+     "serializedName": "MachineReadableLine2",
+     "modelType": {
+      "$id": "215",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "216",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Passport",
+   "documentation": "Structure that contains subject passport elements.",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "217",
+    "fixed": false,
+    "raw": "Passport"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Passport",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/Passport"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "218",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "219",
+     "isReadOnly": false,
+     "realPath": [
+      "Status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "220",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "221",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "222",
+      "fixed": false,
+      "raw": "Status"
+     },
+     "serializedName": "Status",
+     "modelType": {
+      "$id": "223",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "224",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "225",
+     "isReadOnly": false,
+     "realPath": [
+      "TransactionId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "226",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "227",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "228",
+      "fixed": false,
+      "raw": "TransactionId"
+     },
+     "serializedName": "TransactionId",
+     "modelType": {
+      "$id": "229",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "230",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "InstantIDResponseHeader",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "231",
+    "fixed": false,
+    "raw": "InstantIDResponseHeader"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InstantIDResponseHeader",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InstantIDResponseHeader"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "232",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "233",
+     "isReadOnly": false,
+     "realPath": [
+      "First"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "234",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "235",
+      "fixed": false,
+      "raw": "First name."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "236",
+      "fixed": false,
+      "raw": "First"
+     },
+     "serializedName": "First",
+     "modelType": {
+      "$id": "237",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "238",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "239",
+     "isReadOnly": false,
+     "realPath": [
+      "Last"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "240",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "241",
+      "fixed": false,
+      "raw": "Last name."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "242",
+      "fixed": false,
+      "raw": "Last"
+     },
+     "serializedName": "Last",
+     "modelType": {
+      "$id": "243",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "244",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Name",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "245",
+    "fixed": false,
+    "raw": "Name"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "Name",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/Name"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "246",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "247",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetNumber"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "248",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "249",
+      "fixed": false,
+      "raw": "Street name."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "250",
+      "fixed": false,
+      "raw": "StreetNumber"
+     },
+     "serializedName": "StreetNumber",
+     "modelType": {
+      "$id": "251",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "252",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "253",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetName"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "254",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "255",
+      "fixed": false,
+      "raw": "Street name."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "256",
+      "fixed": false,
+      "raw": "StreetName"
+     },
+     "serializedName": "StreetName",
+     "modelType": {
+      "$id": "257",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "258",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "259",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetSuffix"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "260",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "261",
+      "fixed": false,
+      "raw": "Street suffix (for example, St or Ave)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "262",
+      "fixed": false,
+      "raw": "StreetSuffix"
+     },
+     "serializedName": "StreetSuffix",
+     "modelType": {
+      "$id": "263",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "264",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "265",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetPreDirection"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "266",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "267",
+      "fixed": false,
+      "raw": "Street pre-direction (for example, SW or NE)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "268",
+      "fixed": false,
+      "raw": "StreetPreDirection"
+     },
+     "serializedName": "StreetPreDirection",
+     "modelType": {
+      "$id": "269",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "270",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "271",
+     "isReadOnly": false,
+     "realPath": [
+      "UnitDesignation"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "272",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "273",
+      "fixed": false,
+      "raw": "Unit designation (for example, Apt or Suite)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "274",
+      "fixed": false,
+      "raw": "UnitDesignation"
+     },
+     "serializedName": "UnitDesignation",
+     "modelType": {
+      "$id": "275",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "276",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "277",
+     "isReadOnly": false,
+     "realPath": [
+      "UnitNumber"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "278",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "279",
+      "fixed": false,
+      "raw": "Unit number."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "280",
+      "fixed": false,
+      "raw": "UnitNumber"
+     },
+     "serializedName": "UnitNumber",
+     "modelType": {
+      "$id": "281",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "282",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "283",
+     "isReadOnly": false,
+     "realPath": [
+      "Country"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "284",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "285",
+      "fixed": false,
+      "raw": "County."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "286",
+      "fixed": false,
+      "raw": "Country"
+     },
+     "serializedName": "Country",
+     "modelType": {
+      "$id": "287",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "288",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "289",
+     "isReadOnly": false,
+     "realPath": [
+      "PostalCode"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "290",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "291",
+      "fixed": false,
+      "raw": "Postal code."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "292",
+      "fixed": false,
+      "raw": "PostalCode"
+     },
+     "serializedName": "PostalCode",
+     "modelType": {
+      "$id": "293",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "294",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "295",
+     "isReadOnly": false,
+     "realPath": [
+      "StateCityZip"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "296",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "297",
+      "fixed": false,
+      "raw": "Two-letter state abbreviation, city, and ZIP Code."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "298",
+      "fixed": false,
+      "raw": "StateCityZip"
+     },
+     "serializedName": "StateCityZip",
+     "modelType": {
+      "$id": "299",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "300",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "301",
+     "isReadOnly": false,
+     "realPath": [
+      "Lattitude"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "302",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "303",
+      "fixed": false,
+      "raw": "Latitude coordinates."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "304",
+      "fixed": false,
+      "raw": "Lattitude"
+     },
+     "serializedName": "Lattitude",
+     "modelType": {
+      "$id": "305",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "306",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "307",
+     "isReadOnly": false,
+     "realPath": [
+      "Longitude"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "308",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "309",
+      "fixed": false,
+      "raw": "Longitude coordinates."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "310",
+      "fixed": false,
+      "raw": "Longitude"
+     },
+     "serializedName": "Longitude",
+     "modelType": {
+      "$id": "311",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "312",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "313",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetPostDirection"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "314",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "315",
+      "fixed": false,
+      "raw": "Street post-direction (for example, N or W)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "316",
+      "fixed": false,
+      "raw": "StreetPostDirection"
+     },
+     "serializedName": "StreetPostDirection",
+     "modelType": {
+      "$id": "317",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "318",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "319",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetAddress1"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "320",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "321",
+      "fixed": false,
+      "raw": "Unparsed first address line (for example, 1 N. Main St)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "322",
+      "fixed": false,
+      "raw": "StreetAddress1"
+     },
+     "serializedName": "StreetAddress1",
+     "modelType": {
+      "$id": "323",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "324",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "325",
+     "isReadOnly": false,
+     "realPath": [
+      "StreetAddress2"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "326",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "327",
+      "fixed": false,
+      "raw": "Unparsed second address line (for example, Unit 3C)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "328",
+      "fixed": false,
+      "raw": "StreetAddress2"
+     },
+     "serializedName": "StreetAddress2",
+     "modelType": {
+      "$id": "329",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "330",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "331",
+     "isReadOnly": false,
+     "realPath": [
+      "City"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "332",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "333",
+      "fixed": false,
+      "raw": "City."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "334",
+      "fixed": false,
+      "raw": "City"
+     },
+     "serializedName": "City",
+     "modelType": {
+      "$id": "335",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "336",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "337",
+     "isReadOnly": false,
+     "realPath": [
+      "State"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "338",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "339",
+      "fixed": false,
+      "raw": "Two-letter state abbreviation (for example, MT or FL)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "340",
+      "fixed": false,
+      "raw": "State"
+     },
+     "serializedName": "State",
+     "modelType": {
+      "$id": "341",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "342",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "343",
+     "isReadOnly": false,
+     "realPath": [
+      "Zip4"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "344",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "345",
+      "fixed": false,
+      "raw": "ZIP+4 Code."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "346",
+      "fixed": false,
+      "raw": "Zip4"
+     },
+     "serializedName": "Zip4",
+     "modelType": {
+      "$id": "347",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "348",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "349",
+     "isReadOnly": false,
+     "realPath": [
+      "Zip5"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "350",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "351",
+      "fixed": false,
+      "raw": "ZIP+4 Code."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "352",
+      "fixed": false,
+      "raw": "Zip5"
+     },
+     "serializedName": "Zip5",
+     "modelType": {
+      "$id": "353",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "354",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "StandardizedInputAddress",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "355",
+    "fixed": false,
+    "raw": "StandardizedInputAddress"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "StandardizedInputAddress",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/StandardizedInputAddress"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "356",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "357",
+     "isReadOnly": false,
+     "realPath": [
+      "Name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "358",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "359",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "360",
+      "fixed": false,
+      "raw": "Name"
+     },
+     "serializedName": "Name",
+     "modelType": {
+      "$ref": "232"
+     }
+    },
+    {
+     "$id": "361",
+     "isReadOnly": false,
+     "realPath": [
+      "Address"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "362",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "363",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "364",
+      "fixed": false,
+      "raw": "Address"
+     },
+     "serializedName": "Address",
+     "modelType": {
+      "$ref": "246"
+     }
+    },
+    {
+     "$id": "365",
+     "isReadOnly": false,
+     "realPath": [
+      "SSN"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "366",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "367",
+      "fixed": false,
+      "raw": "SSN."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "368",
+      "fixed": false,
+      "raw": "SSN"
+     },
+     "serializedName": "SSN",
+     "modelType": {
+      "$id": "369",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "370",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "371",
+     "isReadOnly": false,
+     "realPath": [
+      "DOB"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "372",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "373",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "374",
+      "fixed": false,
+      "raw": "DOB"
+     },
+     "serializedName": "DOB",
+     "modelType": {
+      "$ref": "46"
+     }
+    }
+   ],
+   "serializedName": "VerifiedInput",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "375",
+    "fixed": false,
+    "raw": "VerifiedInput"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "VerifiedInput",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/VerifiedInput"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "376",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "377",
+     "isReadOnly": false,
+     "realPath": [
+      "Name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "378",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "379",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "380",
+      "fixed": false,
+      "raw": "Name"
+     },
+     "serializedName": "Name",
+     "modelType": {
+      "$ref": "232"
+     }
+    },
+    {
+     "$id": "381",
+     "isReadOnly": false,
+     "realPath": [
+      "Address"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "382",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "383",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "384",
+      "fixed": false,
+      "raw": "Address"
+     },
+     "serializedName": "Address",
+     "modelType": {
+      "$ref": "2"
+     }
+    },
+    {
+     "$id": "385",
+     "isReadOnly": false,
+     "realPath": [
+      "DOB"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "386",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "387",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "388",
+      "fixed": false,
+      "raw": "DOB"
+     },
+     "serializedName": "DOB",
+     "modelType": {
+      "$ref": "46"
+     }
+    },
+    {
+     "$id": "389",
+     "isReadOnly": false,
+     "realPath": [
+      "SSN"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "390",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "391",
+      "fixed": false,
+      "raw": "SSN."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "392",
+      "fixed": false,
+      "raw": "SSN"
+     },
+     "serializedName": "SSN",
+     "modelType": {
+      "$id": "393",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "394",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "395",
+     "isReadOnly": false,
+     "realPath": [
+      "UseDobFilter"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "396",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "397",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "398",
+      "fixed": false,
+      "raw": "UseDobFilter"
+     },
+     "serializedName": "UseDobFilter",
+     "modelType": {
+      "$id": "399",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "400",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "401",
+     "isReadOnly": false,
+     "realPath": [
+      "DobRadius"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "402",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "403",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "404",
+      "fixed": false,
+      "raw": "DobRadius"
+     },
+     "serializedName": "DobRadius",
+     "modelType": {
+      "$id": "405",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "406",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "407",
+     "isReadOnly": false,
+     "realPath": [
+      "Passport"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "408",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "409",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "410",
+      "fixed": false,
+      "raw": "Passport"
+     },
+     "serializedName": "Passport",
+     "modelType": {
+      "$ref": "186"
+     }
+    },
+    {
+     "$id": "411",
+     "isReadOnly": false,
+     "realPath": [
+      "Channel"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "412",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "413",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "414",
+      "fixed": false,
+      "raw": "Channel"
+     },
+     "serializedName": "Channel",
+     "modelType": {
+      "$id": "415",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "416",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "417",
+     "isReadOnly": false,
+     "realPath": [
+      "OwnOrRent"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "418",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "419",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "420",
+      "fixed": false,
+      "raw": "OwnOrRent"
+     },
+     "serializedName": "OwnOrRent",
+     "modelType": {
+      "$id": "421",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "422",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "InputEcho",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "423",
+    "fixed": false,
+    "raw": "InputEcho"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InputEcho",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InputEcho"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "424",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "425",
+     "isReadOnly": false,
+     "realPath": [
+      "RiskCode"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "426",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "427",
+      "fixed": false,
+      "raw": "Risk indicator code."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "428",
+      "fixed": false,
+      "raw": "RiskCode"
+     },
+     "serializedName": "RiskCode",
+     "modelType": {
+      "$id": "429",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "430",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "431",
+     "isReadOnly": false,
+     "realPath": [
+      "Description"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "432",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "433",
+      "fixed": false,
+      "raw": "Risk indicator description."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "434",
+      "fixed": false,
+      "raw": "Description"
+     },
+     "serializedName": "Description",
+     "modelType": {
+      "$id": "435",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "436",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "437",
+     "isReadOnly": false,
+     "realPath": [
+      "Sequence"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "438",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "439",
+      "fixed": false,
+      "raw": "Risk indicator priority."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "440",
+      "fixed": false,
+      "raw": "Sequence"
+     },
+     "serializedName": "Sequence",
+     "modelType": {
+      "$id": "441",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "double",
+      "name": {
+       "$id": "442",
+       "fixed": false,
+       "raw": "Double"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "RiskIndicator",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "443",
+    "fixed": false,
+    "raw": "RiskIndicator"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "RiskIndicator",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/RiskIndicator"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "444",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "445",
+     "isReadOnly": false,
+     "realPath": [
+      "RiskIndicator"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "446",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "447",
+      "fixed": false,
+      "raw": "Array that contains risk codes and descriptions."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "448",
+      "fixed": false,
+      "raw": "RiskIndicator"
+     },
+     "serializedName": "RiskIndicator",
+     "modelType": {
+      "$id": "449",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "424"
+      },
+      "name": {
+       "$id": "450",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "RiskIndicators",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "451",
+    "fixed": false,
+    "raw": "RiskIndicators"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "RiskIndicators",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/RiskIndicators"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "452",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "453",
+     "isReadOnly": false,
+     "realPath": [
+      "ComprehensiveVerificationIndex"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "454",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "455",
+      "fixed": false,
+      "raw": "Index summarizing the verification matches that are found in the NAS and NAP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "456",
+      "fixed": false,
+      "raw": "ComprehensiveVerificationIndex"
+     },
+     "serializedName": "ComprehensiveVerificationIndex",
+     "modelType": {
+      "$id": "457",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "458",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "459",
+     "isReadOnly": false,
+     "realPath": [
+      "RiskIndicators"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "460",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "461",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "462",
+      "fixed": false,
+      "raw": "RiskIndicators"
+     },
+     "serializedName": "RiskIndicators",
+     "modelType": {
+      "$ref": "444"
+     }
+    }
+   ],
+   "serializedName": "ComprehensiveVerification",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "463",
+    "fixed": false,
+    "raw": "ComprehensiveVerification"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ComprehensiveVerification",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/ComprehensiveVerification"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "464",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "465",
+     "isReadOnly": false,
+     "realPath": [
+      "Summary"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "466",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "467",
+      "fixed": false,
+      "raw": "Index that indicates the level of the match of the submitted NAP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "468",
+      "fixed": false,
+      "raw": "Summary"
+     },
+     "serializedName": "Summary",
+     "modelType": {
+      "$id": "469",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "470",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "NameAddressPhone",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "471",
+    "fixed": false,
+    "raw": "NameAddressPhone"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "NameAddressPhone",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/NameAddressPhone"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "472",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "473",
+     "isReadOnly": false,
+     "realPath": [
+      "InputEcho"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "474",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "475",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "476",
+      "fixed": false,
+      "raw": "InputEcho"
+     },
+     "serializedName": "InputEcho",
+     "modelType": {
+      "$ref": "376"
+     }
+    },
+    {
+     "$id": "477",
+     "isReadOnly": false,
+     "realPath": [
+      "UniqueId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "478",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "479",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "480",
+      "fixed": false,
+      "raw": "UniqueId"
+     },
+     "serializedName": "UniqueId",
+     "modelType": {
+      "$id": "481",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "482",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "483",
+     "isReadOnly": false,
+     "realPath": [
+      "VerifiedInput"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "484",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "485",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "486",
+      "fixed": false,
+      "raw": "VerifiedInput"
+     },
+     "serializedName": "VerifiedInput",
+     "modelType": {
+      "$ref": "356"
+     }
+    },
+    {
+     "$id": "487",
+     "isReadOnly": false,
+     "realPath": [
+      "DobVerified"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "488",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "489",
+      "fixed": false,
+      "raw": "Indicates whether the DOB is verified."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "490",
+      "fixed": false,
+      "raw": "DobVerified"
+     },
+     "serializedName": "DobVerified",
+     "modelType": {
+      "$id": "491",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "492",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "493",
+     "isReadOnly": false,
+     "realPath": [
+      "NameAddressSsnSummary"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "494",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "495",
+      "fixed": false,
+      "raw": "Index that indicates the level of the match of the submitted NAS."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "496",
+      "fixed": false,
+      "raw": "NameAddressSsnSummary"
+     },
+     "serializedName": "NameAddressSsnSummary",
+     "modelType": {
+      "$id": "497",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "498",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "499",
+     "isReadOnly": false,
+     "realPath": [
+      "NameAddressPhone"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "500",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "501",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "502",
+      "fixed": false,
+      "raw": "NameAddressPhone"
+     },
+     "serializedName": "NameAddressPhone",
+     "modelType": {
+      "$ref": "464"
+     }
+    },
+    {
+     "$id": "503",
+     "isReadOnly": false,
+     "realPath": [
+      "ComprehensiveVerification"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "504",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "505",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "506",
+      "fixed": false,
+      "raw": "ComprehensiveVerification"
+     },
+     "serializedName": "ComprehensiveVerification",
+     "modelType": {
+      "$ref": "452"
+     }
+    },
+    {
+     "$id": "507",
+     "isReadOnly": false,
+     "realPath": [
+      "AdditionalScore1"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "508",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "509",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "510",
+      "fixed": false,
+      "raw": "AdditionalScore1"
+     },
+     "serializedName": "AdditionalScore1",
+     "modelType": {
+      "$id": "511",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "512",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "513",
+     "isReadOnly": false,
+     "realPath": [
+      "AdditionalScore2"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "514",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "515",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "516",
+      "fixed": false,
+      "raw": "AdditionalScore2"
+     },
+     "serializedName": "AdditionalScore2",
+     "modelType": {
+      "$id": "517",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "518",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "519",
+     "isReadOnly": false,
+     "realPath": [
+      "SsnFoundForLexID"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "520",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "521",
+      "fixed": false,
+      "raw": "Indicates whether an SSN is found in the input individual's LexID record."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "522",
+      "fixed": false,
+      "raw": "SsnFoundForLexID"
+     },
+     "serializedName": "SsnFoundForLexID",
+     "modelType": {
+      "$id": "523",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "524",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "525",
+     "isReadOnly": false,
+     "realPath": [
+      "AddressPOBox"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "526",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "527",
+      "fixed": false,
+      "raw": "Indicates whether the address is a PO Box."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "528",
+      "fixed": false,
+      "raw": "AddressPOBox"
+     },
+     "serializedName": "AddressPOBox",
+     "modelType": {
+      "$id": "529",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "530",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "531",
+     "isReadOnly": false,
+     "realPath": [
+      "AddressCMRA"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "532",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "533",
+      "fixed": false,
+      "raw": "Indicates whether the address is a CMRA."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "534",
+      "fixed": false,
+      "raw": "AddressCMRA"
+     },
+     "serializedName": "AddressCMRA",
+     "modelType": {
+      "$id": "535",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "536",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "537",
+     "isReadOnly": false,
+     "realPath": [
+      "InstantIdVersion"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "538",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "539",
+      "fixed": false,
+      "raw": "InstantID version that is used to generate the results."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "540",
+      "fixed": false,
+      "raw": "InstantIdVersion"
+     },
+     "serializedName": "InstantIdVersion",
+     "modelType": {
+      "$id": "541",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "542",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "543",
+     "isReadOnly": false,
+     "realPath": [
+      "EmergingId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "544",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "545",
+      "fixed": false,
+      "raw": "Indicates whether the NAS verification record is a LexisNexis Risk Solutions emerging identity record and does not have an assigned LexID number."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "546",
+      "fixed": false,
+      "raw": "EmergingId"
+     },
+     "serializedName": "EmergingId",
+     "modelType": {
+      "$id": "547",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "548",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "549",
+     "isReadOnly": false,
+     "realPath": [
+      "AddressStandardized"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "550",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "551",
+      "fixed": false,
+      "raw": "Indicates whether the information that is returned in the StandardizedInputAddress response structure is standardized (based on USPS guidelines)."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "552",
+      "fixed": false,
+      "raw": "AddressStandardized"
+     },
+     "serializedName": "AddressStandardized",
+     "modelType": {
+      "$id": "553",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "554",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "555",
+     "isReadOnly": false,
+     "realPath": [
+      "StandardizedInputAddress"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "556",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "557",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "558",
+      "fixed": false,
+      "raw": "StandardizedInputAddress"
+     },
+     "serializedName": "StandardizedInputAddress",
+     "modelType": {
+      "$ref": "246"
+     }
+    }
+   ],
+   "serializedName": "InstantIDResponseResult",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "559",
+    "fixed": false,
+    "raw": "InstantIDResponseResult"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InstantIDResponseResult",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InstantIDResponseResult"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "560",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "561",
+     "isReadOnly": false,
+     "realPath": [
+      "Header"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "562",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "563",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "564",
+      "fixed": false,
+      "raw": "Header"
+     },
+     "serializedName": "Header",
+     "modelType": {
+      "$ref": "218"
+     }
+    },
+    {
+     "$id": "565",
+     "isReadOnly": false,
+     "realPath": [
+      "Result"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "566",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "567",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "568",
+      "fixed": false,
+      "raw": "Result"
+     },
+     "serializedName": "Result",
+     "modelType": {
+      "$ref": "472"
+     }
+    }
+   ],
+   "serializedName": "InstantIDResponse",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "569",
+    "fixed": false,
+    "raw": "InstantIDResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InstantIDResponse",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InstantIDResponse"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "570",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "571",
+     "isReadOnly": false,
+     "realPath": [
+      "response"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "572",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "573",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "574",
+      "fixed": false,
+      "raw": "response"
+     },
+     "serializedName": "response",
+     "modelType": {
+      "$ref": "560"
+     }
+    }
+   ],
+   "serializedName": "InstantIDResponseEx",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "575",
+    "fixed": false,
+    "raw": "InstantIDResponseEx"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InstantIDResponseEx",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InstantIDResponseEx"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "576",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "577",
+     "isReadOnly": false,
+     "realPath": [
+      "InstantIDResponseEx"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "578",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "579",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "580",
+      "fixed": false,
+      "raw": "InstantIDResponseEx"
+     },
+     "serializedName": "InstantIDResponseEx",
+     "modelType": {
+      "$ref": "570"
+     }
+    }
+   ],
+   "serializedName": "InstantIDResponseExWrapper",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "581",
+    "fixed": false,
+    "raw": "InstantIDResponseExWrapper"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InstantIDResponseExWrapper",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InstantIDResponseExWrapper"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "582",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "583",
+     "isReadOnly": false,
+     "realPath": [
+      "Type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "584",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "585",
+      "fixed": false,
+      "raw": "Type of request that initiates the transaction.f"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "586",
+      "fixed": false,
+      "raw": "Type"
+     },
+     "serializedName": "Type",
+     "modelType": {
+      "$id": "587",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "588",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "589",
+     "isReadOnly": false,
+     "realPath": [
+      "Settings"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "590",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "591",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "592",
+      "fixed": false,
+      "raw": "Settings"
+     },
+     "serializedName": "Settings",
+     "modelType": {
+      "$ref": "80"
+     }
+    },
+    {
+     "$id": "593",
+     "isReadOnly": false,
+     "realPath": [
+      "Persons"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "594",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "595",
+      "fixed": false,
+      "raw": "Structure that contains input subject elements."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "596",
+      "fixed": false,
+      "raw": "Persons"
+     },
+     "serializedName": "Persons",
+     "modelType": {
+      "$id": "597",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "120"
+      },
+      "name": {
+       "$id": "598",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "InitiateWorkflowRequest",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "599",
+    "fixed": false,
+    "raw": "InitiateWorkflowRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InitiateWorkflowRequest",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InitiateWorkflowRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "600",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "601",
+     "isReadOnly": false,
+     "realPath": [
+      "ConversationId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "602",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "603",
+      "fixed": false,
+      "raw": "Unique identifier that is assigned to the transaction by RDP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "604",
+      "fixed": false,
+      "raw": "ConversationId"
+     },
+     "serializedName": "ConversationId",
+     "modelType": {
+      "$id": "605",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "606",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "607",
+     "isReadOnly": false,
+     "realPath": [
+      "RequestId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "608",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "609",
+      "fixed": false,
+      "raw": "Unique identifier that is assigned to the transaction request by RDP."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "610",
+      "fixed": false,
+      "raw": "RequestId"
+     },
+     "serializedName": "RequestId",
+     "modelType": {
+      "$id": "611",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "612",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "613",
+     "isReadOnly": false,
+     "realPath": [
+      "TransactionStatus"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "614",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "615",
+      "fixed": false,
+      "raw": "Current status of the transaction, the transaction number, and the result of the transaction."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "616",
+      "fixed": false,
+      "raw": "TransactionStatus"
+     },
+     "serializedName": "TransactionStatus",
+     "modelType": {
+      "$id": "617",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "618",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "619",
+     "isReadOnly": false,
+     "realPath": [
+      "Reference"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "620",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "621",
+      "fixed": false,
+      "raw": "Internal tracking number that your organization can assign to a transaction."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "622",
+      "fixed": false,
+      "raw": "Reference"
+     },
+     "serializedName": "Reference",
+     "modelType": {
+      "$id": "623",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "624",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "WorkflowStatus",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "625",
+    "fixed": false,
+    "raw": "WorkflowStatus"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "WorkflowStatus",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/WorkflowStatus"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "626",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "627",
+     "isReadOnly": false,
+     "realPath": [
+      "Text"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "628",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "629",
+      "fixed": false,
+      "raw": "Description message."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "630",
+      "fixed": false,
+      "raw": "Text"
+     },
+     "serializedName": "Text",
+     "modelType": {
+      "$id": "631",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "632",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "DetailDescription",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "633",
+    "fixed": false,
+    "raw": "DetailDescription"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "DetailDescription",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/DetailDescription"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "634",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "635",
+     "isReadOnly": false,
+     "realPath": [
+      "InformationType"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "636",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "637",
+      "fixed": false,
+      "raw": "Type of information which connected to workflow status."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "638",
+      "fixed": false,
+      "raw": "InformationType"
+     },
+     "serializedName": "InformationType",
+     "modelType": {
+      "$id": "639",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "640",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "641",
+     "isReadOnly": false,
+     "realPath": [
+      "Code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "642",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "643",
+      "fixed": false,
+      "raw": "Code of the error if exists"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "644",
+      "fixed": false,
+      "raw": "Code"
+     },
+     "serializedName": "Code",
+     "modelType": {
+      "$id": "645",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "646",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "647",
+     "isReadOnly": false,
+     "realPath": [
+      "Description"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "648",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "649",
+      "fixed": false,
+      "raw": "Error description"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "650",
+      "fixed": false,
+      "raw": "Description"
+     },
+     "serializedName": "Description",
+     "modelType": {
+      "$id": "651",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "652",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "653",
+     "isReadOnly": false,
+     "realPath": [
+      "DetailDescription"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "654",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "655",
+      "fixed": false,
+      "raw": "Error details elements"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "656",
+      "fixed": false,
+      "raw": "DetailDescription"
+     },
+     "serializedName": "DetailDescription",
+     "modelType": {
+      "$id": "657",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "626"
+      },
+      "name": {
+       "$id": "658",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "InformationItem",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "659",
+    "fixed": false,
+    "raw": "InformationItem"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InformationItem",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InformationItem"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "660",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "661",
+     "isReadOnly": false,
+     "realPath": [
+      "Status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "662",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "663",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "664",
+      "fixed": false,
+      "raw": "Status"
+     },
+     "serializedName": "Status",
+     "modelType": {
+      "$ref": "600"
+     }
+    },
+    {
+     "$id": "665",
+     "isReadOnly": false,
+     "realPath": [
+      "Products"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "666",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "667",
+      "fixed": false,
+      "raw": "Structure that can contain multiple product responses."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "668",
+      "fixed": false,
+      "raw": "Products"
+     },
+     "serializedName": "Products",
+     "modelType": {
+      "$id": "669",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "160"
+      },
+      "name": {
+       "$id": "670",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "671",
+     "isReadOnly": false,
+     "realPath": [
+      "PassThroughs"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "672",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "673",
+      "fixed": false,
+      "raw": "Structure that contains product pass through elements."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "674",
+      "fixed": false,
+      "raw": "PassThroughs"
+     },
+     "serializedName": "PassThroughs",
+     "modelType": {
+      "$id": "675",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "146"
+      },
+      "name": {
+       "$id": "676",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "677",
+     "isReadOnly": false,
+     "realPath": [
+      "Information"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "678",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "679",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "680",
+      "fixed": false,
+      "raw": "Information"
+     },
+     "serializedName": "Information",
+     "modelType": {
+      "$id": "681",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "634"
+      },
+      "name": {
+       "$id": "682",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "InitiateWorkflowResponse",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "683",
+    "fixed": false,
+    "raw": "InitiateWorkflowResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "InitiateWorkflowResponse",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/schemas/InitiateWorkflowResponse"
+     ]
+    }
+   },
+   "deprecated": false
+  }
+ ],
+ "name": "LexisNexisRDPAPI",
+ "namespace": "WX.B2C.User.Verification.LexisNexis.Rdp.Client",
+ "modelsName": "Models",
+ "apiVersion": "3.0.0",
+ "baseUrl": "http://localhost",
+ "documentation": "The LexisNexis RDP API is used to submit check requests.",
+ "properties": [
+  {
+   "$id": "684",
+   "isReadOnly": false,
+   "realPath": [
+    "accountId"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "685",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "686",
+    "fixed": false,
+    "raw": "This variable is the account identifier of the account that is associated to the transaction or the user."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "AccountId",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/parameters/AccountId"
+     ]
+    }
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "687",
+    "fixed": false,
+    "raw": "accountId"
+   },
+   "serializedName": "accountId",
+   "modelType": {
+    "$id": "688",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "689",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "690",
+   "isReadOnly": false,
+   "realPath": [
+    "workflowName"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "691",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "692",
+    "fixed": false,
+    "raw": "This variable is the name of the workflow that runs in the transaction."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "3.0.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "WorkflowName",
+     "originalLocations": [
+      "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/parameters/WorkflowName"
+     ]
+    }
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "693",
+    "fixed": false,
+    "raw": "workflowName"
+   },
+   "serializedName": "workflowName",
+   "modelType": {
+    "$id": "694",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "695",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  }
+ ],
+ "operations": [
+  {
+   "$id": "696",
+   "methods": [
+    {
+     "$id": "697",
+     "parameters": [
+      {
+       "$id": "698",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "699",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "700",
+        "fixed": false,
+        "raw": "Request"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1095rr3·restws-identity-v3-accounts-accountid-workflows-workflowname-conversations·post·requestbody",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/requestBodies/paths·1095rr3·restws-identity-v3-accounts-accountid-workflows-workflowname-conversations·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "701",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "582"
+       }
+      },
+      {
+       "$id": "702",
+       "clientProperty": {
+        "$ref": "684"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "703",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "704",
+        "fixed": false,
+        "raw": "This variable is the account identifier of the account that is associated to the transaction or the user."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "AccountId",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/parameters/AccountId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "705",
+        "fixed": false,
+        "raw": "accountId"
+       },
+       "serializedName": "accountId",
+       "modelType": {
+        "$id": "706",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "707",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "708",
+       "clientProperty": {
+        "$ref": "690"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "709",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "710",
+        "fixed": false,
+        "raw": "This variable is the name of the workflow that runs in the transaction."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "WorkflowName",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/parameters/WorkflowName"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "711",
+        "fixed": false,
+        "raw": "workflowName"
+       },
+       "serializedName": "workflowName",
+       "modelType": {
+        "$id": "712",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "713",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "714",
+      "fixed": false,
+      "raw": "Initiate"
+     },
+     "group": {
+      "$id": "715",
+      "fixed": false,
+      "raw": "Workflow"
+     },
+     "serializedName": "Workflow_Initiate",
+     "url": "/restws/identity/v3/accounts/{accountId}/workflows/{workflowName}/conversations",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "716",
+       "body": {
+        "$ref": "660"
+       },
+       "extensions": {
+        "$id": "717",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "3.0.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1hhkhty·restws-identity-v3-accounts-accountid-workflows-workflowname-conversations·post·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/wx-b2c-user-verification/source/WX.B2C.User.Verification.LexisNexis.Rdp.Client/openapi.json#/components/responses/paths·1hhkhty·restws-identity-v3-accounts-accountid-workflows-workflowname-conversations·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "718",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "719",
+      "body": {
+       "$ref": "660"
+      },
+      "isNullable": true
+     },
+     "summary": "Initiate a workflow in RDP",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "720",
+    "fixed": false,
+    "raw": "Workflow"
+   },
+   "typeName": {
+    "$id": "721",
+    "fixed": false
+   },
+   "nameForProperty": "Workflow"
+  }
+ ]
+}

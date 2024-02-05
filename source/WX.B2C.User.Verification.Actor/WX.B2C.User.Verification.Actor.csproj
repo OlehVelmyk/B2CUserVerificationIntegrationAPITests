@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <ServerGarbageCollection>True</ServerGarbageCollection>
+    <SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <TargetLatestRuntimePatch>False</TargetLatestRuntimePatch>
+    <ServicePackagePath>PackageRoot</ServicePackagePath>
+    <ServicePackagePrefix>$(MSBuildProjectName)</ServicePackagePrefix>
+    <FabActUtilWorkingDir>$(BaseIntermediateOutputPath)\FabActUtilTemp</FabActUtilWorkingDir>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="4.0.470" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WX.B2C.User.Verification.Automation.Services\WX.B2C.User.Verification.Automation.Services.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.BlobStorage\WX.B2C.User.Verification.BlobStorage.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Core.Services\WX.B2C.User.Verification.Core.Services.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.DataAccess\WX.B2C.User.Verification.DataAccess.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.EventPublisher\WX.B2C.User.Verification.EventPublisher.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.Common\WX.B2C.User.Verification.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.IpStack\WX.B2C.User.Verification.IpStack.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.LexisNexis\WX.B2C.User.Verification.LexisNexis.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Onfido\WX.B2C.User.Verification.Onfido.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.PassFort\WX.B2C.User.Verification.PassFort.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.B2C.Survey\WX.B2C.User.Verification.B2C.Survey.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Provider.Services\WX.B2C.User.Verification.Provider.Services.csproj" />
+  </ItemGroup>
+
+</Project>

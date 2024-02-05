@@ -1,0 +1,965 @@
+{
+  "clear": [
+    {
+      "check_id": "94fc61db-72db-4142-b256-405e3d406a59",
+      "created_at": "2022-07-29T11:58:03Z",
+      "documents": [
+        {
+          "id": "6516bb7e-7224-49e9-932c-62b620e1d402"
+        },
+        {
+          "id": "012e8caf-a9ef-4027-82c1-d715b6db7e82"
+        }
+      ],
+      "href": "/v3.2/reports/1db75569-733b-41a3-87df-537b742b714c",
+      "id": "1db75569-733b-41a3-87df-537b742b714c",
+      "name": "document",
+      "properties": {
+        "first_name": "JUAN ANTONIO",
+        "last_name": "SANCHEZ CARABALLO",
+        "issuing_country": "ESP",
+        "document_numbers": [
+          {
+            "type": "personal_number",
+            "value": "44315521H"
+          },
+          {
+            "type": "document_number",
+            "value": "BIX101258"
+          }
+        ],
+        "document_type": "national_identity_card",
+        "gender": "Male",
+        "nationality": "ESP",
+        "date_of_birth": "1978-11-29",
+        "date_of_expiry": "2029-02-06",
+        "place_of_birth": "LAS PALMAS DE GRAN CANARIA LAS PALMAS",
+        "mrz_line1": "IDESPBIX101258944315521H<<<<<<",
+        "mrz_line2": "7811296M2902061ESP<<<<<<<<<<<6",
+        "mrz_line3": "SANCHEZ<CARABALLO<<JUAN<ANTONI"
+      },
+      "result": "clear",
+      "status": "complete",
+      "sub_result": "clear",
+      "breakdown": {
+        "data_comparison": {
+          "result": "clear",
+          "breakdown": {
+            "date_of_expiry": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": null,
+              "properties": {}
+            },
+            "document_type": {
+              "result": null,
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": null,
+              "properties": {}
+            },
+            "gender": {
+              "result": null,
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "last_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "data_consistency": {
+          "result": "clear",
+          "breakdown": {
+            "date_of_expiry": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_type": {
+              "result": "clear",
+              "properties": {}
+            },
+            "nationality": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": "clear",
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "last_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "data_validation": {
+          "result": "clear",
+          "breakdown": {
+            "document_expiration": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {
+                "document_number": "clear",
+                "personal_number": "clear"
+              }
+            },
+            "expiry_date": {
+              "result": "clear",
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "mrz": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "compromised_document": {
+          "result": "clear"
+        },
+        "age_validation": {
+          "result": "clear",
+          "breakdown": {
+            "minimum_accepted_age": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "image_integrity": {
+          "result": "clear",
+          "breakdown": {
+            "supported_document": {
+              "result": "clear",
+              "properties": {}
+            },
+            "image_quality": {
+              "result": "clear",
+              "properties": {}
+            },
+            "colour_picture": {
+              "result": "clear",
+              "properties": {}
+            },
+            "conclusive_document_quality": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "police_record": {
+          "result": "clear"
+        },
+        "visual_authenticity": {
+          "result": "clear",
+          "breakdown": {
+            "face_detection": {
+              "result": "clear",
+              "properties": {}
+            },
+            "digital_tampering": {
+              "result": "clear",
+              "properties": {}
+            },
+            "original_document_present": {
+              "result": "clear",
+              "properties": {}
+            },
+            "picture_face_integrity": {
+              "result": "clear",
+              "properties": {}
+            },
+            "security_features": {
+              "result": "clear",
+              "properties": {}
+            },
+            "fonts": {
+              "result": "clear",
+              "properties": {}
+            },
+            "template": {
+              "result": "clear",
+              "properties": {}
+            },
+            "other": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "fraud": [
+    {
+      "check_id": "f5cbd21f-a470-4ef8-b6e5-2d6604ca17dc",
+      "created_at": "2022-08-02T12:11:05Z",
+      "documents": [
+        {
+          "id": "122b45c5-b792-464c-9f59-b706109f1b5f"
+        },
+        {
+          "id": "66f098a9-8bce-4a74-891c-1f70ad6bb1fc"
+        }
+      ],
+      "href": "/v3.2/reports/918c2d96-4104-45ce-aedb-59005e0fd721",
+      "id": "918c2d96-4104-45ce-aedb-59005e0fd721",
+      "name": "document",
+      "properties": {
+        "first_name": "CARLENA MARRAE",
+        "last_name": "GIINTHIR",
+        "issuing_country": "USA",
+        "document_numbers": [
+          {
+            "type": "document_number",
+            "value": "V641104780546"
+          }
+        ],
+        "document_type": "driving_licence",
+        "gender": "Female",
+        "issuing_state": "MN",
+        "date_of_birth": "1991-05-29",
+        "issuing_date": "2021-06-11",
+        "date_of_expiry": "2025-05-29",
+        "real_id_compliance": false,
+        "barcode": [
+          {
+            "first_name": "CARLENA MARRAE",
+            "last_name": "GIINTHIR",
+            "document_type": "driving_licence",
+            "date_of_expiry": "2025-05-29",
+            "date_of_birth": "1991-05-29",
+            "issuing_date": "2021-06-11",
+            "address_line_1": "306 MINNESOTA AVE",
+            "address_line_3": "PRINSBURG",
+            "address_line_4": "562819760",
+            "address_line_5": "MN",
+            "issuing_state": "MN",
+            "class": "D",
+            "gender": "Female",
+            "issuing_country": "USA",
+            "document_number": "V641104780546",
+            "real_id_classification": "real_id"
+          }
+        ]
+      },
+      "result": "consider",
+      "status": "complete",
+      "sub_result": "suspected",
+      "breakdown": {
+        "data_comparison": {
+          "result": "clear",
+          "breakdown": {
+            "date_of_expiry": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": null,
+              "properties": {}
+            },
+            "document_type": {
+              "result": null,
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": null,
+              "properties": {}
+            },
+            "gender": {
+              "result": null,
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "last_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "data_consistency": {
+          "result": "clear",
+          "breakdown": {
+            "date_of_expiry": {
+              "result": null,
+              "properties": {}
+            },
+            "document_type": {
+              "result": null,
+              "properties": {}
+            },
+            "nationality": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": null,
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": null,
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "last_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "data_validation": {
+          "result": "clear",
+          "breakdown": {
+            "document_expiration": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {
+                "document_number": "clear"
+              }
+            },
+            "expiry_date": {
+              "result": "clear",
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "mrz": {
+              "result": null,
+              "properties": {}
+            }
+          }
+        },
+        "compromised_document": {
+          "result": "clear"
+        },
+        "age_validation": {
+          "result": "clear",
+          "breakdown": {
+            "minimum_accepted_age": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "image_integrity": {
+          "result": "clear",
+          "breakdown": {
+            "supported_document": {
+              "result": "clear",
+              "properties": {}
+            },
+            "image_quality": {
+              "result": "clear",
+              "properties": {}
+            },
+            "colour_picture": {
+              "result": "clear",
+              "properties": {}
+            },
+            "conclusive_document_quality": {
+              "result": "clear",
+              "properties": {
+                "missing_back": "clear",
+                "digital_document": "clear",
+                "punctured_document": "clear",
+                "corner_removed": "clear",
+                "watermarks_digital_text_overlay": "clear",
+                "abnormal_document_features": "clear",
+                "obscured_security_features": "clear",
+                "obscured_data_points": "clear"
+              }
+            }
+          }
+        },
+        "police_record": {
+          "result": null
+        },
+        "visual_authenticity": {
+          "result": "consider",
+          "breakdown": {
+            "other": {
+              "result": "consider",
+              "properties": {}
+            },
+            "fonts": {
+              "result": "consider",
+              "properties": {}
+            },
+            "security_features": {
+              "result": "consider",
+              "properties": {}
+            },
+            "template": {
+              "result": "consider",
+              "properties": {}
+            },
+            "face_detection": {
+              "result": "clear",
+              "properties": {}
+            },
+            "digital_tampering": {
+              "result": "clear",
+              "properties": {}
+            },
+            "original_document_present": {
+              "result": "clear",
+              "properties": {
+                "scan": "clear",
+                "document_on_printed_paper": "clear",
+                "screenshot": "clear",
+                "photo_of_screen": "clear"
+              }
+            },
+            "picture_face_integrity": {
+              "result": "consider",
+              "properties": {}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "resubmit": [
+    {
+      "check_id": "45397816-29ba-42ce-ba1d-3759b4c0c923",
+      "created_at": "2022-07-29T11:32:07Z",
+      "documents": [
+        {
+          "id": "913f6e4b-09c1-4524-a6ce-16d482de0dd2"
+        },
+        {
+          "id": "8d9d5904-6a10-4200-b50e-2082999f2e8f"
+        }
+      ],
+      "href": "/v3.2/reports/1f5a42ca-fc6f-4752-8448-d16746914ed9",
+      "id": "1f5a42ca-fc6f-4752-8448-d16746914ed9",
+      "name": "document",
+      "properties": {
+        "first_name": "ZAHRA",
+        "last_name": "BAOU",
+        "issuing_country": "FRA",
+        "document_numbers": [
+          {
+            "type": "document_number",
+            "value": "150260400977"
+          }
+        ],
+        "document_type": "national_identity_card",
+        "gender": "Female",
+        "date_of_birth": "1984-06-15",
+        "issuing_date": "2015-02-10",
+        "date_of_expiry": "2030-02-09",
+        "mrz_line1": "IDFRABAOU<<<<<<<<<<<<<<<<<<<<<604050",
+        "mrz_line2": "1502604009773ZAHRA<<<<<<<<<8406158F1",
+        "place_of_birth": "TIGHREMT AIT ZINE TAZARINE"
+      },
+      "result": "consider",
+      "status": "complete",
+      "sub_result": "suspected",
+      "breakdown": {
+        "data_comparison": {
+          "result": "consider",
+          "breakdown": {
+            "date_of_expiry": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": null,
+              "properties": {}
+            },
+            "document_type": {
+              "result": null,
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": null,
+              "properties": {}
+            },
+            "gender": {
+              "result": null,
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "consider",
+              "properties": {}
+            },
+            "last_name": {
+              "result": "consider",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "consider",
+              "properties": {}
+            }
+          }
+        },
+        "data_consistency": {
+          "result": "clear",
+          "breakdown": {
+            "last_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": "clear",
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {}
+            },
+            "date_of_expiry": {
+              "result": null,
+              "properties": {}
+            },
+            "document_type": {
+              "result": "clear",
+              "properties": {}
+            },
+            "nationality": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "data_validation": {
+          "result": "clear",
+          "breakdown": {
+            "expiry_date": {
+              "result": null,
+              "properties": {}
+            },
+            "document_expiration": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {
+                "document_number": "clear"
+              }
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "mrz": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "compromised_document": {
+          "result": "clear"
+        },
+        "age_validation": {
+          "result": "clear",
+          "breakdown": {
+            "minimum_accepted_age": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "image_integrity": {
+          "result": "clear",
+          "breakdown": {
+            "supported_document": {
+              "result": "clear",
+              "properties": {}
+            },
+            "image_quality": {
+              "result": "clear",
+              "properties": {}
+            },
+            "colour_picture": {
+              "result": "clear",
+              "properties": {}
+            },
+            "conclusive_document_quality": {
+              "result": "clear",
+              "properties": {
+                "missing_back": "clear",
+                "digital_document": "clear",
+                "punctured_document": "clear",
+                "corner_removed": "clear",
+                "watermarks_digital_text_overlay": "clear",
+                "abnormal_document_features": "clear",
+                "obscured_security_features": "clear",
+                "obscured_data_points": "clear"
+              }
+            }
+          }
+        },
+        "police_record": {
+          "result": "clear"
+        },
+        "visual_authenticity": {
+          "result": "consider",
+          "breakdown": {
+            "other": {
+              "result": "consider",
+              "properties": {}
+            },
+            "picture_face_integrity": {
+              "result": "clear",
+              "properties": {}
+            },
+            "face_detection": {
+              "result": "clear",
+              "properties": {}
+            },
+            "digital_tampering": {
+              "result": "clear",
+              "properties": {}
+            },
+            "original_document_present": {
+              "result": "consider",
+              "properties": {
+                "scan": "clear",
+                "document_on_printed_paper": "clear",
+                "screenshot": "clear",
+                "photo_of_screen": "consider"
+              }
+            },
+            "security_features": {
+              "result": "clear",
+              "properties": {}
+            },
+            "fonts": {
+              "result": "clear",
+              "properties": {}
+            },
+            "template": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "check_id": "f3212aea-cf4a-4a9a-8301-fd3aef76f6a5",
+      "created_at": "2022-07-29T11:40:32Z",
+      "documents": [
+        {
+          "id": "4bf2b8d2-9183-4f56-990b-b860018e86a3"
+        },
+        {
+          "id": "5ab5735e-72ea-411e-b498-f05bb7f59498"
+        }
+      ],
+      "href": "/v3.2/reports/d69c9385-3e45-45bc-959c-e43c488b6139",
+      "id": "d69c9385-3e45-45bc-959c-e43c488b6139",
+      "name": "document",
+      "properties": {
+        "first_name": "JUAN ANTONIO",
+        "last_name": "SANCHEZ CARABALLO",
+        "issuing_country": "ESP",
+        "document_numbers": [
+          {
+            "type": "document_number",
+            "value": "BIX101258"
+          },
+          {
+            "type": "personal_number",
+            "value": "44315521H"
+          }
+        ],
+        "document_type": "national_identity_card",
+        "gender": "Male",
+        "nationality": "ESP",
+        "date_of_birth": "1978-11-29",
+        "date_of_expiry": "2029-02-06",
+        "place_of_birth": "LAS PALMAS DE GRAN CANARIA LAS PALMAS",
+        "mrz_line1": "IDESPBIX101258944315521H<<<<<<",
+        "mrz_line2": "7811296M2902061ESP<<<<<<<<<<<6",
+        "mrz_line3": "SANCHEZ<CARABALLO<<JUAN<ANTONI"
+      },
+      "result": "consider",
+      "status": "complete",
+      "sub_result": "suspected",
+      "breakdown": {
+        "data_comparison": {
+          "result": "clear",
+          "breakdown": {
+            "date_of_expiry": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": null,
+              "properties": {}
+            },
+            "document_type": {
+              "result": null,
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": null,
+              "properties": {}
+            },
+            "gender": {
+              "result": null,
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "last_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "data_consistency": {
+          "result": "clear",
+          "breakdown": {
+            "date_of_expiry": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_type": {
+              "result": "clear",
+              "properties": {}
+            },
+            "nationality": {
+              "result": null,
+              "properties": {}
+            },
+            "issuing_country": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": "clear",
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "last_name": {
+              "result": "clear",
+              "properties": {}
+            },
+            "first_name": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "data_validation": {
+          "result": "clear",
+          "breakdown": {
+            "document_expiration": {
+              "result": "clear",
+              "properties": {}
+            },
+            "gender": {
+              "result": "clear",
+              "properties": {}
+            },
+            "document_numbers": {
+              "result": "clear",
+              "properties": {
+                "document_number": "clear",
+                "personal_number": "clear"
+              }
+            },
+            "expiry_date": {
+              "result": "clear",
+              "properties": {}
+            },
+            "date_of_birth": {
+              "result": "clear",
+              "properties": {}
+            },
+            "mrz": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "compromised_document": {
+          "result": "clear"
+        },
+        "age_validation": {
+          "result": "clear",
+          "breakdown": {
+            "minimum_accepted_age": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        },
+        "image_integrity": {
+          "result": "clear",
+          "breakdown": {
+            "supported_document": {
+              "result": "clear",
+              "properties": {}
+            },
+            "image_quality": {
+              "result": "clear",
+              "properties": {}
+            },
+            "colour_picture": {
+              "result": "clear",
+              "properties": {}
+            },
+            "conclusive_document_quality": {
+              "result": "clear",
+              "properties": {
+                "missing_back": "clear",
+                "digital_document": "clear",
+                "punctured_document": "clear",
+                "corner_removed": "clear",
+                "watermarks_digital_text_overlay": "clear",
+                "abnormal_document_features": "clear",
+                "obscured_security_features": "clear",
+                "obscured_data_points": "clear"
+              }
+            }
+          }
+        },
+        "police_record": {
+          "result": "clear"
+        },
+        "visual_authenticity": {
+          "result": "consider",
+          "breakdown": {
+            "other": {
+              "result": "consider",
+              "properties": {}
+            },
+            "face_detection": {
+              "result": "clear",
+              "properties": {}
+            },
+            "digital_tampering": {
+              "result": "clear",
+              "properties": {}
+            },
+            "original_document_present": {
+              "result": "consider",
+              "properties": {
+                "scan": "clear",
+                "document_on_printed_paper": "clear",
+                "screenshot": "clear",
+                "photo_of_screen": "consider"
+              }
+            },
+            "picture_face_integrity": {
+              "result": "clear",
+              "properties": {}
+            },
+            "security_features": {
+              "result": "clear",
+              "properties": {}
+            },
+            "fonts": {
+              "result": "clear",
+              "properties": {}
+            },
+            "template": {
+              "result": "clear",
+              "properties": {}
+            }
+          }
+        }
+      }
+    }
+  ] 
+}

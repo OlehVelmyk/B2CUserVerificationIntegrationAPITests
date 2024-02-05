@@ -1,0 +1,227 @@
+﻿[
+  {
+    "id": "CAED84F7-FC93-431C-8B34-56612CE52DFD",
+    "name": "ROW monitoring policy",
+    "regionType": "Region",
+    "region": "RoW",
+    "triggers": [
+      {
+        "id": "651F41FE-29F9-4F2A-979D-F425377DB305",
+        "name": "Account age tracking",
+        "schedule": {
+          "type": "interval",
+          "offset": "01:00:00",
+          "value": {
+            "unit": "Day",
+            "value": 7
+          }
+        },
+        "conditions": [
+          {
+            "type": "AccountAge",
+            "value": {
+              "riskLevel": "Low",
+              "limit": "3",
+              "unit": "Year" 
+            }
+          },
+          {
+            "type": "AccountAge",
+            "value": {
+              "riskLevel": "Medium",
+              "limit": "2",
+              "unit": "Year"
+            }
+          },
+          {
+            "type": "AccountAge",
+            "value": {
+              "riskLevel": "High",
+              "limit": "1",
+              "unit": "Year"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "Address",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfAddress",
+                "isReviewNeeded": true,
+                "isRequired": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "F7AEF22C-0638-4322-97FD-E5DA05918D1F",
+        "name": "Request PoA on first turnover threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "High",
+              "threshold": 4000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "Address",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfAddress",
+                "isReviewNeeded": true,
+                "isRequired": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "47EAA9B2-0FE0-41E0-A1E8-B502F48A9C23",
+        "name": "Require PoA on second turnover threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "High",
+              "threshold": 5000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "Address",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfAddress",
+                "isReviewNeeded": true,
+                "isRequired": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "C8C1ECF5-C784-41BB-8FAD-C30CFAC68918",
+        "name": "Request PoF on third turnover threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 100000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 75000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "High",
+              "threshold": 50000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "1673241E-BC0A-4007-A353-A2C39880BBEF", //Proof of funds
+              "addCompleted" : true
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfFunds",
+                "isReviewNeeded": true,
+                "isRequired": false
+              }
+            }
+          },
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "first-threshold-reached"
+            }
+          }
+        ]
+      },
+      {
+        "id": "82CC6921-9263-442A-B022-00A8D1D5A4BF",
+        "name": "Require PoF on fourth turnover threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 200000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 150000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "High",
+              "threshold": 100000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "1673241E-BC0A-4007-A353-A2C39880BBEF" //Proof of funds
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfFunds",
+                "isReviewNeeded": true,
+                "isRequired": true
+              }
+            }
+          },
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "second-threshold-reached"
+            }
+          }
+        ]
+      }
+    ],
+    "templates": [
+      {
+        "id": "1673241E-BC0A-4007-A353-A2C39880BBEF",
+        "name": "Proof of funds/wealth assessment",
+        "type": "ProofOfFunds",
+        "priority": 4,
+        "autoCompletePolicy": "EveryTime"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "id": "652ef0d1-8438-11ec-bbf1-c932cc307bfd",
+  "event": "CHECK_COMPLETED",
+  "secret": "Wirex/2018/Passfort",
+  "timestamp": 1643813829,
+  "data": {
+    "check": {
+      "check_type": "PEPS_AND_SANCTIONS_SCREEN",
+      "decision": "PASS",
+      "id": "{checkId}",
+      "result": "Pass",
+      "variant": {
+        "alias": "peps_and_sanctions_screendefault",
+        "id": "2ef4390c-8b98-11e9-99f6-0a580a00057e",
+        "name": "Default"
+      }
+    },
+    "customer_ref": null,
+    "profile_id": "8cd3336e-5802-4f4c-a47a-4d18c52085d9"
+  }
+}

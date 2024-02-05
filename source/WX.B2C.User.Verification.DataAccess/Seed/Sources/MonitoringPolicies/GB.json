@@ -1,0 +1,261 @@
+﻿[
+  {
+    "id": "DE887152-CA43-499D-8EFD-6BC955B78B80",
+    "name": "GB monitoring policy",
+    "regionType": "Country",
+    "region": "GB",
+    "triggers": [
+      {
+        "id": "64E483BC-20F6-4EEC-9F1A-2F2363CFC861",
+        "name": "GB high risk user",
+        "conditions": [
+          {
+            "type": "RiskLevel",
+            "value": "High"
+          },
+          {
+            "type": "RiskLevel",
+            "value": "ExtraHigh"
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "CF9F0CA8-6535-4F4A-B2D3-71AB075EC841" //Financial conditions
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "FinancialCondition",
+              "collectionStep": {
+                // "Occupation/income survey" 
+                "xPath": "Survey.F9A2A3AC-6E98-43C9-BAB2-794E8E6DF686",
+                "isReviewNeeded": false,
+                "isRequired": true
+              }
+            }
+          },
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "C1B826B7-6E0A-4AB3-813D-4393E0C0E095" //Proof of funds
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                //SoF survey
+                "xPath": "Survey.0FB7492B-7DC5-4277-A7FF-F3D07376FF66",
+                "isReviewNeeded": false,
+                "isRequired": true
+              }
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfFunds",
+                "isReviewNeeded": true,
+                "isRequired": true
+              }
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "Address",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfAddress",
+                "isReviewNeeded": true,
+                "isRequired": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "044529B5-D983-4F57-8DBA-16FEBF264052",
+        "name": "GB first threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 60000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 30000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "first-threshold-reached"
+            }
+          },
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "CF9F0CA8-6535-4F4A-B2D3-71AB075EC841" //Financial conditions
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "FinancialCondition",
+              "collectionStep": {
+                // "Occupation/income survey" 
+                "xPath": "Survey.F9A2A3AC-6E98-43C9-BAB2-794E8E6DF686",
+                "isReviewNeeded": false,
+                "isRequired": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "F623D69C-F636-4DAC-923A-5BE2C3779D7B",
+        "name": "GB second threshold",
+        "conditions": [
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 75000
+            }
+          },
+          {
+            "type": "ExceededTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 60000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "second-threshold-reached"
+            }
+          },
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "C1B826B7-6E0A-4AB3-813D-4393E0C0E095" //Proof of funds
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                //SoF survey
+                "xPath": "Survey.0FB7492B-7DC5-4277-A7FF-F3D07376FF66",
+                "isReviewNeeded": false,
+                "isRequired": true
+              }
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "ProofOfFunds",
+              "collectionStep": {
+                "xPath": "Documents.ProofOfFunds",
+                "isReviewNeeded": true,
+                "isRequired": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6F762B87-112E-43C5-B311-C32CDF723D63",
+        "name": "GB repeating threshold",
+        "iterative": true,
+        "conditions": [
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "Low",
+              "threshold": 75000,
+              "step": 75000
+            }
+          },
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "Medium",
+              "threshold": 60000,
+              "step": 60000
+            }
+          },
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "High",
+              "threshold": 15000,
+              "step": 30000
+            }
+          },
+          {
+            "type": "RepeatingTurnover",
+            "value": {
+              "riskLevel": "ExtraHigh",
+              "threshold": 15000,
+              "step": 30000
+            }
+          }
+        ],
+        "commands": [
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "repeating-turnover-threshold-reached"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1F50ACCD-F4F2-4744-8D89-9F4A27DF17B1",
+        "name": "Pep user review reminder",
+        "iterative": true,
+        "schedule": {
+          "type": "interval",
+          "offset": "30.00:00:00",
+          "value": {
+            "unit": "Month",
+            "value": 1
+          }
+        },
+        "preconditions": [
+          {
+            "type": "IsPep",
+            "value": true
+          }
+        ],
+        "commands": [
+          {
+            "type": "SendTicket",
+            "config": {
+              "reason": "pep-monthly-review-reminder"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

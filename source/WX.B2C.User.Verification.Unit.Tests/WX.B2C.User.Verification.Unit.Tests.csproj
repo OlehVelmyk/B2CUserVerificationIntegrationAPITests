@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.2.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="FsCheck.NUnit" Version="3.0.0-alpha5" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WX.B2C.User.Verification.Automation.Services\WX.B2C.User.Verification.Automation.Services.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.BlobStorage\WX.B2C.User.Verification.BlobStorage.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Core.Services\WX.B2C.User.Verification.Core.Services.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.DataAccess\WX.B2C.User.Verification.DataAccess.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.EmailSender\WX.B2C.User.Verification.EmailSender.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Facade.Controllers.Admin\WX.B2C.User.Verification.Facade.Controllers.Admin.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Facade.Controllers.Public\WX.B2C.User.Verification.Facade.Controllers.Public.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.LexisNexis\WX.B2C.User.Verification.LexisNexis.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Listener.Commands\WX.B2C.User.Verification.Listener.Commands.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Onfido\WX.B2C.User.Verification.Onfido.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Worker.Jobs\WX.B2C.User.Verification.Worker.Jobs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BlobStorage\Sources\enum.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BlobStorage\Sources\array.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BlobStorage\Sources\empty.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BlobStorage\Sources\null_values.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BlobStorage\Sources\some.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Validators\Reports\known-faces-reports.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Validators\Reports\facial-similarity-reports.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Validators\Reports\document-reports.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

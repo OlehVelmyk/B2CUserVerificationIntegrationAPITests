@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="WX.Logging.Autofac" Version="1.0.1.9" />
+    <PackageReference Include="WX.Utils" Version="16.11.1.157" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WX.B2C.User.Verification.Core.Contracts\WX.B2C.User.Verification.Core.Contracts.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Extensions\WX.B2C.User.Verification.Extensions.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.Contracts\WX.B2C.User.Verification.Infrastructure.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>WX.B2C.User.Verification.Unit.Tests</_Parameter1>
+	</AssemblyAttribute>
+	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+	  <_Parameter1>WX.B2C.User.Verification.Integration.Tests</_Parameter1>
+	</AssemblyAttribute>
+  </ItemGroup>
+
+</Project>

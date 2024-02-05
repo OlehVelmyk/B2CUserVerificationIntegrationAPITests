@@ -1,0 +1,84 @@
+﻿[
+  {
+    "id": "5DECE2A9-CDD3-4D0D-B1BC-8A164B745051",
+    "name": "Global verification policy",
+    "regionType": "Global",
+    "region": "Global",
+    "tasks": [
+      {
+        "id": "94538731-6F81-48C7-8664-13E70238E5C3",
+        "name": "Identity task",
+        "type": "Identity",
+        "priority": 1,
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [
+          "D6F2DAF9-3F8F-4335-A7B8-4FC383471A1D", // "Onfido document check"
+          "3B43F013-5AC2-4BD9-96DE-20A683331BCF" // "Onfido facial similarity check by photo"
+        ]
+      },
+      {
+        "id": "B5160FF6-C9E6-4492-9422-96EB6B8F42EF",
+        "name": "Tax residence",
+        "type": "TaxResidence",
+        "priority": 2,
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [
+          "A9E0048B-0F6B-44F0-8A22-703DD86BA05E" // "Tax residence check"
+        ]
+      },
+      {
+        "id": "563AF1E6-DC53-40A7-8604-78945F88B6A3",
+        "name": "User duplication screening",
+        "type": "DuplicationScreening",
+        "priority": 1,
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [
+          "372929F1-8597-4E50-A5CE-5881377AF295", // "Name and date of birth duplication"
+          "0822EFCF-5F04-4D10-A144-460E2040968E", // "Onfido known face check by photo"
+          "62BA1CC3-8802-4C13-B2BA-BB6EFBDBEE1F" // "Id document number duplication"
+        ]
+      },
+      {
+        "id": "BC3341A5-E1B3-4F72-93A3-1A5324A92FF9",
+        "name": "User address verification",
+        "type": "Address",
+        "priority": 2,
+        "autoCompletePolicy": "EveryTime",
+        "collectionSteps": [
+          {
+            "xPath": "Documents.ProofOfAddress",
+            "isReviewNeeded": true,
+            "isRequired": true
+          }
+        ]
+      },
+      {
+        "id": "AA49652A-74C8-4667-A20F-A92FE59CBF2B",
+        "name": "Risk lists screening",
+        "type": "RiskListsScreening",
+        "priority": 3,
+        "collectionSteps": [
+          {
+            "xPath": "VerificationDetails.IsPep",
+            "isReviewNeeded": false,
+            "isRequired": true
+          },
+          {
+            "xPath": "VerificationDetails.IsAdverseMedia",
+            "isReviewNeeded": false,
+            "isRequired": true
+          },
+          {
+            "xPath": "VerificationDetails.IsSanctioned",
+            "isReviewNeeded": false,
+            "isRequired": true
+          }
+        ],
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [
+          "BB30DACB-F8A0-477C-941A-FB0C71C0297A" // "Pep, adverse media, sanction check"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WX.B2C.User.Verification.Api.Internal</name>
+    </assembly>
+    <members>
+        <member name="T:WX.B2C.User.Verification.Api.Internal.InternalApiService">
+            <summary>
+            The FabricRuntime creates an instance of this class for each service type instance. 
+            </summary>
+        </member>
+        <member name="M:WX.B2C.User.Verification.Api.Internal.InternalApiService.CreateServiceInstanceListeners">
+            <summary>
+            Optional override to create listeners (like tcp, http) for this service instance.
+            </summary>
+            <returns>The collection of listeners.</returns>
+        </member>
+        <member name="M:WX.B2C.User.Verification.Api.Internal.Program.Main">
+            <summary>
+            This is the entry point of the service host process.
+            </summary>
+        </member>
+        <member name="M:WX.B2C.User.Verification.Api.Internal.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            ConfigureContainer is where you can register things directly
+            with Autofac. This runs after ConfigureServices so the things
+            here will override registrations made in ConfigureServices.
+            Don't build the container; that gets done for you by the factory.
+            </summary>
+            <param name="builder"></param>
+            <remarks.>https://autofaccn.readthedocs.io/en/latest/integration/aspnetcore.html#startup-class</remarks.>
+        </member>
+    </members>
+</doc>

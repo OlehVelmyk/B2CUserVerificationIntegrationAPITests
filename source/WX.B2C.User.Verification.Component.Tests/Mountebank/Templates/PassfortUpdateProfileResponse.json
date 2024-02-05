@@ -1,0 +1,345 @@
+{
+  "custom_fields_data": {
+    "property1": 0,
+    "property2": 0
+  },
+  "customer_ref": "string",
+  "documents": [
+    {
+      "id": "01234567-89ab-cdef-0123-456789abcdef",
+      "category": "PROOF_OF_IDENTITY",
+      "document_type": "PASSPORT",
+      "extracted_data": {
+        "issuer": "string",
+        "issuing_country": "GBR",
+        "number": "string",
+        "issued": "1992-11-24",
+        "expiry": "1992-11-24",
+        "personal_details": {
+          "name": {
+            "title": "string",
+            "given_names": [
+              "string"
+            ],
+            "family_name": "string",
+            "alt_family_names": [
+              "string"
+            ]
+          },
+          "dob": "1992",
+          "nationality": "GBR",
+          "gender": "M",
+          "national_identity_number": {
+            "ESP": "X0123456L",
+            "MEX": "ABCD012345EF9",
+            "BRA": "09932330078",
+            "CAN": "099323300",
+            "ARG": "10563145-8",
+            "AUS": "M0993353",
+            "AUT": "U12345678",
+            "BEL": "1234567890",
+            "CHE": "s0004156",
+            "CHN": "RRRRRRYYYYMMDDSSSC",
+            "CZE": "1234567890",
+            "DNK": "DDMMYY-0000",
+            "EGY": "11111111111111",
+            "FIN": "12345678",
+            "FRA": "XX123456789",
+            "DEU": "123456789",
+            "GRC": "123456789",
+            "HKG": "X123456(A)",
+            "HUN": "12345678",
+            "IND": "AAAPL1234C",
+            "IRL": "1234567T",
+            "ITA": "SSSNNNYYMDDZZZZX",
+            "JPN": "xxxxxxxxxxx",
+            "JOR": "XXXXXXXXXXXXXX",
+            "KWT": "xxxxxxxxxxxx",
+            "LUX": "12345678",
+            "MYS": "YYMMDD-SS-123G",
+            "MLT": "12345678",
+            "NLD": "123456789B01",
+            "NZL": "VV123456",
+            "OMN": "xxxxxxxxx",
+            "PRT": "123456789",
+            "ROU": "GYYMMDDZZSSSC",
+            "RUS": "AAAABBBBBBCC",
+            "SAU": "xxxxxxxxxx",
+            "SGP": "S/T-XXXXXXXC",
+            "ZAF": "YYMMDDSSSSCAZ",
+            "SWE": "YYMMDD-NNGC",
+            "TUR": "11111111111",
+            "GBR": "123456789",
+            "USA": "123-45-6789",
+            "property1": "string",
+            "property2": "string"
+          }
+        },
+        "address_history": [
+          {
+            "address": {
+              "type": "STRUCTURED",
+              "country": "GBR",
+              "state_province": "CA",
+              "county": "Middlesex",
+              "postal_code": "W1 2ZT",
+              "locality": "London",
+              "route": "Crown Street",
+              "street_number": "38",
+              "premise": "Princelet House",
+              "subpremise": "Flat C",
+              "original_freeform_address": "Flat C, Princelet House, 38, Crown Street, London, London, Middlesex, W1 2ZT",
+              "original_structured_address": {},
+              "longitude": 0,
+              "latitude": 0
+            },
+            "start_date": "1999-03",
+            "end_date": "1999-03"
+          }
+        ],
+        "mrz1": "string",
+        "mrz2": "string",
+        "mrz3": "string",
+        "result": {
+          "provider_name": "string",
+          "review_date": "2017-02-08 15:16:01",
+          "provider_information": [
+            {
+              "id": "string",
+              "name": "string",
+              "value": "string",
+              "api_only": true
+            }
+          ],
+          "image_checks_passed": true,
+          "image_checks": [
+            {
+              "category": "string",
+              "type": "string",
+              "result": "PASS"
+            }
+          ],
+          "document_type_passed": true,
+          "forgery_checks_passed": true,
+          "forgery_checks": [
+            {
+              "category": "string",
+              "type": "string",
+              "result": "PASS"
+            }
+          ],
+          "field_checks": [
+            {
+              "field": "FIELD_GIVEN_NAMES",
+              "result": "CHECK_UNCERTAIN"
+            }
+          ],
+          "all_passed": true,
+          "error_reason": "string"
+        },
+        "external_service": "string",
+        "external_ref": "string"
+      },
+      "verification_result": {
+        "provider_name": "string",
+        "review_date": "2017-02-08 15:16:01",
+        "provider_information": [
+          {
+            "id": "string",
+            "name": "string",
+            "value": "string",
+            "api_only": true
+          }
+        ],
+        "image_checks_passed": true,
+        "image_checks": [
+          {
+            "category": "string",
+            "type": "string",
+            "result": "PASS"
+          }
+        ],
+        "document_type_passed": true,
+        "forgery_checks_passed": true,
+        "forgery_checks": [
+          {
+            "category": "string",
+            "type": "string",
+            "result": "PASS"
+          }
+        ],
+        "field_checks": [
+          {
+            "field": "FIELD_GIVEN_NAMES",
+            "result": "CHECK_UNCERTAIN"
+          }
+        ],
+        "all_passed": true,
+        "error_reason": "string"
+      },
+      "files": [
+        {
+          "file_id": "01234567-89ab-cdef-0123-456789abcdef",
+          "type": "LIVE_VIDEO",
+          "reference": "string"
+        }
+      ],
+      "images": [
+        {
+          "id": "01234567-89ab-cdef-0123-456789abcdef",
+          "provider_reference": "string",
+          "image_type": "FRONT",
+          "upload_date": "2017-02-08 15:16:01",
+          "file_id": "01234567-89ab-cdef-0123-456789abcdef"
+        }
+      ]
+    }
+  ],
+  "external_refs": {
+    "jumio_netverify": [
+      "01234567-89ab-cdef-0123-456789abcdef"
+    ],
+    "generic": "string"
+  },
+  "fraud_detection": {
+    "database_type": "CIFAS",
+    "search_reference": "string",
+    "match_count": 0,
+    "matches": [
+      {
+        "database_type": "CIFAS",
+        "id": "string",
+        "reporting_company": "string",
+        "case_type": "string",
+        "product": "string",
+        "do_not_filter": true,
+        "supply_date": "1992-11-24",
+        "application_date": "1992-11-24",
+        "claim_date": "1992-11-24",
+        "filing_reason": [
+          "string"
+        ]
+      }
+    ]
+  },
+  "entity_type": "INDIVIDUAL",
+  "personal_details": {
+    "name": {
+      "title": "string",
+      "given_names": [
+        "string"
+      ],
+      "family_name": "string",
+      "alt_family_names": [
+        "string"
+      ]
+    },
+    "dob": "1992",
+    "nationality": "GBR",
+    "gender": "M",
+    "national_identity_number": {
+      "ESP": "X0123456L",
+      "MEX": "ABCD012345EF9",
+      "BRA": "09932330078",
+      "CAN": "099323300",
+      "ARG": "10563145-8",
+      "AUS": "M0993353",
+      "AUT": "U12345678",
+      "BEL": "1234567890",
+      "CHE": "s0004156",
+      "CHN": "RRRRRRYYYYMMDDSSSC",
+      "CZE": "1234567890",
+      "DNK": "DDMMYY-0000",
+      "EGY": "11111111111111",
+      "FIN": "12345678",
+      "FRA": "XX123456789",
+      "DEU": "123456789",
+      "GRC": "123456789",
+      "HKG": "X123456(A)",
+      "HUN": "12345678",
+      "IND": "AAAPL1234C",
+      "IRL": "1234567T",
+      "ITA": "SSSNNNYYMDDZZZZX",
+      "JPN": "xxxxxxxxxxx",
+      "JOR": "XXXXXXXXXXXXXX",
+      "KWT": "xxxxxxxxxxxx",
+      "LUX": "12345678",
+      "MYS": "YYMMDD-SS-123G",
+      "MLT": "12345678",
+      "NLD": "123456789B01",
+      "NZL": "VV123456",
+      "OMN": "xxxxxxxxx",
+      "PRT": "123456789",
+      "ROU": "GYYMMDDZZSSSC",
+      "RUS": "AAAABBBBBBCC",
+      "SAU": "xxxxxxxxxx",
+      "SGP": "S/T-XXXXXXXC",
+      "ZAF": "YYMMDDSSSSCAZ",
+      "SWE": "YYMMDD-NNGC",
+      "TUR": "11111111111",
+      "GBR": "123456789",
+      "USA": "123-45-6789",
+      "property1": "string",
+      "property2": "string"
+    }
+  },
+  "address_history": [
+    {
+      "address": {
+        "type": "STRUCTURED",
+        "country": "GBR",
+        "state_province": "CA",
+        "county": "Middlesex",
+        "postal_code": "W1 2ZT",
+        "locality": "London",
+        "route": "Crown Street",
+        "street_number": "38",
+        "premise": "Princelet House",
+        "subpremise": "Flat C",
+        "original_freeform_address": "Flat C, Princelet House, 38, Crown Street, London, London, Middlesex, W1 2ZT",
+        "original_structured_address": {},
+        "longitude": 0,
+        "latitude": 0
+      },
+      "start_date": "1999-03",
+      "end_date": "1999-03"
+    }
+  ],
+  "banking_details": {
+    "bank_accounts": [
+      {
+        "country": "GBR",
+        "type": "UK_ACCOUNT",
+        "sort_code": "string",
+        "account_number": "string"
+      }
+    ]
+  },
+  "contact_details": {
+    "phone_number": "string",
+    "email": "string"
+  },
+  "ip_location": {
+    "ip_address": "string",
+    "country": "GBR",
+    "coordinates": {
+      "longitude": 0,
+      "latitude": 0,
+      "name": "string"
+    },
+    "proxy": "ANONYMOUS",
+    "continent": "AF",
+    "region": "string",
+    "city": "string"
+  },
+  "documents_metadata": [
+    {
+      "document_type": "PASSPORT",
+      "number": "string",
+      "country_code": "GBR",
+      "issuing_state": "string",
+      "version": "string",
+      "expiry": "1992-11-24"
+    }
+  ]
+}

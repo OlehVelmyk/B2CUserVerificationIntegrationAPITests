@@ -1,0 +1,33 @@
+{
+  "PublicApiEndpoint": "http://localhost:18622",
+  "AdminApiEndpoint": "https://localhost:17622",
+  "InternalApiEndpoint": "http://localhost:17522",
+  "WebhookApiEndpoint": "http://localhost:18722",
+  "B2cSurveyApiEndpoint": "http://localhost:17063",
+  "ConnectionString": "Server=(localdb)\\.\\sharedb;Database=wx-b2c-user-verification-local;Trusted_Connection=True;MultipleActiveResultSets=true;Integrated Security=True;",
+  "OnfidoApiUrl": "https://api.eu.onfido.com/v3.2",
+  "OnfidoApiToken": "Token token=test_b1ffs76SNj8WnsqCOBIarHNUBc9GNtD9",
+  "PassFortApiUrl": "https://api.passfort.com/4.0",
+  "LocalOnfidoApiUrl": "http://localhost:0001/v3.2",
+  "LocalPassFortApiUrl": "http://localhost:0002/4.0",
+
+  "KeyVault": {
+    "KeyVaultUrl": "https://wx-dev3.vault.azure.net/",
+    "KeyVaultClientId": "2fc813f0-66e7-48e7-9dfd-d393cef2cc19",
+    "KeyVaultSecret": "gCI-pZ2747yXplCFSBO1o4t_hJ.vgK0C~Y"
+  },
+
+  "ActiveDirectoryConfig": {
+    "AADInstance": "https://login.microsoftonline.com/{0}",
+    "ClientId": "9b6bc53a-593e-4842-98e5-146e02c31bb3",
+    "TenantId": "462364dc-9288-4225-aa48-d15f9acfa5e2",
+    "Audience": "https://wirexapp.com/wx-admin-dev-3"
+  },
+
+  "AdminCredentials": {
+    "TopSecurity": {
+      "Email": "testuser.topsecuritylevel@wirexapp.com",
+      "Password": "Kob92121"
+    }
+  }
+}

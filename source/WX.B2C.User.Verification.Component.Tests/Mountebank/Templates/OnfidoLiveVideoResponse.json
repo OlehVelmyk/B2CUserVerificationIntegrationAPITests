@@ -1,0 +1,9 @@
+{
+  "id": "{videoId}",
+  "created_at": "2022-05-24T10:27:00Z",
+  "href": "/v3.2/live_videos/{videoId}",
+  "download_href": "/v3.2/live_videos/{videoId}/download",
+  "file_name": "sample_photo2.jpg",
+  "file_size": 74071,
+  "file_type": "{contentType}"
+}

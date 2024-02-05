@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Section Name="KeyVaultConfigSection">
+    <Parameter Name="KeyVaultUrl" Value="https://wx-dev3.vault.azure.net/" IsEncrypted="true" />
+    <Parameter Name="KeyVaultClientId" Value="2fc813f0-66e7-48e7-9dfd-d393cef2cc19" IsEncrypted="true" />
+    <Parameter Name="KeyVaultSecret" Value="gCI-pZ2747yXplCFSBO1o4t_hJ.vgK0C~Y" IsEncrypted="true" />
+  </Section>
+  <Section Name="AppConfigSection" >
+    <Parameter Name="DaysBeforeChangeBridgerPassword" Value="15" IsEncrypted="true" />
+    <Parameter Name="LexisNexisBridgerServiceEndpoint" Value="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.2/XGServices.svc/" IsEncrypted="true" />
+    <Parameter Name="DefaultBatchSize" Value="20000" IsEncrypted="true" />
+    <Parameter Name="AccountAlertCronExpression" Value="0 0 4 ? * * *" IsEncrypted="true" /><!--every day on 4:00AM-->
+    <Parameter Name="ExcludedCountries" Value="US,AU,HK,MY,SG,KR,TW,PH,TH" IsEncrypted="true" />
+    <Parameter Name="ExtraHighAccountAge" Value="1" IsEncrypted="true" />
+    <Parameter Name="HighAccountAge" Value="1" IsEncrypted="true" />
+    <Parameter Name="MediumAccountAge" Value="2" IsEncrypted="true" />
+    <Parameter Name="LowAccountAge" Value="3" IsEncrypted="true" />
+    <Parameter Name="ExtraHighTurnover" Value="50" IsEncrypted="true" />
+    <Parameter Name="HighTurnover" Value="50" IsEncrypted="true" />
+    <Parameter Name="MediumTurnover" Value="250" IsEncrypted="true" />
+    <Parameter Name="LowTurnover" Value="750" IsEncrypted="true" />
+    <Parameter Name="OnfidoApiUrl" Value="https://api.eu.onfido.com/v3.2" IsEncrypted="true" />
+  </Section>
+</Settings>

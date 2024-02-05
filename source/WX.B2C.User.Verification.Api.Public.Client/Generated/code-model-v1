@@ -1,0 +1,4918 @@
+{
+ "$id": "1",
+ "modelTypes": [
+  {
+   "$id": "2",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "3",
+     "isReadOnly": false,
+     "realPath": [
+      "document_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "4",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "5",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "6",
+      "fixed": false,
+      "raw": "document_type"
+     },
+     "serializedName": "document_type",
+     "modelType": {
+      "$id": "7",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "8",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "9",
+     "isReadOnly": false,
+     "realPath": [
+      "extensions"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "10",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "11",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "12",
+      "fixed": false,
+      "raw": "extensions"
+     },
+     "serializedName": "extensions",
+     "modelType": {
+      "$id": "13",
+      "$type": "SequenceType",
+      "elementType": {
+       "$id": "14",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "15",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "16",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "17",
+     "isReadOnly": false,
+     "realPath": [
+      "description_code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "18",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "19",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "20",
+      "fixed": false,
+      "raw": "description_code"
+     },
+     "serializedName": "description_code",
+     "modelType": {
+      "$id": "21",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "22",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "23",
+     "isReadOnly": false,
+     "realPath": [
+      "max_size_in_bytes"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "24",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "25",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "26",
+      "fixed": false,
+      "raw": "max_size_in_bytes"
+     },
+     "serializedName": "max_size_in_bytes",
+     "modelType": {
+      "$id": "27",
+      "$type": "PrimaryType",
+      "format": "int32",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "28",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "29",
+     "isReadOnly": false,
+     "realPath": [
+      "document_side"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "30",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "31",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "DocumentSide",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/DocumentSide"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "DocumentSide",
+       "modelAsString": false
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "32",
+      "fixed": false,
+      "raw": "document_side"
+     },
+     "serializedName": "document_side",
+     "modelType": {
+      "$id": "33",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "34",
+        "name": "Front",
+        "serializedName": "Front"
+       },
+       {
+        "$id": "35",
+        "name": "Back",
+        "serializedName": "Back"
+       },
+       {
+        "$id": "36",
+        "name": "Both",
+        "serializedName": "Both"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "37",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "38",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "39",
+       "fixed": false,
+       "raw": "DocumentSide"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "40",
+     "isReadOnly": false,
+     "realPath": [
+      "max_quantity"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "41",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "42",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "43",
+      "fixed": false,
+      "raw": "max_quantity"
+     },
+     "serializedName": "max_quantity",
+     "modelType": {
+      "$id": "44",
+      "$type": "PrimaryType",
+      "format": "int32",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "45",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "46",
+     "isReadOnly": false,
+     "realPath": [
+      "min_quantity"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "47",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "48",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "49",
+      "fixed": false,
+      "raw": "min_quantity"
+     },
+     "serializedName": "min_quantity",
+     "modelType": {
+      "$id": "50",
+      "$type": "PrimaryType",
+      "format": "int32",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "51",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "DocumentValidationRuleItemDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "52",
+    "fixed": false,
+    "raw": "DocumentValidationRuleItemDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "DocumentValidationRuleItemDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/DocumentValidationRuleItemDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "53",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "54",
+     "isReadOnly": false,
+     "realPath": [
+      "document_category"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "55",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "56",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "DocumentCategory",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/DocumentCategory"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "DocumentCategory",
+       "modelAsString": false
+      }
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "57",
+      "fixed": false,
+      "raw": "document_category"
+     },
+     "serializedName": "document_category",
+     "modelType": {
+      "$id": "58",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "59",
+        "name": "ProofOfIdentity",
+        "serializedName": "ProofOfIdentity"
+       },
+       {
+        "$id": "60",
+        "name": "ProofOfAddress",
+        "serializedName": "ProofOfAddress"
+       },
+       {
+        "$id": "61",
+        "name": "Supporting",
+        "serializedName": "Supporting"
+       },
+       {
+        "$id": "62",
+        "name": "Taxation",
+        "serializedName": "Taxation"
+       },
+       {
+        "$id": "63",
+        "name": "ProofOfFunds",
+        "serializedName": "ProofOfFunds"
+       },
+       {
+        "$id": "64",
+        "name": "Selfie",
+        "serializedName": "Selfie"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "65",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "66",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "67",
+       "fixed": false,
+       "raw": "DocumentCategory"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "68",
+     "isReadOnly": false,
+     "realPath": [
+      "validation_rules"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "69",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "70",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "71",
+      "fixed": false,
+      "raw": "validation_rules"
+     },
+     "serializedName": "validation_rules",
+     "modelType": {
+      "$id": "72",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "2"
+      },
+      "name": {
+       "$id": "73",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "DocumentValidationRuleDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "74",
+    "fixed": false,
+    "raw": "DocumentValidationRuleDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "DocumentValidationRuleDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/DocumentValidationRuleDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "75",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "76",
+     "isReadOnly": false,
+     "realPath": [
+      "error_code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "77",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "78",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "79",
+      "fixed": false,
+      "raw": "error_code"
+     },
+     "serializedName": "error_code",
+     "modelType": {
+      "$id": "80",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "81",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "82",
+     "isReadOnly": false,
+     "realPath": [
+      "description"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "83",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "84",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "85",
+      "fixed": false,
+      "raw": "description"
+     },
+     "serializedName": "description",
+     "modelType": {
+      "$id": "86",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "87",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "88",
+     "isReadOnly": false,
+     "realPath": [
+      "parameters"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "89",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "90",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "91",
+      "fixed": false,
+      "raw": "parameters"
+     },
+     "serializedName": "parameters",
+     "modelType": {
+      "$id": "92",
+      "$type": "DictionaryType",
+      "valueType": {
+       "$id": "93",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "object",
+       "name": {
+        "$id": "94",
+        "fixed": false,
+        "raw": "Object"
+       },
+       "deprecated": false
+      },
+      "supportsAdditionalProperties": false,
+      "name": {
+       "$id": "95",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "ErrorDetails",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "96",
+    "fixed": false,
+    "raw": "ErrorDetails"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ErrorDetails",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ErrorDetails"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "97",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "98",
+     "isReadOnly": false,
+     "realPath": [
+      "errors"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "99",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "100",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "101",
+      "fixed": false,
+      "raw": "errors"
+     },
+     "serializedName": "errors",
+     "modelType": {
+      "$id": "102",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "75"
+      },
+      "name": {
+       "$id": "103",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "ErrorResponse",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "104",
+    "fixed": false,
+    "raw": "ErrorResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ErrorResponse",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ErrorResponse"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "105",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "106",
+     "isReadOnly": false,
+     "realPath": [
+      "number"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "107",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "108",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "109",
+      "fixed": false,
+      "raw": "number"
+     },
+     "serializedName": "number",
+     "modelType": {
+      "$id": "110",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "111",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "112",
+     "isReadOnly": false,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "113",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "114",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "115",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "116",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "117",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "IdDocumentNumberDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "118",
+    "fixed": false,
+    "raw": "IdDocumentNumberDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "IdDocumentNumberDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/IdDocumentNumberDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "119",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "120",
+     "isReadOnly": false,
+     "realPath": [
+      "number"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "121",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "122",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "123",
+      "fixed": false,
+      "raw": "number"
+     },
+     "serializedName": "number",
+     "modelType": {
+      "$id": "124",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "125",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "126",
+     "isReadOnly": false,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "127",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "128",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "TinType",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/TinType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "TinType",
+       "modelAsString": false
+      }
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "129",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "130",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "131",
+        "name": "SSN",
+        "serializedName": "SSN"
+       },
+       {
+        "$id": "132",
+        "name": "ITIN",
+        "serializedName": "ITIN"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "133",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "134",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "135",
+       "fixed": false,
+       "raw": "TinType"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "TinDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "136",
+    "fixed": false,
+    "raw": "TinDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "TinDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/TinDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "137",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "138",
+     "isReadOnly": false,
+     "realPath": [
+      "tax_residence"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "139",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "140",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "141",
+      "fixed": false,
+      "raw": "tax_residence"
+     },
+     "serializedName": "tax_residence",
+     "modelType": {
+      "$id": "142",
+      "$type": "SequenceType",
+      "elementType": {
+       "$id": "143",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "144",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "145",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "146",
+     "isReadOnly": false,
+     "realPath": [
+      "id_document_number"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "147",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "148",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "149",
+      "fixed": false,
+      "raw": "id_document_number"
+     },
+     "serializedName": "id_document_number",
+     "modelType": {
+      "$ref": "105"
+     }
+    },
+    {
+     "$id": "150",
+     "isReadOnly": false,
+     "realPath": [
+      "tin"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "151",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "152",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "153",
+      "fixed": false,
+      "raw": "tin"
+     },
+     "serializedName": "tin",
+     "modelType": {
+      "$ref": "119"
+     }
+    }
+   ],
+   "serializedName": "VerificationDetailsDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "154",
+    "fixed": false,
+    "raw": "VerificationDetailsDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "VerificationDetailsDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/VerificationDetailsDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "155",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "156",
+     "isReadOnly": false,
+     "realPath": [
+      "application_state"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "157",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "158",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ApplicationState",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ApplicationState"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "ApplicationState",
+       "modelAsString": false
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "159",
+      "fixed": false,
+      "raw": "application_state"
+     },
+     "serializedName": "application_state",
+     "modelType": {
+      "$id": "160",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "161",
+        "name": "Applied",
+        "serializedName": "Applied"
+       },
+       {
+        "$id": "162",
+        "name": "Approved",
+        "serializedName": "Approved"
+       },
+       {
+        "$id": "163",
+        "name": "InReview",
+        "serializedName": "InReview"
+       },
+       {
+        "$id": "164",
+        "name": "Rejected",
+        "serializedName": "Rejected"
+       },
+       {
+        "$id": "165",
+        "name": "Cancelled",
+        "serializedName": "Cancelled"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "166",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "167",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "168",
+       "fixed": false,
+       "raw": "ApplicationState"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "169",
+     "isReadOnly": false,
+     "realPath": [
+      "verification_details"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "170",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "171",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "172",
+      "fixed": false,
+      "raw": "verification_details"
+     },
+     "serializedName": "verification_details",
+     "modelType": {
+      "$ref": "137"
+     }
+    }
+   ],
+   "serializedName": "ProfileDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "173",
+    "fixed": false,
+    "raw": "ProfileDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ProfileDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ProfileDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "174",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "175",
+     "isReadOnly": false,
+     "realPath": [
+      "product_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "176",
+      "fixed": false,
+      "raw": "WirexBasic"
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "177",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ProductType",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ProductType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "ProductType",
+       "modelAsString": false
+      }
+     },
+     "isRequired": true,
+     "isConstant": true,
+     "name": {
+      "$id": "178",
+      "fixed": false,
+      "raw": "product_type"
+     },
+     "serializedName": "product_type",
+     "modelType": {
+      "$id": "179",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "180",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "RegisterApplicationRequest",
+   "containsConstantProperties": true,
+   "name": {
+    "$id": "181",
+    "fixed": false,
+    "raw": "RegisterApplicationRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "RegisterApplicationRequest",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/RegisterApplicationRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "182",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "183",
+     "isReadOnly": false,
+     "realPath": [
+      "applicant_id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "184",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "185",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "186",
+      "fixed": false,
+      "raw": "applicant_id"
+     },
+     "serializedName": "applicant_id",
+     "modelType": {
+      "$id": "187",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "188",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "189",
+     "isReadOnly": false,
+     "realPath": [
+      "token"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "190",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "191",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "192",
+      "fixed": false,
+      "raw": "token"
+     },
+     "serializedName": "token",
+     "modelType": {
+      "$id": "193",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "194",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "SdkTokenDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "195",
+    "fixed": false,
+    "raw": "SdkTokenDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "SdkTokenDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/SdkTokenDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "196",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "197",
+     "isReadOnly": false,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "198",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "199",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "TokenType",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/TokenType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "TokenType",
+       "modelAsString": false
+      }
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "200",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "201",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "202",
+        "name": "Application",
+        "serializedName": "Application"
+       },
+       {
+        "$id": "203",
+        "name": "Web",
+        "serializedName": "Web"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "204",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "205",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "206",
+       "fixed": false,
+       "raw": "TokenType"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "207",
+     "isReadOnly": false,
+     "realPath": [
+      "application_id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "208",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "209",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "210",
+      "fixed": false,
+      "raw": "application_id"
+     },
+     "serializedName": "application_id",
+     "modelType": {
+      "$id": "211",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "212",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "SdkTokenRequest",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "213",
+    "fixed": false,
+    "raw": "SdkTokenRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "SdkTokenRequest",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/SdkTokenRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "214",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "215",
+     "isReadOnly": false,
+     "realPath": [
+      "category"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "216",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "217",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "DocumentCategory",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/DocumentCategory"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "DocumentCategory",
+       "modelAsString": false
+      }
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "218",
+      "fixed": false,
+      "raw": "category"
+     },
+     "serializedName": "category",
+     "modelType": {
+      "$ref": "58"
+     }
+    },
+    {
+     "$id": "219",
+     "isReadOnly": false,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "220",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "221",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "222",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "223",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "224",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "225",
+     "isReadOnly": false,
+     "realPath": [
+      "provider"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "226",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "227",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ExternalFileProviderType",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ExternalFileProviderType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "ExternalFileProviderType",
+       "modelAsString": false
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "228",
+      "fixed": false,
+      "raw": "provider"
+     },
+     "serializedName": "provider",
+     "modelType": {
+      "$id": "229",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "230",
+        "name": "Onfido",
+        "serializedName": "Onfido"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "231",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "232",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "233",
+       "fixed": false,
+       "raw": "ExternalFileProviderType"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "234",
+     "isReadOnly": false,
+     "realPath": [
+      "files"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "235",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "236",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "237",
+      "fixed": false,
+      "raw": "files"
+     },
+     "serializedName": "files",
+     "modelType": {
+      "$id": "238",
+      "$type": "SequenceType",
+      "elementType": {
+       "$id": "239",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "240",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "241",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "SubmitDocumentRequest",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "242",
+    "fixed": false,
+    "raw": "SubmitDocumentRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "SubmitDocumentRequest",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/SubmitDocumentRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "243",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "244",
+     "isReadOnly": false,
+     "realPath": [
+      "tin_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "245",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "246",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "TinType",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/TinType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "TinType",
+       "modelAsString": false
+      }
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "247",
+      "fixed": false,
+      "raw": "tin_type"
+     },
+     "serializedName": "tin_type",
+     "modelType": {
+      "$ref": "130"
+     }
+    },
+    {
+     "$id": "248",
+     "isReadOnly": false,
+     "realPath": [
+      "validation_regex"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "249",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "250",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "251",
+      "fixed": false,
+      "raw": "validation_regex"
+     },
+     "serializedName": "validation_regex",
+     "modelType": {
+      "$id": "252",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "253",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "TinValidationRuleDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "254",
+    "fixed": false,
+    "raw": "TinValidationRuleDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "TinValidationRuleDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/TinValidationRuleDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "255",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "256",
+     "isReadOnly": false,
+     "realPath": [
+      "tax_residence"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "257",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "258",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "259",
+      "fixed": false,
+      "raw": "tax_residence"
+     },
+     "serializedName": "tax_residence",
+     "modelType": {
+      "$id": "260",
+      "$type": "SequenceType",
+      "elementType": {
+       "$id": "261",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "262",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "263",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "264",
+     "isReadOnly": false,
+     "realPath": [
+      "tin"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "265",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "266",
+      "fixed": false
+     },
+     "extensions": {
+      "x-nullable": true
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "267",
+      "fixed": false,
+      "raw": "tin"
+     },
+     "serializedName": "tin",
+     "modelType": {
+      "$ref": "119"
+     }
+    }
+   ],
+   "serializedName": "UpdateVerificationDetailsRequest",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "268",
+    "fixed": false,
+    "raw": "UpdateVerificationDetailsRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "UpdateVerificationDetailsRequest",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/UpdateVerificationDetailsRequest"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "269",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "270",
+     "isReadOnly": false,
+     "realPath": [
+      "file_id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "271",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "272",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "273",
+      "fixed": false,
+      "raw": "file_id"
+     },
+     "serializedName": "file_id",
+     "modelType": {
+      "$id": "274",
+      "$type": "PrimaryType",
+      "format": "uuid",
+      "knownPrimaryType": "uuid",
+      "name": {
+       "$id": "275",
+       "fixed": false,
+       "raw": "Uuid"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "UploadedFileDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "276",
+    "fixed": false,
+    "raw": "UploadedFileDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "UploadedFileDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/UploadedFileDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "277",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "278",
+     "isReadOnly": false,
+     "realPath": [
+      "action_type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "279",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "280",
+      "fixed": false
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "1.0"
+       ],
+       "filename": [
+        "mem:///110?oai3.shaken.json"
+       ],
+       "name": "ActionType",
+       "originalLocations": [
+        "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ActionType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "ActionType",
+       "modelAsString": false
+      }
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "281",
+      "fixed": false,
+      "raw": "action_type"
+     },
+     "serializedName": "action_type",
+     "modelType": {
+      "$id": "282",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "283",
+        "name": "Survey",
+        "serializedName": "Survey"
+       },
+       {
+        "$id": "284",
+        "name": "Selfie",
+        "serializedName": "Selfie"
+       },
+       {
+        "$id": "285",
+        "name": "TaxResidence",
+        "serializedName": "TaxResidence"
+       },
+       {
+        "$id": "286",
+        "name": "Tin",
+        "serializedName": "Tin"
+       },
+       {
+        "$id": "287",
+        "name": "ProofOfIdentity",
+        "serializedName": "ProofOfIdentity"
+       },
+       {
+        "$id": "288",
+        "name": "ProofOfAddress",
+        "serializedName": "ProofOfAddress"
+       },
+       {
+        "$id": "289",
+        "name": "ProofOfFunds",
+        "serializedName": "ProofOfFunds"
+       },
+       {
+        "$id": "290",
+        "name": "W9Form",
+        "serializedName": "W9Form"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "291",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "292",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "293",
+       "fixed": false,
+       "raw": "ActionType"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "294",
+     "isReadOnly": false,
+     "realPath": [
+      "reason"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "295",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "296",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "297",
+      "fixed": false,
+      "raw": "reason"
+     },
+     "serializedName": "reason",
+     "modelType": {
+      "$id": "298",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "299",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "300",
+     "isReadOnly": false,
+     "realPath": [
+      "is_optional"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "301",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "302",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "303",
+      "fixed": false,
+      "raw": "is_optional"
+     },
+     "serializedName": "is_optional",
+     "modelType": {
+      "$id": "304",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "name": {
+       "$id": "305",
+       "fixed": false,
+       "raw": "Boolean"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "306",
+     "isReadOnly": false,
+     "realPath": [
+      "priority"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "307",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "308",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "309",
+      "fixed": false,
+      "raw": "priority"
+     },
+     "serializedName": "priority",
+     "modelType": {
+      "$id": "310",
+      "$type": "PrimaryType",
+      "format": "int32",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "311",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "312",
+     "isReadOnly": false,
+     "realPath": [
+      "action_data"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "313",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "314",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "315",
+      "fixed": false,
+      "raw": "action_data"
+     },
+     "serializedName": "action_data",
+     "modelType": {
+      "$id": "316",
+      "$type": "DictionaryType",
+      "valueType": {
+       "$id": "317",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "318",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "supportsAdditionalProperties": false,
+      "name": {
+       "$id": "319",
+       "fixed": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "UserActionDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "320",
+    "fixed": false,
+    "raw": "UserActionDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "UserActionDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/UserActionDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "321",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "322",
+     "isReadOnly": false,
+     "realPath": [
+      "tax_residences"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "323",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "324",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "325",
+      "fixed": false,
+      "raw": "tax_residences"
+     },
+     "serializedName": "tax_residences",
+     "modelType": {
+      "$id": "326",
+      "$type": "SequenceType",
+      "elementType": {
+       "$id": "327",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "name": {
+        "$id": "328",
+        "fixed": false,
+        "raw": "String"
+       },
+       "deprecated": false
+      },
+      "name": {
+       "$id": "329",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "330",
+     "isReadOnly": false,
+     "realPath": [
+      "tin_validation_rules"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "331",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "332",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "333",
+      "fixed": false,
+      "raw": "tin_validation_rules"
+     },
+     "serializedName": "tin_validation_rules",
+     "modelType": {
+      "$id": "334",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "243"
+      },
+      "name": {
+       "$id": "335",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "VerificationDetailsValidationRuleDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "336",
+    "fixed": false,
+    "raw": "VerificationDetailsValidationRuleDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "VerificationDetailsValidationRuleDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/VerificationDetailsValidationRuleDto"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "337",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "338",
+     "isReadOnly": false,
+     "realPath": [
+      "verification_details_rule"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "339",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "340",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "341",
+      "fixed": false,
+      "raw": "verification_details_rule"
+     },
+     "serializedName": "verification_details_rule",
+     "modelType": {
+      "$ref": "321"
+     }
+    },
+    {
+     "$id": "342",
+     "isReadOnly": false,
+     "realPath": [
+      "document_rules"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "343",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "344",
+      "fixed": false
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "345",
+      "fixed": false,
+      "raw": "document_rules"
+     },
+     "serializedName": "document_rules",
+     "modelType": {
+      "$id": "346",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "53"
+      },
+      "name": {
+       "$id": "347",
+       "fixed": false
+      },
+      "extensions": {
+       "x-nullable": false
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "ValidationRulesDto",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "348",
+    "fixed": false,
+    "raw": "ValidationRulesDto"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "ValidationRulesDto",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/schemas/ValidationRulesDto"
+     ]
+    }
+   },
+   "deprecated": false
+  }
+ ],
+ "errorTypes": [
+  {
+   "$ref": "97"
+  }
+ ],
+ "enumTypes": [
+  {
+   "$ref": "282"
+  },
+  {
+   "$ref": "160"
+  },
+  {
+   "$ref": "58"
+  },
+  {
+   "$ref": "33"
+  },
+  {
+   "$ref": "229"
+  },
+  {
+   "$id": "349",
+   "$type": "EnumType",
+   "values": [
+    {
+     "$id": "350",
+     "name": "WirexBasic",
+     "serializedName": "WirexBasic"
+    }
+   ],
+   "oldModelAsString": false,
+   "modelAsString": false,
+   "underlyingType": {
+    "$id": "351",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "352",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   },
+   "name": {
+    "$id": "353",
+    "fixed": false,
+    "raw": "ProductType"
+   },
+   "deprecated": false
+  },
+  {
+   "$ref": "130"
+  },
+  {
+   "$ref": "201"
+  },
+  {
+   "$id": "354",
+   "$type": "EnumType",
+   "values": [
+    {
+     "$id": "355",
+     "name": "Onfido",
+     "serializedName": "Onfido"
+    }
+   ],
+   "oldModelAsString": false,
+   "modelAsString": false,
+   "underlyingType": {
+    "$id": "356",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "357",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   },
+   "name": {
+    "$id": "358",
+    "fixed": false,
+    "raw": "TokenProvider"
+   },
+   "deprecated": false
+  }
+ ],
+ "name": "WXB2CUserVerificationApiPublic",
+ "namespace": "WX.B2C.User.Verification.Api.Public.Client",
+ "modelsName": "Models",
+ "apiVersion": "1.0",
+ "baseUrl": "http://localhost",
+ "extensions": {
+  "security": [
+   {
+    "Bearer": []
+   }
+  ]
+ },
+ "properties": [
+  {
+   "$id": "359",
+   "isReadOnly": false,
+   "realPath": [
+    "correlationId"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "360",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "361",
+    "fixed": false,
+    "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "CorrelationIdHeaderId",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+     ]
+    }
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "362",
+    "fixed": false,
+    "raw": "correlationId"
+   },
+   "serializedName": "correlationId",
+   "modelType": {
+    "$id": "363",
+    "$type": "PrimaryType",
+    "format": "uuid",
+    "knownPrimaryType": "uuid",
+    "name": {
+     "$id": "364",
+     "fixed": false,
+     "raw": "Uuid"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "365",
+   "isReadOnly": false,
+   "realPath": [
+    "operationId"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "366",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "367",
+    "fixed": false,
+    "raw": "Request id/operation id to identify operation ordering in a chain"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "OperationIdHeaderId",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+     ]
+    }
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "368",
+    "fixed": false,
+    "raw": "operationId"
+   },
+   "serializedName": "operationId",
+   "modelType": {
+    "$id": "369",
+    "$type": "PrimaryType",
+    "format": "uuid",
+    "knownPrimaryType": "uuid",
+    "name": {
+     "$id": "370",
+     "fixed": false,
+     "raw": "Uuid"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "371",
+   "isReadOnly": false,
+   "realPath": [
+    "tokenProvider"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "372",
+    "fixed": false,
+    "raw": "Onfido"
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "373",
+    "fixed": false
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1c5agq0·api-v1-verification-providers-tokenprovider-sdk_token·post·parameters·0",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/paths·1c5agq0·api-v1-verification-providers-tokenprovider-sdk_token·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": true,
+   "name": {
+    "$id": "374",
+    "fixed": false,
+    "raw": "TokenProvider1"
+   },
+   "serializedName": "tokenProvider",
+   "modelType": {
+    "$id": "375",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "376",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "377",
+   "isReadOnly": false,
+   "realPath": [
+    "documentCategory"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "378",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "379",
+    "fixed": false
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///110?oai3.shaken.json"
+     ],
+     "name": "paths·1q9wfxz·api-v1-verification-validations-documents-documentcategory·get·parameters·0",
+     "originalLocations": [
+      "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/paths·1q9wfxz·api-v1-verification-validations-documents-documentcategory·get·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "380",
+    "fixed": false,
+    "raw": "DocumentCategory1"
+   },
+   "serializedName": "documentCategory",
+   "modelType": {
+    "$ref": "58"
+   }
+  }
+ ],
+ "operations": [
+  {
+   "$id": "381",
+   "methods": [
+    {
+     "$id": "382",
+     "parameters": [
+      {
+       "$id": "383",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "384",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "385",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "386",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "387",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "388",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "389",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "390",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "391",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "392",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "393",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "394",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "395",
+      "fixed": false,
+      "raw": "Get"
+     },
+     "group": {
+      "$id": "396",
+      "fixed": false,
+      "raw": "Actions"
+     },
+     "serializedName": "Actions_Get",
+     "url": "/api/v1/verification/actions",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "397",
+       "body": {
+        "$id": "398",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "277"
+        },
+        "name": {
+         "$id": "399",
+         "fixed": false
+        },
+        "deprecated": false
+       },
+       "extensions": {
+        "$id": "400",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1a8hffa·api-v1-verification-actions·get·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·1a8hffa·api-v1-verification-actions·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "401",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "402",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·5y4t8n·api-v1-verification-actions·get·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·5y4t8n·api-v1-verification-actions·get·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "403",
+      "body": {
+       "$ref": "398"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "404",
+    "fixed": false,
+    "raw": "Actions"
+   },
+   "typeName": {
+    "$id": "405",
+    "fixed": false
+   },
+   "nameForProperty": "Actions"
+  },
+  {
+   "$id": "406",
+   "methods": [
+    {
+     "$id": "407",
+     "parameters": [
+      {
+       "$id": "408",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "409",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "410",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1f0ri4c·api-v1-verification-applications·post·requestbody",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/requestBodies/paths·1f0ri4c·api-v1-verification-applications·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": true,
+       "name": {
+        "$id": "411",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "174"
+       }
+      },
+      {
+       "$id": "412",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "413",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "414",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "415",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "416",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "417",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "418",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "419",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "420",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "421",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "422",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "423",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "424",
+      "fixed": false,
+      "raw": "Register"
+     },
+     "group": {
+      "$id": "425",
+      "fixed": false,
+      "raw": "Applications"
+     },
+     "serializedName": "Applications_Register",
+     "url": "/api/v1/verification/applications",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "426",
+       "extensions": {
+        "$id": "427",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·riqlcy·api-v1-verification-applications·post·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·riqlcy·api-v1-verification-applications·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "428",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "429",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·1lvclun·api-v1-verification-applications·post·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·1lvclun·api-v1-verification-applications·post·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "430",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "431",
+    "fixed": false,
+    "raw": "Applications"
+   },
+   "typeName": {
+    "$id": "432",
+    "fixed": false
+   },
+   "nameForProperty": "Applications"
+  },
+  {
+   "$id": "433",
+   "methods": [
+    {
+     "$id": "434",
+     "parameters": [
+      {
+       "$id": "435",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "436",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "437",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·6idznt·api-v1-verification-documents·post·requestbody",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/requestBodies/paths·6idznt·api-v1-verification-documents·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "438",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "214"
+       }
+      },
+      {
+       "$id": "439",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "440",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "441",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "442",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "443",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "444",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "445",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "446",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "447",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "448",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "449",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "450",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "451",
+      "fixed": false,
+      "raw": "Submit"
+     },
+     "group": {
+      "$id": "452",
+      "fixed": false,
+      "raw": "Documents"
+     },
+     "serializedName": "Documents_Submit",
+     "url": "/api/v1/verification/documents",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "453",
+       "extensions": {
+        "$id": "454",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1y30c7z·api-v1-verification-documents·post·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·1y30c7z·api-v1-verification-documents·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "455",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "456",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·wxyixl·api-v1-verification-documents·post·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·wxyixl·api-v1-verification-documents·post·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "457",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "458",
+    "fixed": false,
+    "raw": "Documents"
+   },
+   "typeName": {
+    "$id": "459",
+    "fixed": false
+   },
+   "nameForProperty": "Documents"
+  },
+  {
+   "$id": "460",
+   "methods": [
+    {
+     "$id": "461",
+     "parameters": [
+      {
+       "$id": "462",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "463",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "464",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "465",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "466",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "467",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "468",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "469",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "470",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "471",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "472",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "473",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "474",
+      "fixed": false,
+      "raw": "Get"
+     },
+     "group": {
+      "$id": "475",
+      "fixed": false,
+      "raw": "Profile"
+     },
+     "serializedName": "Profile_Get",
+     "url": "/api/v1/verification/profile",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "476",
+       "body": {
+        "$ref": "155"
+       },
+       "extensions": {
+        "$id": "477",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·hxumnk·api-v1-verification-profile·get·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·hxumnk·api-v1-verification-profile·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "478",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "479",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·odkac6·api-v1-verification-profile·get·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·odkac6·api-v1-verification-profile·get·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "480",
+      "body": {
+       "$ref": "155"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "481",
+     "parameters": [
+      {
+       "$id": "482",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "483",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "484",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·sirczz·api-v1-verification-profile-details·patch·requestbody",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/requestBodies/paths·sirczz·api-v1-verification-profile-details·patch·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "485",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "255"
+       }
+      },
+      {
+       "$id": "486",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "487",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "488",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "489",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "490",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "491",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "492",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "493",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "494",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "495",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "496",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "497",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "498",
+      "fixed": false,
+      "raw": "Update"
+     },
+     "group": {
+      "$id": "499",
+      "fixed": false,
+      "raw": "Profile"
+     },
+     "serializedName": "Profile_Update",
+     "url": "/api/v1/verification/profile/details",
+     "isAbsoluteUrl": false,
+     "httpMethod": "patch",
+     "responses": {
+      "OK": {
+       "$id": "500",
+       "body": {
+        "$ref": "155"
+       },
+       "extensions": {
+        "$id": "501",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1jj7d2i·api-v1-verification-profile-details·patch·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·1jj7d2i·api-v1-verification-profile-details·patch·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "502",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "503",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·tjy17a·api-v1-verification-profile-details·patch·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·tjy17a·api-v1-verification-profile-details·patch·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "504",
+      "body": {
+       "$ref": "155"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "505",
+    "fixed": false,
+    "raw": "Profile"
+   },
+   "typeName": {
+    "$id": "506",
+    "fixed": false
+   },
+   "nameForProperty": "Profile"
+  },
+  {
+   "$id": "507",
+   "methods": [
+    {
+     "$id": "508",
+     "parameters": [
+      {
+       "$id": "509",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "510",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "511",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·962rc8·api-v1-verification-providers-tokenprovider-sdk_token·post·requestbody",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/requestBodies/paths·962rc8·api-v1-verification-providers-tokenprovider-sdk_token·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "512",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "196"
+       }
+      },
+      {
+       "$id": "513",
+       "clientProperty": {
+        "$ref": "371"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "514",
+        "fixed": false,
+        "raw": "Onfido"
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "515",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1c5agq0·api-v1-verification-providers-tokenprovider-sdk_token·post·parameters·0",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/paths·1c5agq0·api-v1-verification-providers-tokenprovider-sdk_token·post·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": true,
+       "name": {
+        "$id": "516",
+        "fixed": false,
+        "raw": "tokenProvider"
+       },
+       "serializedName": "tokenProvider",
+       "modelType": {
+        "$id": "517",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "518",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "519",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "520",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "521",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "522",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "523",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "524",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "525",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "526",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "527",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "528",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "529",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "530",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "531",
+      "fixed": false,
+      "raw": "Post"
+     },
+     "group": {
+      "$id": "532",
+      "fixed": false,
+      "raw": "Providers"
+     },
+     "serializedName": "Providers_Post",
+     "url": "/api/v1/verification/providers/{tokenProvider}/sdk-token",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "533",
+       "body": {
+        "$ref": "182"
+       },
+       "extensions": {
+        "$id": "534",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·tvw9ix·api-v1-verification-providers-tokenprovider-sdk_token·post·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·tvw9ix·api-v1-verification-providers-tokenprovider-sdk_token·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "535",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "536",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·1mhxf5o·api-v1-verification-providers-tokenprovider-sdk_token·post·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·1mhxf5o·api-v1-verification-providers-tokenprovider-sdk_token·post·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "537",
+      "body": {
+       "$ref": "182"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "538",
+    "fixed": false,
+    "raw": "Providers"
+   },
+   "typeName": {
+    "$id": "539",
+    "fixed": false
+   },
+   "nameForProperty": "Providers"
+  },
+  {
+   "$id": "540",
+   "methods": [
+    {
+     "$id": "541",
+     "parameters": [
+      {
+       "$id": "542",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "543",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "544",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "545",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "546",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "547",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "548",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "549",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "550",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "551",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "552",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "553",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "554",
+      "fixed": false,
+      "raw": "GetRules"
+     },
+     "group": {
+      "$id": "555",
+      "fixed": false,
+      "raw": "Validation"
+     },
+     "serializedName": "Validation_GetRules",
+     "url": "/api/v1/verification/validations",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "556",
+       "body": {
+        "$ref": "337"
+       },
+       "extensions": {
+        "$id": "557",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·r0piox·api-v1-verification-validations·get·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·r0piox·api-v1-verification-validations·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "558",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "559",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·1inet3o·api-v1-verification-validations·get·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·1inet3o·api-v1-verification-validations·get·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "560",
+      "body": {
+       "$ref": "337"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "561",
+     "parameters": [
+      {
+       "$id": "562",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "563",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "564",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "565",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "566",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "567",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "568",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "569",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "570",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "571",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "572",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "573",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "574",
+      "fixed": false,
+      "raw": "GetVerificationDetailsRules"
+     },
+     "group": {
+      "$id": "575",
+      "fixed": false,
+      "raw": "Validation"
+     },
+     "serializedName": "Validation_GetVerificationDetailsRules",
+     "url": "/api/v1/verification/validations/details",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "576",
+       "body": {
+        "$ref": "321"
+       },
+       "extensions": {
+        "$id": "577",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·9epu69·api-v1-verification-validations-details·get·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·9epu69·api-v1-verification-validations-details·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "578",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "579",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·12fu3a1·api-v1-verification-validations-details·get·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·12fu3a1·api-v1-verification-validations-details·get·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "580",
+      "body": {
+       "$ref": "321"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "581",
+     "parameters": [
+      {
+       "$id": "582",
+       "clientProperty": {
+        "$ref": "377"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "583",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "584",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·1q9wfxz·api-v1-verification-validations-documents-documentcategory·get·parameters·0",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/paths·1q9wfxz·api-v1-verification-validations-documents-documentcategory·get·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "585",
+        "fixed": false,
+        "raw": "documentCategory"
+       },
+       "serializedName": "documentCategory",
+       "modelType": {
+        "$ref": "58"
+       }
+      },
+      {
+       "$id": "586",
+       "clientProperty": {
+        "$ref": "359"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "587",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "588",
+        "fixed": false,
+        "raw": "Unique identifier value that is attached to requests and messages that allow reference to a particular transaction or event chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "CorrelationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/CorrelationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "589",
+        "fixed": false,
+        "raw": "correlationId"
+       },
+       "serializedName": "correlationId",
+       "modelType": {
+        "$id": "590",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "591",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      },
+      {
+       "$id": "592",
+       "clientProperty": {
+        "$ref": "365"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "593",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "594",
+        "fixed": false,
+        "raw": "Request id/operation id to identify operation ordering in a chain"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "OperationIdHeaderId",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/parameters/OperationIdHeaderId"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "595",
+        "fixed": false,
+        "raw": "operationId"
+       },
+       "serializedName": "operationId",
+       "modelType": {
+        "$id": "596",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "name": {
+         "$id": "597",
+         "fixed": false,
+         "raw": "Uuid"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "598",
+      "fixed": false,
+      "raw": "GetDocumentRules"
+     },
+     "group": {
+      "$id": "599",
+      "fixed": false,
+      "raw": "Validation"
+     },
+     "serializedName": "Validation_GetDocumentRules",
+     "url": "/api/v1/verification/validations/documents/{documentCategory}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "600",
+       "body": {
+        "$ref": "53"
+       },
+       "extensions": {
+        "$id": "601",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///110?oai3.shaken.json"
+         ],
+         "name": "paths·19z7nei·api-v1-verification-validations-documents-documentcategory·get·responses·200",
+         "originalLocations": [
+          "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·19z7nei·api-v1-verification-validations-documents-documentcategory·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "602",
+      "body": {
+       "$ref": "97"
+      },
+      "extensions": {
+       "$id": "603",
+       "x-ms-metadata": {
+        "apiVersions": [
+         "1.0"
+        ],
+        "filename": [
+         "mem:///110?oai3.shaken.json"
+        ],
+        "name": "paths·11yhiep·api-v1-verification-validations-documents-documentcategory·get·responses·default",
+        "originalLocations": [
+         "file:///C:/wx/microservices/wx-b2c-user-verification/source/WX.B2C.User.Verification.Api.Public.Client/swagger.json#/components/responses/paths·11yhiep·api-v1-verification-validations-documents-documentcategory·get·responses·default"
+        ]
+       }
+      },
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "604",
+      "body": {
+       "$ref": "53"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "605",
+    "fixed": false,
+    "raw": "Validation"
+   },
+   "typeName": {
+    "$id": "606",
+    "fixed": false
+   },
+   "nameForProperty": "Validation"
+  }
+ ]
+}

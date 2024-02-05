@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.22" />
+    <PackageReference Include="Masking.Serilog" Version="1.0.13" />
+    <PackageReference Include="prometheus-net" Version="6.0.0" />
+    <PackageReference Include="WX.KeyVault" Version="3.0.1.28" />
+    <PackageReference Include="WX.Logging.Autofac" Version="1.0.1.9" />
+    <PackageReference Include="WX.ServiceFabric.Autofac" Version="2.6.6.65" />
+    <PackageReference Include="WX.ServiceFabric.Telemetry.Autofac" Version="2.6.6.65" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WX.B2C.User.Verification.Configuration\WX.B2C.User.Verification.Configuration.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.Communication\WX.B2C.User.Verification.Infrastructure.Communication.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.Remoting\WX.B2C.User.Verification.Infrastructure.Remoting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>WX.B2C.User.Verification.Unit.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>WX.B2C.User.Verification.Integration.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,149 @@
+﻿[
+  {
+    "id": "4B6271BD-FDE5-40F7-8701-29AA66865568",
+    "name": "US verification policy",
+    "regionType": "Country",
+    "region": "US",
+    "tasks": [
+      {
+        "id": "CAEFE21A-E362-4FF5-93B5-943158102C31",
+        "name": "Identity task",
+        "type": "Identity",
+        "priority": 1,
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [
+          "D6F2DAF9-3F8F-4335-A7B8-4FC383471A1D", // "Onfido document check"
+          "6D930727-5BCC-4014-A9C1-B08B85491D34" // "Onfido facial similarity check by video"
+        ]
+      },
+      {
+        "id": "FBCA7EFC-39F1-4D26-8E5C-4FEB4A7FD34F",
+        "name": "Tax residence",
+        "type": "TaxResidence",
+        "priority": 2,
+        "autoCompletePolicy": "EveryTime",
+        "collectionSteps": [
+          {
+            "xPath": "VerificationDetails.TaxResidence",
+            "isReviewNeeded": false,
+            "isRequired": true
+          }
+        ]
+      },
+      {
+        "id": "9486F8EF-1730-45A7-A724-434D4E89C7C1",
+        "name": "User duplication screening",
+        "type": "DuplicationScreening",
+        "priority": 1,
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [
+          "372929F1-8597-4E50-A5CE-5881377AF295", // "Name and date of birth duplication"
+          "0E3B0522-8330-487F-A35C-38CC6022812A", // "Onfido known face check by video"
+          "62BA1CC3-8802-4C13-B2BA-BB6EFBDBEE1F" // "Id document number duplication"
+        ]
+      },
+      {
+        "id": "828C3D69-D9B1-46D5-9498-45F3DD74B278",
+        "name": "User address",
+        "type": "Address",
+        "priority": 2,
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [ "6431DD13-EF54-4D99-978E-E94067913B43" ] // "Check IP match by country"
+      },
+      {
+        "id": "886609CB-ED63-4AEF-AEE9-B51B75C2A829",
+        "name": "Additional identity proofing task",
+        "type": "FraudScreening",
+        "priority": 3,
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [ "7147ADE3-A665-4B03-9B89-99008218C12F" ] // "LN RDP identity check"
+      },
+      {
+        "id": "C2BADFF2-B73F-4FB0-B447-A3EB48964B36",
+        "name": "Risk lists screening",
+        "type": "RiskListsScreening",
+        "priority": 4,
+        "collectionSteps": [
+          {
+            "xPath": "VerificationDetails.IsPep",
+            "isReviewNeeded": false,
+            "isRequired": true
+          },
+          {
+            "xPath": "VerificationDetails.IsAdverseMedia",
+            "isReviewNeeded": false,
+            "isRequired": true
+          },
+          {
+            "xPath": "VerificationDetails.IsSanctioned",
+            "isReviewNeeded": false,
+            "isRequired": true
+          }
+        ],
+        "autoCompletePolicy": "EveryTime",
+        "checksVariants": [
+          "34A33DF0-B9B5-4205-9CC6-1F90BE10D313"
+        ]
+      },
+      {
+        "id": "72DF5230-BB5A-4857-BCAF-9E27F0CD8A36",
+        "name": "CDD questionnaire",
+        "type": "FinancialCondition",
+        "priority": 1,
+        "autoCompletePolicy": "EveryTime",
+        "collectionSteps": [
+          {
+            // "US CDD Survey"
+            "xPath": "Survey.DE532CA0-C21E-4F7B-AD09-647EAA0C4E00",
+            "isReviewNeeded": false,
+            "isRequired": true
+          }
+        ]
+      }
+    ],
+    "triggers": [
+      {
+        "id": "44FE4C45-7F6D-48A8-8690-E5D92C97F61B",
+        "name": "EDD questionnaire",
+        "conditions": [
+          {
+            "type": "TinType",
+            "value": "ITIN"
+          },
+          {
+            "type": "IsPep",
+            "value": true
+          }
+        ],
+        "commands": [
+          {
+            "type": "AddTask",
+            "config": {
+              "variantId": "C2D32093-AD0F-45AD-9377-4DD12550A221"
+            }
+          },
+          {
+            "type": "AddCollectionStep",
+            "config": {
+              "taskType": "UserRiskScreening",
+              "collectionStep": {
+                "xPath": "Survey.EDDACA4C-C4A6-40C6-8FF3-D63A5D435783",
+                "isReviewNeeded": true,
+                "isRequired": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "templates": [
+      {
+        "id": "C2D32093-AD0F-45AD-9377-4DD12550A221",
+        "name": "EDD questionnaire",
+        "type": "UserRiskScreening",
+        "priority": 4,
+        "autoCompletePolicy": "EveryTime"
+      }
+    ]
+  }
+]

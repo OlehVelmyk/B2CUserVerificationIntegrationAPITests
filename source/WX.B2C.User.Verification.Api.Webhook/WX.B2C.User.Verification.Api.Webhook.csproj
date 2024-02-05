@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <ServerGarbageCollection>True</ServerGarbageCollection>
+    <SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <TargetLatestRuntimePatch>False</TargetLatestRuntimePatch>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<DocumentationFile>C:\wx\wx-b2c-user-verification\source\WX.B2C.User.Verification.Api.Webhook\WX.B2C.User.Verification.Api.Webhook.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="4.0.470" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Autofac.ServiceFabric" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WX.B2C.User.Verification.Core.Services\WX.B2C.User.Verification.Core.Services.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.DataAccess\WX.B2C.User.Verification.DataAccess.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Facade.Controllers.Webhook\WX.B2C.User.Verification.Facade.Controllers.Webhook.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.ApiMiddleware\WX.B2C.User.Verification.Infrastructure.ApiMiddleware.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.Common\WX.B2C.User.Verification.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.ServiceFabric\WX.B2C.User.Verification.Infrastructure.ServiceFabric.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Onfido\WX.B2C.User.Verification.Onfido.csproj" />
+  </ItemGroup>
+
+</Project>

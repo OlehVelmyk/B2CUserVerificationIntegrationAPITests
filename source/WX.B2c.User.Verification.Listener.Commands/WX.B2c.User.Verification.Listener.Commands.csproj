@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <ServerGarbageCollection>True</ServerGarbageCollection>
+    <SelfContained>false</SelfContained>  
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <TargetLatestRuntimePatch>False</TargetLatestRuntimePatch>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>latest</LangVersion> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Autofac.ServiceFabric" Version="2.2.0" />
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="4.0.470" />
+    <PackageReference Include="WX.Commands.StorageQueue" Version="18.0.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WX.B2C.User.Verification.Core.Services\WX.B2C.User.Verification.Core.Services.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.DataAccess\WX.B2C.User.Verification.DataAccess.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Facade.Commands\WX.B2C.User.Verification.Facade.Commands.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.Infrastructure.ServiceFabric\WX.B2C.User.Verification.Infrastructure.ServiceFabric.csproj" />
+    <ProjectReference Include="..\WX.B2C.User.Verification.User.Support\WX.B2C.User.Verification.User.Support.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>WX.B2C.User.Verification.Unit.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
